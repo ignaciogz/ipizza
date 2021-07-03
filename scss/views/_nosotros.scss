@@ -1,0 +1,119 @@
+@import '../base/media-query';
+@import '../base/mixins';
+
+/* -------- nosotros.html -------- */
+section.historia {
+    article {
+        padding: var(--padding-vertical) var(--padding-horizontal);
+    }
+
+    &::before {
+        @include background-full(url(../img/background/bg-nosotros.webp));
+        filter: brightness(0.4);
+    }
+    
+    .no-webp &::before {
+        @include background(url(../img/background/bg-nosotros.jpg));
+    }
+}
+
+section.historia figure {
+    margin: 0;
+    position: relative;
+
+    img {
+        border: 0.5rem outset var(--color-gris);
+        height: 375px;
+        transform: rotate(-5deg);
+        width: 563px;
+    }
+
+    figcaption {
+        width: 100%;
+        
+        h1 {
+            color: var(--color-queso);
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+section.galeria {
+    background: map-get($gradientes, UIg-DeepSpace);
+    padding: 0;
+
+    img {
+        height: 44vh;
+        width: 100%;
+    }
+}
+
+@include mediaq-breakpoint-max(md) {
+    section.historia {
+        height: auto;
+
+        article {
+            padding: 0;
+        }
+    }
+
+    section.historia figure {
+        height: auto;
+    }
+
+    section.galeria img {
+        height: 30vh;
+    }
+}
+
+@include mediaq-breakpoint(md) {
+    section.historia {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nosotros-tablet.jpg));
+        }
+        
+        .webp &::before {
+            @include background(url(../img/background/bg-nosotros-tablet.webp));
+        }
+    }
+}
+
+@include mediaq-breakpoint(sm) {
+    section.historia {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nosotros-mobile-xl.jpg));
+        }
+        
+        .webp &::before {
+            @include background(url(../img/background/bg-nosotros-mobile-xl.webp));
+        }
+    }
+}
+
+@include mediaq-breakpoint {
+    section.historia {
+        article {
+            padding: 0;
+        }
+    
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nosotros-mobile.jpg));
+        }
+        
+        .webp &::before {
+            @include background(url(../img/background/bg-nosotros-mobile.webp));
+        }
+    }
+
+    section.historia figure {
+        img {
+            width: 90%;
+        }
+    
+        figcaption {
+            margin-top: 2rem;
+        }
+    }
+}

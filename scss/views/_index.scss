@@ -1,0 +1,318 @@
+@import '../base/extends';
+@import '../base/gradientes';
+@import '../base/media-query';
+@import '../base/mixins';
+
+/* -------- index.html -------- */
+section.video-marketing {
+    padding: 0;
+
+    video {
+        height: var(--altura-visible);
+        object-fit: fill;
+        width: 100%;
+    }
+    .frase-publicitaria {
+        color: var(--color-gris);
+        font-size: 2.8rem;
+        font-weight: bold;
+        position: absolute;
+            top: 30vh;
+            left: 68vw;
+        text-shadow: 2px 2px 4px var(--color-blanco);
+
+        h2,
+        p {
+            margin: 0;
+        }
+    }
+}
+
+section.menu-de-pizzas {
+    background: map-get($gradientes, UIg-Zinc);
+
+    .maestro-pizzero {
+        @include background-full(url(../img/background/bg-maestro-pizzero.svg), -39% 75%, 50% 110%);
+        background-repeat: no-repeat;
+    }
+
+    #carousel-productos {
+        height: 400px;
+    }
+} 
+
+section.nuestra-calidad {
+    padding: var(--padding-vertical) 0;
+
+    article {
+        filter: grayscale(1);
+        padding: 0 var(--padding-horizontal);
+        position: relative;
+        transition: 1s;
+
+        &:last-child {
+            padding-top: var(--padding-vertical);
+        }
+
+        &:hover {
+            filter: grayscale(0);
+            transition: 1s;
+        }
+    }
+
+    &::before  {
+        @include background-full(url(../img/background/bg-nuestra-calidad.webp), top);
+        filter: grayscale(1);
+    }
+
+    .no-webp &::before {
+        @include background(url(../img/background/bg-nuestra-calidad.jpg), top);
+    }
+}
+
+section.nuestra-calidad figure {
+    img {
+        border-radius: var(--borde-general);
+        height: 100%;
+        width: 100%;
+    }
+
+    figcaption {
+        width: 100%;
+
+        p {
+            line-height: 40px;
+            word-spacing: 4px;
+        }
+    }
+}
+
+section.opiniones {
+    @include background(url(../img/background/bg-opiniones.webp));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 440px;
+
+    .no-webp & {
+        @include background(url(../img/background/bg-opiniones.jpg));
+    }
+}
+
+section.opiniones article {
+    @extend %sombra-contenedor;
+    background-color: #F8F9F1E6;
+    border-radius: var(--borde-general);
+    color: var(--color-gris);
+    padding: 1rem;
+    width: 50%;
+
+    .opinion-estrellas {
+        margin-bottom: 1rem;
+    
+        i {
+            color: var(--color-queso);
+        }
+    }
+    .opinion {
+        font-style: italic;
+        line-height: 1.5rem;
+        text-align: justify;
+        text-indent: 1rem;
+        word-spacing: 0.1vw;
+    
+        p {
+            font-size: 0.8rem;
+    
+            &:first-child {
+                text-indent: 0;
+            }
+
+            &:first-child::before,
+            &:last-child::after {
+                content: '"';
+                font-size: 2rem;
+                font-family: var(--font-family-ipizza);
+                margin: 0 0.5vw;
+            }
+        }
+    }
+    header {
+        font-weight: bold;
+
+        h4::before {
+            content: 'Escrito por: ';
+            font-weight: normal;
+        }
+    }
+}
+
+@include mediaq-breakpoint-max(md) {
+    section.menu-de-pizzas {    
+        .maestro-pizzero {
+            display: none;
+        }
+    }
+}
+
+@include mediaq-breakpoint-between(sm, lg) {
+    section.video-marketing {
+        height: calc(var(--altura-visible-mobile) * 0.75) !important; // Porque el height auto de .h-visible no calcula bien la altura
+
+        video {
+            height: calc(var(--altura-visible-mobile) * 0.75);
+        }
+
+        .frase-publicitaria {
+            font-size: 2rem;
+            position: absolute;
+                top: 21vh;
+                right: 1%;
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    section.menu-de-pizzas {
+        padding: var(--padding-vertical) 0;
+    }
+
+    section.nuestra-calidad {
+        article,
+        article:hover {
+            filter: unset;
+         }
+    }
+    
+    section.opiniones {
+        height: auto;
+        padding: var(--padding-vertical) 0;
+    }
+}
+
+@include mediaq-breakpoint(md) {
+    section.nuestra-calidad {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-tablet.jpg), top);
+        }
+    
+        .webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-tablet.webp), top);
+        }
+    }
+
+    section.opiniones {
+        .no-webp & {
+            @include background(url(../img/background/bg-opiniones-tablet.jpg));
+        }
+    
+        .webp & {
+            @include background(url(../img/background/bg-opiniones-tablet.webp));
+        }
+    }
+}
+
+@include mediaq-breakpoint(sm) {
+    section.nuestra-calidad {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-mobile-xl.jpg), top);
+        }
+    
+        .webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-mobile-xl.webp), top);
+        }
+    }
+
+    section.opiniones {
+        .no-webp & {
+            @include background(url(../img/background/bg-opiniones-mobile-xl.jpg));
+        }
+    
+        .webp & {
+            @include background(url(../img/background/bg-opiniones-mobile-xl.webp));
+        }
+    }
+}
+
+@include mediaq-breakpoint {
+    section.video-marketing {
+        /* Porque el height auto de .h-visible no calcula bien la altura */
+        height: calc(var(--altura-visible-mobile) * 0.5) !important;
+
+        video {
+            height: calc(var(--altura-visible-mobile) * 0.5);
+        }
+
+        .frase-publicitaria {
+            font-size: 1.5rem;
+            position: absolute;
+                top: 15vh;
+                right: 2%;
+            
+            h2 {
+                font-size: 0.7rem;
+            }
+        }
+    }
+    
+    section.menu-de-pizzas {
+        padding: var(--padding-vertical) 0;
+    }
+
+    section.nuestra-calidad {
+        article,
+        article:hover {
+            filter: unset;
+        }
+
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-mobile.jpg), top);
+        }
+
+        .webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-mobile.webp), top);
+        }
+    }
+    
+    section.nuestra-calidad figure {
+        figcaption {
+            width: 100%;
+            text-align: center;
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    
+    section.opiniones {
+        padding: var(--padding-vertical) 0;
+
+        .no-webp & {
+            @include background(url(../img/background/bg-opiniones-mobile.jpg));
+        }
+
+        .webp & {
+            @include background(url(../img/background/bg-opiniones-mobile.webp));
+        }
+    }
+
+    section.opiniones article {
+        width: 75%;
+
+        .opinion-estrellas {
+            i {
+                font-size: 1.5rem;
+            }    
+        }
+
+        .opinion {
+            text-align: center;
+        }
+        
+        header {
+            text-align: center;
+        }
+    }
+}
