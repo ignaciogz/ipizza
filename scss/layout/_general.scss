@@ -19,8 +19,8 @@ a {
 body {
     background-color: var(--color-gris);
     color: var(--color-blanco);
-    font-family: #{meta.inspect($font-family-general)} !important;
-    font-size: #{$font-size-general} !important;
+    font-family: #{meta.inspect($font-family-general)};
+    font-size: #{$font-size-general};
     padding-top: var(--altura-menu-fijo);
 }
 

@@ -41,8 +41,8 @@ a:active {
 body {
   background-color: var(--color-gris);
   color: var(--color-blanco);
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 21px !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
   padding-top: var(--altura-menu-fijo);
 }
 
@@ -526,7 +526,7 @@ section.nuestra-calidad article:hover {
 }
 @media only screen and (min-width: 1398px) {
   section.menu-de-pizzas h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .contenedor, section.opiniones article {
@@ -1071,7 +1071,7 @@ nav.menu a {
   color: var(--color-blanco);
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 3px 0;
+  padding-bottom: 3px;
   position: relative;
   text-transform: capitalize;
 }
@@ -1138,7 +1138,7 @@ nav.menu-mobile a {
   color: var(--color-blanco);
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 3px 0;
+  padding-bottom: 3px;
   position: relative;
   text-transform: capitalize;
 }
