@@ -125,7 +125,7 @@
     }
 }
 
-@include mediaq-breakpoint-max(md) {
+@include media-breakpoint-down(md) {
     .logotipo {
         margin-left: 50px;
     }

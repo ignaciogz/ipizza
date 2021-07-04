@@ -146,48 +146,7 @@ section.opiniones article {
     }
 }
 
-@include mediaq-breakpoint-max(md) {
-    section.menu-de-pizzas {    
-        .maestro-pizzero {
-            display: none;
-        }
-    }
-}
-
-@include mediaq-breakpoint-between(sm, lg) {
-    section.video-marketing {
-        height: calc(var(--altura-visible-mobile) * 0.75); // Porque el height: auto de .h-visible no calcula bien la altura
-
-        video {
-            height: calc(var(--altura-visible-mobile) * 0.75);
-        }
-
-        .frase-publicitaria {
-            font-size: 2rem;
-            position: absolute;
-                top: 21vh;
-                right: 1%;
-            
-            h2 {
-                font-size: 1.2rem;
-            }
-        }
-    }
-
-    section.nuestra-calidad {
-        article,
-        article:hover {
-            filter: unset;
-         }
-    }
-    
-    section.opiniones {
-        height: auto;
-        padding: var(--padding-vertical) 0;
-    }
-}
-
-@include mediaq-breakpoint(md) {
+@include media-breakpoint-only(md) {
     section.nuestra-calidad {
         .no-webp &::before {
             @include background(url(../img/background/bg-nuestra-calidad-tablet.jpg), top);
@@ -209,7 +168,7 @@ section.opiniones article {
     }
 }
 
-@include mediaq-breakpoint(sm) {
+@include media-breakpoint-only(sm) {
     section.nuestra-calidad {
         .no-webp &::before {
             @include background(url(../img/background/bg-nuestra-calidad-mobile-xl.jpg), top);
@@ -231,7 +190,7 @@ section.opiniones article {
     }
 }
 
-@include mediaq-breakpoint {
+@include media-breakpoint-only(xs) {
     section.video-marketing {
         /* Porque el height auto de .h-visible no calcula bien la altura */
         height: calc(var(--altura-visible-mobile) * 0.5);
@@ -313,10 +272,51 @@ section.opiniones article {
     }
 }
 
-@media only screen and (min-width: 1398px) {
+@include media-breakpoint-down(lg) {
+    section.menu-de-pizzas {    
+        .maestro-pizzero {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {
     section.menu-de-pizzas {
         h1 {
             font-size: 3.5rem;
         }
     } 
+}
+
+@include media-breakpoint-between(sm, lg) {
+    section.video-marketing {
+        height: calc(var(--altura-visible-mobile) * 0.75); // Porque el height: auto de .h-visible no calcula bien la altura
+
+        video {
+            height: calc(var(--altura-visible-mobile) * 0.75);
+        }
+
+        .frase-publicitaria {
+            font-size: 2rem;
+            position: absolute;
+                top: 21vh;
+                right: 1%;
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    section.nuestra-calidad {
+        article,
+        article:hover {
+            filter: unset;
+         }
+    }
+    
+    section.opiniones {
+        height: auto;
+        padding: var(--padding-vertical) 0;
+    }
 }

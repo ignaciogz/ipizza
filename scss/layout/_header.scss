@@ -13,7 +13,7 @@
     height: var(--altura-menu-fijo);
 }
 
-@include mediaq-breakpoint-max(md) {
+@include media-breakpoint-down(md) {
     .header {
         height: var(--altura-menu-fijo-mobile);
         padding: 0 0.7rem;

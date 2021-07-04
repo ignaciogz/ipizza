@@ -1,6 +1,8 @@
 @charset "UTF-8";
 :root {
+  font-size: 21px;
   /* General */
+  --font-family-general: "Open Sans", sans-serif;
   --altura-completa: 100vh;
   --altura-menu-fijo: 75px;
   --altura-visible: calc(100vh - var(--altura-menu-fijo));
@@ -41,8 +43,7 @@ a:active {
 body {
   background-color: var(--color-gris);
   color: var(--color-blanco);
-  font-family: "Open Sans", sans-serif;
-  font-size: 21px;
+  font-family: var(--font-family-general);
   padding-top: var(--altura-menu-fijo);
 }
 
@@ -95,7 +96,7 @@ strong {
   font-size: 0.9rem;
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 767.98px) {
   body {
     padding-top: var(--altura-menu-fijo-mobile);
   }
@@ -126,7 +127,7 @@ strong {
   height: var(--altura-menu-fijo);
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 767.98px) {
   .header {
     height: var(--altura-menu-fijo-mobile);
     padding: 0 0.7rem;
@@ -248,7 +249,7 @@ strong {
   width: 4px;
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 767.98px) {
   .logotipo {
     margin-left: 50px;
   }
@@ -398,39 +399,7 @@ section.opiniones article header h4::before {
   font-weight: normal;
 }
 
-@media only screen and (max-width: 991.98px) {
-  section.menu-de-pizzas .maestro-pizzero {
-    display: none;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 991.98px) {
-  section.video-marketing {
-    height: calc(var(--altura-visible-mobile) * 0.75);
-  }
-  section.video-marketing video {
-    height: calc(var(--altura-visible-mobile) * 0.75);
-  }
-  section.video-marketing .frase-publicitaria {
-    font-size: 2rem;
-    position: absolute;
-    top: 21vh;
-    right: 1%;
-  }
-  section.video-marketing .frase-publicitaria h2 {
-    font-size: 1.2rem;
-  }
-
-  section.nuestra-calidad article,
-section.nuestra-calidad article:hover {
-    filter: unset;
-  }
-
-  section.opiniones {
-    height: auto;
-    padding: var(--padding-vertical) 0;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.nuestra-calidad::before {
     background: url(../img/background/bg-nuestra-calidad-tablet.jpg) top/cover;
   }
@@ -524,9 +493,41 @@ section.nuestra-calidad article:hover {
     text-align: center;
   }
 }
-@media only screen and (min-width: 1398px) {
+@media only screen and (max-width: 991.98px) {
+  section.menu-de-pizzas .maestro-pizzero {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1400px) {
   section.menu-de-pizzas h1 {
     font-size: 3.5rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+  section.video-marketing {
+    height: calc(var(--altura-visible-mobile) * 0.75);
+  }
+  section.video-marketing video {
+    height: calc(var(--altura-visible-mobile) * 0.75);
+  }
+  section.video-marketing .frase-publicitaria {
+    font-size: 2rem;
+    position: absolute;
+    top: 21vh;
+    right: 1%;
+  }
+  section.video-marketing .frase-publicitaria h2 {
+    font-size: 1.2rem;
+  }
+
+  section.nuestra-calidad article,
+section.nuestra-calidad article:hover {
+    filter: unset;
+  }
+
+  section.opiniones {
+    height: auto;
+    padding: var(--padding-vertical) 0;
   }
 }
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .contenedor, section.opiniones article {
@@ -618,7 +619,7 @@ section.faq .desplegable details ul {
   padding: 0 0 1.2rem 2.2rem;
 }
 
-@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.consulta-pedido::before {
     background: url(../img/background/bg-pedidos-tablet.jpg) bottom/cover;
   }
@@ -689,7 +690,7 @@ section.galeria img {
   width: 100%;
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 767.98px) {
   section.historia {
     height: auto;
   }
@@ -705,7 +706,7 @@ section.galeria img {
     height: 30vh;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.historia::before {
     background: url(../img/background/bg-nosotros-tablet.jpg) center/cover;
   }
@@ -785,7 +786,7 @@ section.contacto form#contacto-form:hover {
   transition: 1s;
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 767.98px) {
   section.contacto form#contacto-form {
     width: 95%;
   }
@@ -1015,7 +1016,7 @@ footer .otros-links.d-flex {
   row-gap: 0.5rem;
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 767.98px) {
   footer {
     padding: var(--padding-vertical) 0;
     padding-bottom: calc( var(--padding-vertical) / 2 );
@@ -1204,12 +1205,12 @@ nav.menu-mobile a:hover::before {
     width: initial;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1198px) {
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
   .tarjeta-de-producto {
     width: 225px;
   }
 }
-@media only screen and (min-width: 1398px) {
+@media only screen and (min-width: 1400px) {
   .tarjeta-de-producto {
     width: 275px;
   }
@@ -1623,9 +1624,7 @@ html {
   content: "";
   display: block;
   height: var(--altura-menu-fijo);
-  /* aquí la altura de la cabecera fija*/
   margin-top: calc(0px - var(--altura-menu-fijo));
-  /* altura negativa de la cabecera fija */
 }
 
 @media only screen and (max-width: 991.98px) {

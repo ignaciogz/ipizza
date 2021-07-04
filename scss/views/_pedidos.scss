@@ -87,7 +87,7 @@ section.faq {
     }
 }
 
-@include mediaq-breakpoint(md) {
+@include media-breakpoint-only(md) {
     section.consulta-pedido {
         .no-webp &::before {
             @include background(url(../img/background/bg-pedidos-tablet.jpg), bottom);
@@ -99,7 +99,7 @@ section.faq {
     }
 }
 
-@include mediaq-breakpoint(sm) {
+@include media-breakpoint-only(sm) {
     section.consulta-pedido {
         .no-webp &::before {
             @include background(url(../img/background/bg-pedidos-mobile-xl.jpg), bottom);
@@ -111,7 +111,7 @@ section.faq {
     }
 }
 
-@include mediaq-breakpoint {
+@include media-breakpoint-only(xs) {
     section.consulta-pedido {
         .no-webp &::before {
             @include background(url(../img/background/bg-pedidos-mobile.jpg), bottom);

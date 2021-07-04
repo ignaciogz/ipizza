@@ -48,7 +48,7 @@ section.contacto form#contacto-form {
     }
 }
 
-@include mediaq-breakpoint-max(md) {
+@include media-breakpoint-down(md) {
     section.contacto form#contacto-form {
         width: 95%;
     }

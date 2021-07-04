@@ -1,5 +1,3 @@
-@use 'sass:meta';
-@import '../base/config';
 @import '../base/media-query';
 
 a {
@@ -19,8 +17,7 @@ a {
 body {
     background-color: var(--color-gris);
     color: var(--color-blanco);
-    font-family: #{meta.inspect($font-family-general)};
-    font-size: #{$font-size-general};
+    font-family: var(--font-family-general);
     padding-top: var(--altura-menu-fijo);
 }
 
@@ -73,7 +70,7 @@ strong {
     font-size: 0.9rem;
 }
 
-@include mediaq-breakpoint-max(md) {
+@include media-breakpoint-down(md) {
     body {
         padding-top: var(--altura-menu-fijo-mobile);
     }
@@ -83,7 +80,7 @@ strong {
     }
 }
 
-@include mediaq-breakpoint {
+@include media-breakpoint-only(xs) {
     h1 {
         font-size: 1.8rem;
     }

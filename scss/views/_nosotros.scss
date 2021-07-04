@@ -50,7 +50,7 @@ section.galeria {
     }
 }
 
-@include mediaq-breakpoint-max(md) {
+@include media-breakpoint-down(md) {
     section.historia {
         height: auto;
 
@@ -68,7 +68,7 @@ section.galeria {
     }
 }
 
-@include mediaq-breakpoint(md) {
+@include media-breakpoint-only(md) {
     section.historia {
         .no-webp &::before {
             @include background(url(../img/background/bg-nosotros-tablet.jpg));
@@ -80,7 +80,7 @@ section.galeria {
     }
 }
 
-@include mediaq-breakpoint(sm) {
+@include media-breakpoint-only(sm) {
     section.historia {
         .no-webp &::before {
             @include background(url(../img/background/bg-nosotros-mobile-xl.jpg));
@@ -92,7 +92,7 @@ section.galeria {
     }
 }
 
-@include mediaq-breakpoint {
+@include media-breakpoint-only(xs) {
     section.historia {
         article {
             padding: 0;

@@ -100,14 +100,14 @@ footer .otros-links.d-flex {
     row-gap: 0.5rem;
 }
 
-@include mediaq-breakpoint-max(md) {
+@include media-breakpoint-down(md) {
     footer {
         padding: var(--padding-vertical) 0;
         padding-bottom: calc( var(--padding-vertical) / 2 );
     }
 }
 
-@include mediaq-breakpoint {
+@include media-breakpoint-only(xs) {
     footer .redes-sociales {
         a {
             margin-left: 0.5rem;

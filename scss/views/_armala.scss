@@ -120,7 +120,7 @@ section.detalle-de-pedido {
     }
 }
 
-@include mediaq-breakpoint {
+@include media-breakpoint-only(xs) {
     section.armala {
         padding: var(--padding-vertical) 0;
     }

@@ -139,7 +139,7 @@ button {
 }
 /* FIN Botones de switch */
 
-@include mediaq-breakpoint-between(sm, lg) {
+@include media-breakpoint-between(sm, lg) {
     .btn-armala {
         font-size: 2rem;
         height: 4.2rem;
@@ -154,7 +154,7 @@ button {
     }
 }
 
-@include mediaq-breakpoint {
+@include media-breakpoint-only(xs) {
     .btn-armala {
         display: none;
     }

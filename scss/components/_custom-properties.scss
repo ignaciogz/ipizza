@@ -4,31 +4,34 @@
 @import '../base/tipografias';
 
 :root {
-    /* General */
-    --altura-completa: #{$altura-completa};
-    --altura-menu-fijo: #{$altura-menu-fijo};
-    --altura-visible: calc(100vh - var(--altura-menu-fijo));
-    --borde-general: #{$borde-general};
-    --font-family-ipizza: #{meta.inspect($font-family-artistico)};
-    --padding-horizontal: #{$padding-horizontal};
-    --padding-vertical: #{$padding-vertical};
+    font-size: #{$font-size-general};
 
-    /* Responsive */
-    --altura-menu-fijo-mobile: #{$altura-menu-fijo-mobile};
-    --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
-    --padding-vertical-mobile: #{$padding-vertical-mobile};
+        /* General */
+        --font-family-general: #{meta.inspect($font-family-general)};
+        --altura-completa: #{$altura-completa};
+        --altura-menu-fijo: #{$altura-menu-fijo};
+        --altura-visible: calc(100vh - var(--altura-menu-fijo));
+        --borde-general: #{$borde-general};
+        --font-family-ipizza: #{meta.inspect($font-family-artistico)}; 
+        --padding-horizontal: #{$padding-horizontal};
+        --padding-vertical: #{$padding-vertical};
+        
+        /* Responsive */
+        --altura-menu-fijo-mobile: #{$altura-menu-fijo-mobile};
+        --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
+        --padding-vertical-mobile: #{$padding-vertical-mobile};
 
-    /* Colores del sitio */
-    --color-blanco: #{$color-blanco};
-    --color-gris: #{$color-gris};
-    --color-masa: #{$color-masa};
-    --color-negro-intenso: #{$color-negro-intenso};
-    --color-queso: #{$color-queso};
-    --color-rojo-intenso: #{$color-rojo-intenso};
-    --color-rojo-o: #{$color-rojo-o};
-    --color-tomate: #{$color-tomate};
+        /* Colores del sitio */
+        --color-blanco: #{$color-blanco};
+        --color-gris: #{$color-gris};
+        --color-masa: #{$color-masa};
+        --color-negro-intenso: #{$color-negro-intenso};
+        --color-queso: #{$color-queso};
+        --color-rojo-intenso: #{$color-rojo-intenso};
+        --color-rojo-o: #{$color-rojo-o};
+        --color-tomate: #{$color-tomate};
 
-    --color-facebook: #{$color-facebook};
-    --color-instagram: #{$color-instagram};
-    --color-youtube: #{$color-youtube};
+        --color-facebook: #{$color-facebook};
+        --color-instagram: #{$color-instagram};
+        --color-youtube: #{$color-youtube};
 }
