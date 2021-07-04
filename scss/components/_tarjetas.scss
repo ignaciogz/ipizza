@@ -4,12 +4,14 @@
     @extend %sombra-contenedor;
     background-color: var(--color-gris);
     border-radius: var(--borde-general);
-    height: 375px;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 0.8rem;
     width: 245px;
 
     button {
         display: block;
-        margin: 0.5rem auto 0;
+        margin: 0.6rem auto 0;
     }
 
     &:hover {
@@ -18,27 +20,43 @@
 }
 
 .tarjeta-de-producto figure {
-    margin: 0;
-
     img {
         border-radius: var(--borde-general) var(--borde-general) 0 0;
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-        height: 245px;
-        width: 245px;
+        width: 100%;
     }
 
     figcaption {
-        height: 60px;
         padding: 0 0.5rem;
         text-align: center;
     }    
 }
 
+@include mediaq-breakpoint-between(md, lg) {
+    .tarjeta-de-producto {
+        width: 225px;
+    }
+}
+
 @include mediaq-breakpoint-between(sm, lg) {
-    .tarjeta-de-producto button {
-        font-size: 1.2rem;
-        height: initial;
-        position: static;
-        width: initial;
+    .tarjeta-de-producto {
+        button {
+            font-size: 1.2rem;
+            height: initial;
+            position: static;
+            width: initial;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1198px) {
+    .tarjeta-de-producto {
+        width: 225px;
+    }
+}
+
+@media only screen and (min-width: 1398px) {
+    .tarjeta-de-producto {
+        width: 275px;
     }
 }
