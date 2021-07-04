@@ -5,7 +5,7 @@
     background-color: var(--color-gris);
     box-shadow: 0 10px 6px -6px #F8F9F166;
     height: var(--altura-menu-fijo);
-    padding: 0 2.5rem;
+    padding: 0 var(--padding-horizontal);
     user-select: none;
 }
 
@@ -16,7 +16,6 @@
 @include media-breakpoint-down(md) {
     .header {
         height: var(--altura-menu-fijo-mobile);
-        padding: 0 0.7rem;
     }
 
     .logotipo-y-menu-container {

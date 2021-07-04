@@ -1,18 +1,21 @@
 @charset "UTF-8";
 :root {
   font-size: 21px;
-  /* General */
+  /* Tipografias */
   --font-family-general: "Open Sans", sans-serif;
+  --font-family-ipizza: "Finger Paint", cursive;
+  --font-family-copyright: "Satisfy", cursive;
+  /* General */
   --altura-completa: 100vh;
   --altura-menu-fijo: 75px;
   --altura-visible: calc(100vh - var(--altura-menu-fijo));
   --borde-general: 12px;
-  --font-family-ipizza: "Finger Paint", cursive;
-  --padding-horizontal: 3rem;
+  --padding-horizontal: 2.5rem;
   --padding-vertical: 2.5rem;
   /* Responsive */
   --altura-menu-fijo-mobile: 67px;
   --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
+  --padding-horizontal-mobile: 0.5rem;
   --padding-vertical-mobile: 1.5rem;
   /* Colores del sitio */
   --color-blanco: #F8F9F1;
@@ -76,8 +79,12 @@ h4 {
 }
 
 h5 {
+  font-size: 0.8rem;
+}
+
+.developer {
   display: inline;
-  font-family: "Satisfy", cursive;
+  font-family: var(--font-family-copyright);
   font-size: 1rem;
 }
 
@@ -86,8 +93,14 @@ i {
 }
 
 section {
-  padding: var(--padding-vertical) var(--padding-horizontal);
+  /*padding: var(--padding-vertical) var(--padding-horizontal);*/
   position: relative;
+}
+
+small {
+  display: block;
+  font-size: 0.6rem;
+  text-align: center;
 }
 
 strong {
@@ -119,7 +132,7 @@ strong {
   background-color: var(--color-gris);
   box-shadow: 0 10px 6px -6px #F8F9F166;
   height: var(--altura-menu-fijo);
-  padding: 0 2.5rem;
+  padding: 0 var(--padding-horizontal);
   user-select: none;
 }
 
@@ -130,7 +143,6 @@ strong {
 @media only screen and (max-width: 767.98px) {
   .header {
     height: var(--altura-menu-fijo-mobile);
-    padding: 0 0.7rem;
   }
 
   .logotipo-y-menu-container {
@@ -353,7 +365,7 @@ section.opiniones {
   background: url(../img/background/bg-opiniones.webp) center/cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 440px;
+  /* height: 440px; */
 }
 .no-webp section.opiniones {
   background: url(../img/background/bg-opiniones.jpg) center/cover;
@@ -493,16 +505,6 @@ section.nuestra-calidad article:hover {
     text-align: center;
   }
 }
-@media only screen and (max-width: 991.98px) {
-  section.menu-de-pizzas .maestro-pizzero {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  section.menu-de-pizzas h1 {
-    font-size: 3.5rem;
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   section.video-marketing {
     height: calc(var(--altura-visible-mobile) * 0.75);
@@ -528,6 +530,11 @@ section.nuestra-calidad article:hover {
   section.opiniones {
     height: auto;
     padding: var(--padding-vertical) 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section.menu-de-pizzas h1 {
+    font-size: 3.5rem;
   }
 }
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .contenedor, section.opiniones article {
@@ -928,40 +935,46 @@ section.detalle-de-pedido .precio-total {
 }
 
 /* -------- Footer -------- */
-footer {
+.footer {
   background-color: var(--color-gris);
   border-top: 2.5px solid var(--color-blanco);
   padding: var(--padding-vertical) var(--padding-horizontal);
   user-select: none;
 }
-footer i {
+.footer h2 {
+  font-size: 1.2rem;
+}
+.footer h3 {
+  font-size: 1rem;
+}
+.footer i {
   color: var(--color-blanco);
 }
 
-footer .nuestras-apps img {
+.footer .nuestras-apps img {
   filter: opacity(0.6);
   height: 61px;
   width: 202px;
 }
-footer .nuestras-apps img:hover {
+.footer .nuestras-apps img:hover {
   filter: drop-shadow(0 0 10px #F8F9F166);
 }
 
-footer .iconos-formas-de-pago img {
+.footer .iconos-formas-de-pago img {
   height: 52px;
   margin-right: 0.2rem;
   width: 60px;
 }
 
-footer address {
+.footer address {
   font-style: italic;
   margin: 0;
 }
-footer address .iconos-address {
+.footer address .iconos-address {
   width: 50px;
   height: 42px;
 }
-footer address p {
+.footer address p {
   color: var(--color-blanco);
   font-size: 0.8rem;
   font-family: "Open Sans", sans-serif;
@@ -969,35 +982,57 @@ footer address p {
   margin: 0;
 }
 
-footer .otros-links a:hover {
+.footer .otros-links a:hover {
   color: var(--color-blanco);
 }
-footer .otros-links:active, footer .otros-links:visited {
+.footer .otros-links:active, .footer .otros-links:visited {
   color: var(--color-tomate);
 }
 
-footer small {
-  font-size: 0.6rem;
-  margin-top: 1.5rem;
-}
-
-footer .redes-sociales {
+.footer .redes-sociales {
   margin-top: 0.5rem;
 }
-footer .redes-sociales a {
+.footer .redes-sociales a {
   margin-right: 0.5rem;
 }
-footer .redes-sociales i.fa-facebook-square:hover {
+.footer .redes-sociales i.fa-facebook-square:hover {
   color: var(--color-facebook);
 }
-footer .redes-sociales i.fa-instagram:hover {
+.footer .redes-sociales i.fa-instagram:hover {
   color: var(--color-instagram);
 }
-footer .redes-sociales i.fa-youtube:hover {
+.footer .redes-sociales i.fa-youtube:hover {
   color: var(--color-youtube);
 }
 
-/* Estilos de FLEX */
+.footer small {
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .footer {
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+  }
+  .footer h2 {
+    font-size: 1rem;
+  }
+  .footer h3 {
+    font-size: 0.8rem;
+  }
+  .footer i {
+    font-size: 1.8rem;
+  }
+
+  .footer .redes-sociales a {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+  .footer small {
+    font-size: 0.4rem;
+  }
+}
+/* -------- FLEX Footer -------- */
 footer div.row {
   row-gap: 1.5rem;
 }
@@ -1016,22 +1051,6 @@ footer .otros-links.d-flex {
   row-gap: 0.5rem;
 }
 
-@media only screen and (max-width: 767.98px) {
-  footer {
-    padding: var(--padding-vertical) 0;
-    padding-bottom: calc( var(--padding-vertical) / 2 );
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  footer .redes-sociales a {
-    margin-left: 0.5rem;
-    margin-right: 0;
-  }
-
-  footer small {
-    font-size: 0.4rem;
-  }
-}
 /* -------- FLEX pedido.html --------*/
 .consulta-pedido div.d-flex {
   row-gap: 0.8rem;
@@ -1118,9 +1137,7 @@ section.menu-mobile-container .offcanvas-body {
   height: 80%;
 }
 section.menu-mobile-container small {
-  display: block;
   font-size: 0.8rem;
-  text-align: center;
 }
 
 nav.menu-mobile ul {

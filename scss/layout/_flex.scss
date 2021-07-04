@@ -1,3 +1,22 @@
+/* -------- FLEX Footer -------- */
+footer div.row {
+    row-gap: 1.5rem;
+}
+
+footer .nuestras-apps.d-flex {
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+footer address a.d-flex {
+    column-gap: 0.5rem;
+}
+
+footer address.d-flex,
+footer .otros-links.d-flex {
+    row-gap: 0.5rem;
+}
+
 /* -------- FLEX pedido.html --------*/
 .consulta-pedido {
     div.d-flex {

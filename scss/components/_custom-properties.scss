@@ -6,19 +6,23 @@
 :root {
     font-size: #{$font-size-general};
 
-        /* General */
+        /* Tipografias */
         --font-family-general: #{meta.inspect($font-family-general)};
+        --font-family-ipizza: #{meta.inspect($font-family-artistico)};
+        --font-family-copyright: #{meta.inspect($font-family-firmas)};  
+
+        /* General */
         --altura-completa: #{$altura-completa};
         --altura-menu-fijo: #{$altura-menu-fijo};
         --altura-visible: calc(100vh - var(--altura-menu-fijo));
         --borde-general: #{$borde-general};
-        --font-family-ipizza: #{meta.inspect($font-family-artistico)}; 
         --padding-horizontal: #{$padding-horizontal};
         --padding-vertical: #{$padding-vertical};
         
         /* Responsive */
         --altura-menu-fijo-mobile: #{$altura-menu-fijo-mobile};
         --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
+        --padding-horizontal-mobile: #{$padding-horizontal-mobile};
         --padding-vertical-mobile: #{$padding-vertical-mobile};
 
         /* Colores del sitio */

@@ -1,17 +1,24 @@
 @import '../base/media-query';
 
 /* -------- Footer -------- */
-footer {
+.footer {
     background-color: var(--color-gris);
     border-top: 2.5px solid var(--color-blanco);
     padding: var(--padding-vertical) var(--padding-horizontal);
     user-select: none;
+
+    h2 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
     i {
         color: var(--color-blanco);
     }
 }
 
-footer .nuestras-apps {
+.footer .nuestras-apps {
     img {
         filter: opacity(0.6);
         height: 61px;
@@ -23,7 +30,7 @@ footer .nuestras-apps {
     }
 }
 
-footer .iconos-formas-de-pago {
+.footer .iconos-formas-de-pago {
     img {
         height: 52px;
         margin-right: 0.2rem;
@@ -31,7 +38,7 @@ footer .iconos-formas-de-pago {
     }
 }
     
-footer address {
+.footer address {
     font-style: italic;
     margin: 0;
     .iconos-address {
@@ -47,7 +54,7 @@ footer address {
     }
 }
 
-footer .otros-links {
+.footer .otros-links {
     a:hover {
         color: var(--color-blanco);
     }
@@ -57,12 +64,7 @@ footer .otros-links {
     }
 }
 
-footer small {
-    font-size: 0.6rem;
-    margin-top: 1.5rem;
-}
-
-footer .redes-sociales {
+.footer .redes-sociales {
     margin-top: 0.5rem;
     a {
         margin-right: 0.5rem;
@@ -81,41 +83,33 @@ footer .redes-sociales {
     }
 }
 
-/* Estilos de FLEX */
-footer div.row {
-    row-gap: 1.5rem;
-}
-
-footer .nuestras-apps.d-flex {
-    column-gap: 1rem;
-    row-gap: 1rem;
-}
-
-footer address a.d-flex {
-    column-gap: 0.5rem;
-}
-
-footer address.d-flex,
-footer .otros-links.d-flex {
-    row-gap: 0.5rem;
-}
-
-@include media-breakpoint-down(md) {
-    footer {
-        padding: var(--padding-vertical) 0;
-        padding-bottom: calc( var(--padding-vertical) / 2 );
-    }
+.footer small {
+    margin-top: 1.5rem;
 }
 
 @include media-breakpoint-only(xs) {
-    footer .redes-sociales {
+    .footer {
+        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+
+        h2 {
+            font-size: 1rem;
+        }
+        h3 {
+            font-size: 0.8rem;
+        }
+        i {
+            font-size: 1.8rem;
+        }
+    }
+
+    .footer .redes-sociales {
         a {
             margin-left: 0.5rem;
             margin-right: 0;
         }
     }
 
-    footer small {
+    .footer small {
         font-size: 0.4rem;
     }
 }

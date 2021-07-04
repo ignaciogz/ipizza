@@ -50,8 +50,12 @@ h4 {
 }
 
 h5 {
+    font-size: 0.8rem;
+}
+
+.developer {
     display: inline;
-    font-family: 'Satisfy', cursive;
+    font-family: var(--font-family-copyright);
     font-size: 1rem;
 }
 
@@ -60,8 +64,14 @@ i {
 }
 
 section {
-    padding: var(--padding-vertical) var(--padding-horizontal);
+    /*padding: var(--padding-vertical) var(--padding-horizontal);*/
     position: relative;
+}
+
+small {
+    display: block;
+    font-size: 0.6rem;
+    text-align: center;
 }
 
 strong {
