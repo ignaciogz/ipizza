@@ -1,6 +1,6 @@
-@import '../base/extends';
+@import '../base/mixins';
 
-#container-menu-mobile {
+#menu-mobile {
     background-color: var(--color-gris);
     user-select: none;
 }
@@ -11,9 +11,8 @@ section.menu-mobile {
     position: relative;
 
     .offcanvas-header {
-        height: 10%;
+        height: 20%;
         padding-bottom: 0;
-        width: 100%;
 
         h2 {
             color: var(--color-queso);
@@ -23,7 +22,7 @@ section.menu-mobile {
     }
 
     .offcanvas-body {
-        height: 90%;
+        height: 80%;
     }
 
     small {
@@ -31,6 +30,8 @@ section.menu-mobile {
     }
 }
 
-nav#menu-mobile {
-    @extend %menu;
+nav.menu-mobile {
+    @include menu(block) {
+        margin-top: 1rem;
+    }
 }

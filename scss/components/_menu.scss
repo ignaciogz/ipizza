@@ -1,11 +1,7 @@
-@import '../base/extends';
+@import '../base/mixins';
 
-nav#menu {
-    @extend %menu;
-}
-
-@include mediaq-breakpoint-max(md) {
-    nav#menu {
-        display: none;
+nav.menu {
+    @include menu(inline-block) {
+        padding-left: 0.5rem;
     }
 }

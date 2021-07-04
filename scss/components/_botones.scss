@@ -15,7 +15,10 @@ button {
 .btn-menu-mobile {
     background-color: var(--color-gris);
     border-radius: unset;
-    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+        left: 0;
 
     i {
         color: var(--color-blanco);

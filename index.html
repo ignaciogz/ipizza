@@ -65,44 +65,40 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header container-fluid fixed-top">
-        <div class="row align-items-center h-100">
-            <div class="col-2 col-sm-2 d-lg-none position-fixed">
-                <button class="btn-menu-mobile" type="button" data-bs-toggle="offcanvas" data-bs-target="#container-menu-mobile" aria-controls="container-menu-mobile" aria-label="button-open-menu-mobile">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+    <header class="header d-flex align-items-center justify-content-center justify-content-lg-between fixed-top">
+        <!-- Btn menu mobile -->
+        <button class="btn-menu-mobile d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile" aria-controls="container-menu-mobile" aria-label="button-open-menu-mobile">
+            <i class="fas fa-bars"></i>
+        </button>
 
-            <div class="col-4 col-sm-4 offset-4 offset-sm-4 col-lg-3 offset-lg-0 col-xl-2 h-100">
-                <a href="index.html" title="logotipo de iPizza" class="logotipo h-100 d-flex align-items-center justify-content-center justify-content-lg-start">iPizza
-                    <div class="logo-container">
-                        <div class="logo-masa">
-                            <div class="logo-fetas"></div>
-                        </div>
-                        <div class="logo-queso chorreando"></div>
+        <div class="logotipo-y-menu-container d-flex align-items-center justify-content-center justify-content-lg-start">
+            <!-- Logotipo -->
+            <a href="index.html" title="logotipo de iPizza" class="logotipo d-flex align-items-center justify-content-center justify-content-lg-start justify-content-xxl-center">iPizza
+                <div class="logo-container">
+                    <div class="logo-masa">
+                        <div class="logo-fetas"></div>
                     </div>
-                </a>
-            </div>
+                    <div class="logo-queso chorreando"></div>
+                </div>
+            </a>
 
-            <div class="col-lg">
-                <nav id="menu" class="d-inline-block">
-                    <ul class="d-none d-lg-block m-0 px-1">
-                        <li class="d-inline-block mx-1"><a href="index.html" title="Acceso directo a nuestra página inicial">inicio</a></li>
-                        <li class="d-inline-block mx-1"><a href="pedidos.html" title="Acceso directo a nuestra página de pedidos">pedidos</a></li>
-                        <li class="d-inline-block mx-1"><a href="nosotros.html" title="Acceso directo a nuestra página sobre nosotros">nosotros</a></li>
-                        <li class="d-inline-block mx-1"><a href="contacto.html" title="Acceso directo a nuestra página de contacto">contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="col-lg-2 d-flex justify-content-end">
-                <button id="btn-armala-header" class="btn-armala shake" onclick="location.href = 'armala.html';">armala</button>
-            </div>
+            <!-- Menu de navegacion -->
+            <nav class="menu d-none d-lg-block">
+                <ul>
+                    <li><a href="index.html" title="Acceso directo a nuestra página inicial">inicio</a></li>
+                    <li><a href="pedidos.html" title="Acceso directo a nuestra página de pedidos">pedidos</a></li>
+                    <li><a href="nosotros.html" title="Acceso directo a nuestra página sobre nosotros">nosotros</a></li>
+                    <li><a href="contacto.html" title="Acceso directo a nuestra página de contacto">contacto</a></li>
+                </ul>
+            </nav>
         </div>
+
+        <!-- Btn armala -->
+        <button id="btn-armala-header" class="btn-armala shake" onclick="location.href = 'armala.html';">armala</button>
     </header>
 
     <!-- Menu mobile -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="container-menu-mobile" aria-labelledby="label-menu-mobile">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menu-mobile" aria-labelledby="label-menu-mobile">
         <section class="menu-mobile">
             <div class="offcanvas-header justify-content-center">
                 <h2 class="offcanvas-title" id="label-menu-mobile">Menú</h2>
@@ -111,12 +107,12 @@
                 </button>
             </div>
             <div class="offcanvas-body d-flex flex-column justify-content-between">
-                <nav id="menu-mobile">
-                    <ul class="m-0 px-1">
-                        <li class="d-block text-center m-3"><a href="index.html" title="Acceso directo a nuestra página inicial">inicio</a></li>
-                        <li class="d-block text-center m-3"><a href="pedidos.html" title="Acceso directo a nuestra página de pedidos">pedidos</a></li>
-                        <li class="d-block text-center m-3"><a href="nosotros.html" title="Acceso directo a nuestra página sobre nosotros">nosotros</a></li>
-                        <li class="d-block text-center m-3"><a href="contacto.html" title="Acceso directo a nuestra página de contacto">contacto</a></li>
+                <nav class="menu-mobile">
+                    <ul>
+                        <li class="text-center"><a href="index.html" title="Acceso directo a nuestra página inicial">inicio</a></li>
+                        <li class="text-center"><a href="pedidos.html" title="Acceso directo a nuestra página de pedidos">pedidos</a></li>
+                        <li class="text-center"><a href="nosotros.html" title="Acceso directo a nuestra página sobre nosotros">nosotros</a></li>
+                        <li class="text-center"><a href="contacto.html" title="Acceso directo a nuestra página de contacto">contacto</a></li>
                     </ul>
                 </nav>
                 <small class="d-block text-center">
@@ -191,6 +187,7 @@
                         <div id="carousel-productos" class="carousel slide" data-bs-interval="false"
                             data-bs-ride="false">
                             <div class="carousel-inner h-100 d-flex align-items-center">
+                                
                                 <div class="carousel-item">
                                     <div class="tarjeta-de-producto tarjeta-i1 mx-auto" data-aos="fade"
                                         data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="2000">
@@ -206,6 +203,7 @@
                                             onclick="location.href = 'armala.html';">armala</button>
                                     </div>
                                 </div>
+                                
                                 <div class="carousel-item active">
                                     <div class="tarjeta-de-producto tarjeta-i4 mx-auto" data-aos="fade"
                                         data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="2000">
@@ -221,6 +219,7 @@
                                             onclick="location.href = 'armala.html';">armala</button>
                                     </div>
                                 </div>
+                                
                                 <div class="carousel-item">
                                     <div class="tarjeta-de-producto tarjeta-i2 mx-auto" data-aos="fade"
                                         data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="2000">

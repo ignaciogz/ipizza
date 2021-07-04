@@ -5,6 +5,7 @@
     color: var(--color-blanco);
     font-family: 'Finger Paint', cursive;
     font-size: 2.2rem;
+    height: inherit;
     user-select: none;
 
     &:visited,
@@ -126,12 +127,10 @@
 
 @include mediaq-breakpoint-max(md) {
     .logotipo {
-        margin-left: 35px;
+        margin-left: 50px;
     }
-}
 
-@include mediaq-breakpoint {
     .logo-container {
-        height: 85px;
+        height: 87px;
     }
 }
