@@ -11,6 +11,7 @@
 
 .logotipo-y-menu-container {
     height: var(--altura-menu-fijo);
+    width: fit-content;
 }
 
 @include media-breakpoint-down(md) {

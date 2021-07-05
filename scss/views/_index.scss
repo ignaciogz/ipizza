@@ -91,7 +91,7 @@ section.opiniones {
     @include background(url(../img/background/bg-opiniones.webp));
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* height: 440px; */
+    padding: var(--padding-vertical) var(--padding-horizontal);
 
     .no-webp & {
         @include background(url(../img/background/bg-opiniones.jpg));
@@ -103,11 +103,13 @@ section.opiniones article {
     background-color: #F8F9F1E6;
     border-radius: var(--borde-general);
     color: var(--color-gris);
+    margin: 0 auto;
     padding: 1rem;
     width: 50%;
 
     .opinion-estrellas {
         margin-bottom: 1rem;
+        text-align: center;
     
         i {
             color: var(--color-queso);
@@ -138,6 +140,7 @@ section.opiniones article {
     }
     header {
         font-weight: bold;
+        text-align: center;
 
         h4::before {
             content: 'Escrito por: ';
@@ -211,8 +214,8 @@ section.opiniones article {
         }
     }
     
-    section.menu-de-pizzas {
-        padding: var(--padding-vertical) 0;
+    section.menu-de-pizzas{
+        padding: var(--padding-vertical) 0.5rem;
     }
 
     section.nuestra-calidad {

@@ -65,47 +65,53 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header d-flex align-items-center justify-content-center justify-content-lg-between fixed-top">
-        <!-- Btn menu mobile -->
-        <button class="btn-menu-mobile d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile" aria-controls="container-menu-mobile" aria-label="button-open-menu-mobile">
-            <i class="fas fa-bars"></i>
-        </button>
+    <header class="header container-fluid fixed-top">
+        <div class="row align-items-center justify-content-center justify-content-lg-between">
+            <!-- Btn menu mobile -->
+            <button class="btn-menu-mobile d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile" aria-controls="container-menu-mobile" aria-label="button-open-menu-mobile">
+                <i class="fas fa-bars"></i>
+            </button>
 
-        <div class="logotipo-y-menu-container d-flex align-items-center justify-content-center justify-content-lg-start">
-            <!-- Logotipo -->
-            <a href="index.html" title="logotipo de iPizza" class="logotipo d-flex align-items-center justify-content-center justify-content-lg-start justify-content-xxl-center">iPizza
-                <div class="logo-container">
-                    <div class="logo-masa">
-                        <div class="logo-fetas"></div>
+            <div class="logotipo-y-menu-container d-flex align-items-center justify-content-center justify-content-lg-start">
+                <!-- Logotipo -->
+                <a href="index.html" title="logotipo de iPizza" class="logotipo d-flex align-items-center justify-content-center justify-content-lg-start justify-content-xxl-center">iPizza
+                    <div class="logo-container">
+                        <div class="logo-masa">
+                            <div class="logo-fetas"></div>
+                        </div>
+                        <div class="logo-queso chorreando"></div>
                     </div>
-                    <div class="logo-queso chorreando"></div>
-                </div>
-            </a>
+                </a>
 
-            <!-- Menu de navegacion -->
-            <nav class="menu d-none d-lg-block">
-                <ul>
-                    <li><a href="index.html" title="Acceso directo a nuestra página inicial">inicio</a></li>
-                    <li><a href="pedidos.html" title="Acceso directo a nuestra página de pedidos">pedidos</a></li>
-                    <li><a href="nosotros.html" title="Acceso directo a nuestra página sobre nosotros">nosotros</a></li>
-                    <li><a href="contacto.html" title="Acceso directo a nuestra página de contacto">contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+                <!-- Menu de navegacion -->
+                <nav class="menu d-none d-lg-block">
+                    <ul>
+                        <li><a href="index.html" title="Acceso directo a nuestra página inicial">inicio</a></li>
+                        <li><a href="pedidos.html" title="Acceso directo a nuestra página de pedidos">pedidos</a></li>
+                        <li><a href="nosotros.html" title="Acceso directo a nuestra página sobre nosotros">nosotros</a></li>
+                        <li><a href="contacto.html" title="Acceso directo a nuestra página de contacto">contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <!-- Btn armala -->
-        <button id="btn-armala-header" class="btn-armala shake" onclick="location.href = 'armala.html';">armala</button>
+            <!-- Btn armala -->
+            <button id="btn-armala-header" class="btn-armala shake" onclick="location.href = 'armala.html';">armala</button>
+        </div> 
     </header>
 
     <!-- Menu mobile -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="menu-mobile" aria-labelledby="label-menu-mobile">
+    <div class="offcanvas offcanvas-start wrap-animation" tabindex="-1" id="menu-mobile" aria-labelledby="label-menu-mobile">
         <section class="menu-mobile-container">
+
+            <!-- Header - Menu mobile -->
             <div class="offcanvas-header justify-content-center">
                 <h2 class="offcanvas-title" id="label-menu-mobile">Menú</h2>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="button-close-menu-mobile">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
+            
+            <!-- Body - Menu mobile -->
             <div class="offcanvas-body d-flex flex-column justify-content-between">
                 <nav class="menu-mobile">
                     <ul>
@@ -116,9 +122,10 @@
                     </ul>
                 </nav>
                 <small>
-                    intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="developer">Ignacio Gutierrez</h2>
+                    intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="desarrollador">Ignacio Gutierrez</h2>
                 </small>
             </div>
+
         </section>
     </div>
 
@@ -130,7 +137,7 @@
                 <source src="videos/laArmasLaComes.mp4" type="video/mp4">
             </video>
             <figcaption class="frase-publicitaria">
-                <p>Es simple</p> 
+                <p>Es simple</p>
                 <h2>La armas, la comes</h2>
             </figcaption>
         </figure>
@@ -363,13 +370,14 @@
     </section>
 
     <!-- Opiniones -->
-    <section class="opiniones container-fluid h-visible wrap-animation">
+    <section class="opiniones container-fluid wrap-animation h-visible">
         <div class="row h-100">
-            <div id="carousel-opiniones" class="carousel slide h-75" data-bs-ride="carousel">
-                <div class="carousel-inner" data-aos="flip-down" data-aos-easing="ease-in-sine" data-aos-duration="600" data-aos-offset="200">
+            <div id="carousel-opiniones" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner h-100 d-flex align-items-center" data-aos="flip-down" data-aos-easing="ease-in-sine" data-aos-duration="600" data-aos-offset="200">
+                    
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <article class="d-block mx-auto">
-                            <div class="opinion-estrellas text-center">
+                        <article>
+                            <div class="opinion-estrellas">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -380,14 +388,15 @@
                                 <p>Estaba espectacular !! y el precio es aceptable. Es muy fácil el armado, sin tantas vueltas y la app indica en cuanto tiempo estará lista.</p>
                                 <p>Soy un programador, vivo a base de pizzas y la verdad que me sorprendieron. Sin dudas "volveré".</p>
                             </div>
-                            <header class="text-center">
+                            <header>
                                 <h2>Arnold C</h2>
                             </header>
                         </article>
                     </div>
+                    
                     <div class="carousel-item" data-bs-interval="10000">
-                        <article class="d-block mx-auto">
-                            <div class="opinion-estrellas text-center">
+                        <article>
+                            <div class="opinion-estrellas">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -398,14 +407,15 @@
                                 <p>Muy buena calidad y precios. Tiempo de preparación, lo normal 10"/15" por lo general. Despachan los pedidos muy rápidamente. </p>
                                 <p>Excelente opción para salir del paso.</p>
                             </div>
-                            <header class="text-center">
+                            <header>
                                 <h2>Martina Delgado</h2>
                             </header>
                         </article>
                     </div>
+                    
                     <div class="carousel-item" data-bs-interval="10000">
-                        <article class="d-block mx-auto">
-                            <div class="opinion-estrellas text-center">
+                        <article>
+                            <div class="opinion-estrellas">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -415,7 +425,7 @@
                             <div class="opinion">
                                 <p>Sus pizzas son muy ricas, pero el pedido estaba incompleto. Solucionaron mi problema rápidamente. Y fueron muy amables, hasta me enviaron unas porciones de papas de regalo.</p>
                             </div>
-                            <header class="text-center">
+                            <header>
                                 <h2>Guillermo Nuñez</h2>
                             </header>
                         </article>
@@ -434,7 +444,7 @@
                 </button>
             </div>
 
-            <button class="btn-ver-todas d-block mx-auto mt-2" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-duration="500">ver todas <i class="far fa-comments"></i></button>
+            <button class="btn-ver-todas" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-duration="500">ver todas <i class="far fa-comments"></i></button>
         </div>
     </section>
 
@@ -516,11 +526,11 @@
                     </a>
                 </div>
             </div>
-        </div>
 
-        <small>
-            intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="developer">Ignacio Gutierrez</h2>
-        </small>
+            <small>
+                intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="desarrollador">Ignacio Gutierrez</h2>
+            </small>
+        </div>
     </footer>
 
     <!-- JS Animaciones -->

@@ -19,6 +19,13 @@ body {
     color: var(--color-blanco);
     font-family: var(--font-family-general);
     padding-top: var(--altura-menu-fijo);
+    overflow-x: hidden;
+}
+
+.desarrollador {
+    display: inline;
+    font-family: var(--font-family-copyright);
+    font-size: 1rem;
 }
 
 em {
@@ -27,6 +34,10 @@ em {
 
 figure {
     margin: 0;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 h1 {
@@ -53,18 +64,11 @@ h5 {
     font-size: 0.8rem;
 }
 
-.developer {
-    display: inline;
-    font-family: var(--font-family-copyright);
-    font-size: 1rem;
-}
-
 i {
     font-size: 2rem;
 }
 
 section {
-    /*padding: var(--padding-vertical) var(--padding-horizontal);*/
     position: relative;
 }
 
