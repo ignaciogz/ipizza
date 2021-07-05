@@ -1,6 +1,10 @@
 @import '../base/media-query';
 
 /* -------- CSS Tricks -------- */
+html, body {
+    overflow-x: hidden;
+}
+
 .wrap-animation {
     overflow: hidden;
 }

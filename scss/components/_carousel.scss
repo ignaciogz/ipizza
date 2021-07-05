@@ -1,3 +1,5 @@
+@import '../base/media-query';
+
 /* -------- CAROUSEL -------- */
 #carousel-productos {
     height: 400px;
@@ -28,3 +30,13 @@
 .btn-carousel-siguiente i {
     text-shadow: -2px -2px 4px var(--color-gris);
 }
+
+/* @include media-breakpoint-only(xs) {
+    #carousel-opiniones {
+        .btn-carousel-anterior,
+        .btn-carousel-siguiente {
+            visibility: hidden;
+            z-index: 1;
+        }
+    }
+} */

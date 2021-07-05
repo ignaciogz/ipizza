@@ -48,7 +48,6 @@ body {
   color: var(--color-blanco);
   font-family: var(--font-family-general);
   padding-top: var(--altura-menu-fijo);
-  overflow-x: hidden;
 }
 
 .desarrollador {
@@ -63,10 +62,6 @@ em {
 
 figure {
   margin: 0;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 h1 {
@@ -142,7 +137,6 @@ strong {
 
 .logotipo-y-menu-container {
   height: var(--altura-menu-fijo);
-  width: fit-content;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -308,6 +302,7 @@ section.video-marketing .frase-publicitaria p {
 
 section.menu-de-pizzas {
   background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  padding: var(--padding-vertical) calc(var(--padding-horizontal)/2);
 }
 section.menu-de-pizzas .maestro-pizzero {
   content: "";
@@ -324,7 +319,7 @@ section.menu-de-pizzas #carousel-productos {
 }
 
 section.nuestra-calidad {
-  padding: var(--padding-vertical) 0;
+  padding: var(--padding-vertical) var(--padding-horizontal);
 }
 section.nuestra-calidad article {
   filter: grayscale(1);
@@ -433,6 +428,10 @@ section.opiniones article header h4::before {
   .webp section.opiniones {
     background: url(../img/background/bg-opiniones-tablet.webp) center/cover;
   }
+
+  section.opiniones article {
+    width: 75%;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .no-webp section.nuestra-calidad::before {
@@ -451,7 +450,6 @@ section.opiniones article header h4::before {
 }
 @media only screen and (max-width: 575.98px) {
   section.video-marketing {
-    /* Porque el height auto de .h-visible no calcula bien la altura */
     height: calc(var(--altura-visible-mobile) * 0.5);
   }
   section.video-marketing video {
@@ -500,9 +498,6 @@ section.nuestra-calidad article:hover {
     background: url(../img/background/bg-opiniones-mobile.webp) center/cover;
   }
 
-  section.opiniones article {
-    width: 75%;
-  }
   section.opiniones article .opinion-estrellas i {
     font-size: 1.5rem;
   }
@@ -536,8 +531,17 @@ section.nuestra-calidad article:hover {
   }
 
   section.opiniones {
-    height: auto;
     padding: var(--padding-vertical) 0;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  section.opiniones {
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 767.98px) {
+  section.opiniones article {
+    width: 90%;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -1270,8 +1274,18 @@ nav.menu-mobile a:hover::before {
   text-shadow: -2px -2px 4px var(--color-gris);
 }
 
+/* @include media-breakpoint-only(xs) {
+    #carousel-opiniones {
+        .btn-carousel-anterior,
+        .btn-carousel-siguiente {
+            visibility: hidden;
+            z-index: 1;
+        }
+    }
+} */
 /* -------- BOTONES -------- */
 button {
+  display: block;
   border-radius: 25px;
   border-color: transparent;
   color: var(--color-gris);
@@ -1289,7 +1303,6 @@ button {
   padding-right: 1rem;
   position: absolute;
   left: 0;
-  width: fit-content;
 }
 .btn-menu-mobile i {
   color: var(--color-blanco);
@@ -1319,7 +1332,6 @@ button {
   cursor: url("../img/mmm.png"), auto !important;
   font-family: var(--font-family-ipizza);
   transition: 1s !important;
-  width: fit-content;
 }
 .btn-armala:hover {
   background-color: var(--color-gris) !important;
@@ -1402,11 +1414,11 @@ button {
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   .btn-armala {
     font-size: 2rem;
-    height: 4.2rem;
+    height: 4rem;
     position: fixed;
     bottom: 2vh;
-    left: 5vw;
-    width: 90vw;
+    left: 2vw;
+    width: 96vw;
   }
 
   .btn-ver-todas {
@@ -1420,6 +1432,11 @@ button {
 
   .btn-ver-todas {
     width: 75%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .btn-ver-todas {
+    width: 30%;
   }
 }
 /* -------- FORMULARIOS -------- */
@@ -1645,6 +1662,10 @@ html {
 }
 
 /* -------- CSS Tricks -------- */
+html, body {
+  overflow-x: hidden;
+}
+
 .wrap-animation {
   overflow: hidden;
 }
@@ -1672,6 +1693,19 @@ html {
   }
   section.video-marketing video {
     height: calc(var(--altura-visible-mobile) * 0.75);
+  }
+
+  section.nuestra-calidad article,
+section.nuestra-calidad article:hover {
+    filter: unset;
+  }
+
+  section.opiniones {
+    height: 600px;
+  }
+
+  section.opiniones article {
+    width: 80%;
   }
 
   .h-visible {

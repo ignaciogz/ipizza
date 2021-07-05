@@ -8,6 +8,21 @@
         }
     }
 
+    section.nuestra-calidad {
+        article,
+        article:hover {
+            filter: unset;
+         }
+    }
+
+    section.opiniones {
+        height: 600px;
+    }
+
+    section.opiniones article {
+        width: 80%;
+    }
+
     .h-visible {
         height: auto;
     }

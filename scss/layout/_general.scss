@@ -19,7 +19,6 @@ body {
     color: var(--color-blanco);
     font-family: var(--font-family-general);
     padding-top: var(--altura-menu-fijo);
-    overflow-x: hidden;
 }
 
 .desarrollador {
@@ -34,10 +33,6 @@ em {
 
 figure {
     margin: 0;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 h1 {

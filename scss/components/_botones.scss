@@ -2,6 +2,7 @@
 
 /* -------- BOTONES -------- */
 button {
+    display: block;
     border-radius: 25px;
     border-color: transparent;
     color: var(--color-gris);
@@ -19,7 +20,6 @@ button {
     padding-right: 1rem;
     position: absolute;
         left: 0;
-    width: fit-content;
 
     i {
         color: var(--color-blanco);
@@ -54,7 +54,6 @@ button {
     cursor: url("../img/mmm.png"), auto !important;
     font-family: var(--font-family-ipizza);
     transition: 1s !important;
-    width: fit-content;
 
     &:hover {
         background-color: var(--color-gris) !important;
@@ -147,11 +146,11 @@ button {
 @include media-breakpoint-between(sm, lg) {
     .btn-armala {
         font-size: 2rem;
-        height: 4.2rem;
+        height: 4rem;
         position: fixed;
             bottom: 2vh;
-            left: 5vw;
-        width: 90vw;
+            left: 2vw;
+        width: 96vw;
     }
 
     .btn-ver-todas {
@@ -166,5 +165,11 @@ button {
 
     .btn-ver-todas {
         width: 75%;
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .btn-ver-todas {
+        width: 30%;
     }
 }

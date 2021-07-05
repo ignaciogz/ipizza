@@ -30,6 +30,7 @@ section.video-marketing {
 
 section.menu-de-pizzas {
     background: map-get($gradientes, UIg-Zinc);
+    padding: var(--padding-vertical) calc(var(--padding-horizontal)/2);
 
     .maestro-pizzero {
         @include background-full(url(../img/background/bg-maestro-pizzero.svg), -39% 75%, 50% 110%);
@@ -42,7 +43,7 @@ section.menu-de-pizzas {
 } 
 
 section.nuestra-calidad {
-    padding: var(--padding-vertical) 0;
+    padding: var(--padding-vertical) var(--padding-horizontal);
 
     article {
         filter: grayscale(1);
@@ -169,6 +170,10 @@ section.opiniones article {
             @include background(url(../img/background/bg-opiniones-tablet.webp));
         }
     }
+
+    section.opiniones article {
+        width: 75%;
+    }
 }
 
 @include media-breakpoint-only(sm) {
@@ -195,8 +200,7 @@ section.opiniones article {
 
 @include media-breakpoint-only(xs) {
     section.video-marketing {
-        /* Porque el height auto de .h-visible no calcula bien la altura */
-        height: calc(var(--altura-visible-mobile) * 0.5);
+        height: calc(var(--altura-visible-mobile) * 0.5); // Porque el height auto de .h-visible no calcula bien la altura
 
         video {
             height: calc(var(--altura-visible-mobile) * 0.5);
@@ -257,8 +261,6 @@ section.opiniones article {
     }
 
     section.opiniones article {
-        width: 75%;
-
         .opinion-estrellas {
             i {
                 font-size: 1.5rem;
@@ -303,8 +305,19 @@ section.opiniones article {
     }
     
     section.opiniones {
-        height: auto;
         padding: var(--padding-vertical) 0;
+    }
+}
+
+@include media-breakpoint-between(xs, lg) {
+    section.opiniones {
+        height: 600px;
+    }
+}
+
+@include media-breakpoint-between(xs, md) {
+    section.opiniones article {
+        width: 90%;
     }
 }
 
