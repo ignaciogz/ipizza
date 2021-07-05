@@ -21,10 +21,10 @@ body {
     padding-top: var(--altura-menu-fijo);
 }
 
-.desarrollador {
-    display: inline;
+small .desarrollador {
     font-family: var(--font-family-copyright);
     font-size: 1rem;
+    margin-left: 0.3rem;
 }
 
 em {
@@ -64,6 +64,7 @@ i {
 }
 
 section {
+    padding: var(--padding-vertical) var(--padding-horizontal); // Quitar al terminar los html
     position: relative;
 }
 

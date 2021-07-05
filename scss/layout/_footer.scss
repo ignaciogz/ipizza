@@ -85,6 +85,11 @@
 
 .footer small {
     margin-top: 1.5rem;
+
+    .desarrollador {
+        display: inline;
+        font-size: 1rem;
+    }
 }
 
 @include media-breakpoint-only(xs) {
@@ -99,6 +104,20 @@
         }
         i {
             font-size: 1.8rem;
+        }
+    }
+
+    .footer .nuestras-apps {
+        img {
+            height: 58px;
+            width: 198px;
+        }
+    }
+
+    .footer .iconos-formas-de-pago {
+        img {
+            height: 50px;
+            width: 57px;
         }
     }
 

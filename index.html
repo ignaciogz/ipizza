@@ -65,7 +65,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header container-fluid fixed-top">
+    <header class="header fixed-top">
         <div class="d-flex align-items-center justify-content-center justify-content-lg-between">
             <!-- Btn menu mobile -->
             <button class="btn-menu-mobile d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile" aria-controls="container-menu-mobile" aria-label="button-open-menu-mobile">
@@ -95,7 +95,7 @@
             </div>
 
             <!-- Btn armala -->
-            <button id="btn-armala-header" class="btn-armala shake" onclick="location.href = 'armala.html';">armala</button>
+            <button id="btn-armala-header" class="btn-armala d-none d-sm-block shake" onclick="location.href = 'armala.html';">armala</button>
         </div> 
     </header>
 
@@ -264,8 +264,8 @@
         <article>
             <figure>
             <div class="row">
-                <div class="col-12 col-sm-12 col-lg-6 offset-lg-1 order-lg-last d-flex justify-content-center">
-                    <picture>
+                <div class="col-12 col-sm-12 col-lg-6 offset-lg-1 order-lg-last">
+                    <picture class="d-flex justify-content-center justify-content-lg-end">
                         <source media="(max-width: 575.98px)"
                                 srcset="img/pizza-a-la-piedra-mobile.webp">
                         <source media="(max-width: 575.98px)"
@@ -317,8 +317,8 @@
         <article>
             <figure>
             <div class="row">
-                <div class="col-12 col-sm-12 col-lg-6 d-flex justify-content-center">
-                    <picture>
+                <div class="col-12 col-sm-12 col-lg-6">
+                    <picture class="d-flex justify-content-center justify-content-lg-start">
                         <source media="(max-width: 575.98px)"
                                 srcset="img/ingredientes-frescos-mobile.webp">
                         <source media="(max-width: 575.98px)"

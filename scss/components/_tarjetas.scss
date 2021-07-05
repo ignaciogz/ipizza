@@ -7,10 +7,9 @@
     margin: 0 auto;
     padding: 0;
     padding-bottom: 0.8rem;
-    width: 245px;
+    width: 225px;
 
     button {
-        display: block;
         margin: 0.6rem auto 0;
     }
 
@@ -32,12 +31,6 @@
     }    
 }
 
-@include media-breakpoint-between(md, lg) {
-    .tarjeta-de-producto {
-        width: 225px;
-    }
-}
-
 @include media-breakpoint-between(sm, lg) {
     .tarjeta-de-producto {
         button {
@@ -46,12 +39,6 @@
             position: static;
             width: initial;
         }
-    }
-}
-
-@include media-breakpoint-between(lg, xl) {
-    .tarjeta-de-producto {
-        width: 225px;
     }
 }
 

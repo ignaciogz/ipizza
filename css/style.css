@@ -15,8 +15,8 @@
   /* Responsive */
   --altura-menu-fijo-mobile: 67px;
   --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
-  --padding-horizontal-mobile: 0.5rem;
-  --padding-vertical-mobile: 1.5rem;
+  --padding-horizontal-mobile: 0rem;
+  --padding-vertical-mobile: 2.2rem;
   /* Colores del sitio */
   --color-blanco: #F8F9F1;
   --color-gris: #212121;
@@ -50,10 +50,10 @@ body {
   padding-top: var(--altura-menu-fijo);
 }
 
-.desarrollador {
-  display: inline;
+small .desarrollador {
   font-family: var(--font-family-copyright);
   font-size: 1rem;
+  margin-left: 0.3rem;
 }
 
 em {
@@ -93,6 +93,7 @@ i {
 }
 
 section {
+  padding: var(--padding-vertical) var(--padding-horizontal);
   position: relative;
 }
 
@@ -302,7 +303,7 @@ section.video-marketing .frase-publicitaria p {
 
 section.menu-de-pizzas {
   background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
-  padding: var(--padding-vertical) calc(var(--padding-horizontal)/2);
+  padding: var(--padding-vertical) calc(var(--padding-horizontal)/4);
 }
 section.menu-de-pizzas .maestro-pizzero {
   content: "";
@@ -314,21 +315,18 @@ section.menu-de-pizzas .maestro-pizzero {
   right: 0;
   background-repeat: no-repeat;
 }
-section.menu-de-pizzas #carousel-productos {
-  height: 400px;
-}
 
 section.nuestra-calidad {
-  padding: var(--padding-vertical) var(--padding-horizontal);
+  padding: var(--padding-vertical) 0;
 }
 section.nuestra-calidad article {
   filter: grayscale(1);
-  padding: 0 var(--padding-horizontal);
+  padding: 0 calc(var(--padding-horizontal)*2);
   position: relative;
   transition: 1s;
 }
 section.nuestra-calidad article:last-child {
-  padding-top: var(--padding-vertical);
+  margin-top: var(--padding-vertical);
 }
 section.nuestra-calidad article:hover {
   filter: grayscale(0);
@@ -351,14 +349,11 @@ section.nuestra-calidad::before {
 section.nuestra-calidad figure img {
   border-radius: var(--borde-general);
   height: 100%;
-  width: 100%;
-}
-section.nuestra-calidad figure figcaption {
-  width: 100%;
+  width: 90%;
 }
 section.nuestra-calidad figure figcaption p {
-  line-height: 40px;
-  word-spacing: 4px;
+  line-height: 2rem;
+  word-spacing: 0.2rem;
 }
 
 section.opiniones {
@@ -409,7 +404,10 @@ section.opiniones article header {
   font-weight: bold;
   text-align: center;
 }
-section.opiniones article header h4::before {
+section.opiniones article header h2 {
+  font-size: 1rem;
+}
+section.opiniones article header h2::before {
   content: "Escrito por: ";
   font-weight: normal;
 }
@@ -466,12 +464,14 @@ section.opiniones article header h4::before {
   }
 
   section.menu-de-pizzas {
-    padding: var(--padding-vertical) 0.5rem;
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
 
-  section.nuestra-calidad article,
-section.nuestra-calidad article:hover {
-    filter: unset;
+  section.nuestra-calidad article {
+    padding: 0 calc(var(--padding-horizontal)/2);
+  }
+  section.nuestra-calidad article:last-child {
+    margin-top: var(--padding-vertical-mobile);
   }
   .no-webp section.nuestra-calidad::before {
     background: url(../img/background/bg-nuestra-calidad-mobile.jpg) top/cover;
@@ -481,16 +481,12 @@ section.nuestra-calidad article:hover {
   }
 
   section.nuestra-calidad figure figcaption {
-    width: 100%;
     text-align: center;
   }
   section.nuestra-calidad figure figcaption p {
     font-size: 0.8rem;
   }
 
-  section.opiniones {
-    padding: var(--padding-vertical) 0;
-  }
   .no-webp section.opiniones {
     background: url(../img/background/bg-opiniones-mobile.jpg) center/cover;
   }
@@ -524,19 +520,23 @@ section.nuestra-calidad article:hover {
   section.video-marketing .frase-publicitaria h2 {
     font-size: 1.2rem;
   }
-
+}
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
   section.nuestra-calidad article,
 section.nuestra-calidad article:hover {
     filter: unset;
   }
 
-  section.opiniones {
-    padding: var(--padding-vertical) 0;
+  section.nuestra-calidad figure img {
+    width: 100%;
   }
-}
-@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  section.nuestra-calidad figure figcaption {
+    margin-top: 1rem;
+  }
+
   section.opiniones {
     height: 600px;
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
 }
 @media only screen and (min-width: 0) and (max-width: 767.98px) {
@@ -547,6 +547,18 @@ section.nuestra-calidad article:hover {
 @media only screen and (min-width: 1400px) {
   section.menu-de-pizzas h1 {
     font-size: 3.5rem;
+  }
+
+  section.nuestra-calidad article {
+    padding: 0 calc(var(--padding-horizontal)*3);
+  }
+
+  section.nuestra-calidad figure img {
+    width: 85%;
+  }
+
+  section.opiniones {
+    padding: var(--padding-vertical) calc(var(--padding-horizontal)*2);
   }
 }
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .contenedor, section.opiniones article {
@@ -1020,6 +1032,10 @@ section.detalle-de-pedido .precio-total {
 .footer small {
   margin-top: 1.5rem;
 }
+.footer small .desarrollador {
+  display: inline;
+  font-size: 1rem;
+}
 
 @media only screen and (max-width: 575.98px) {
   .footer {
@@ -1033,6 +1049,16 @@ section.detalle-de-pedido .precio-total {
   }
   .footer i {
     font-size: 1.8rem;
+  }
+
+  .footer .nuestras-apps img {
+    height: 58px;
+    width: 198px;
+  }
+
+  .footer .iconos-formas-de-pago img {
+    height: 50px;
+    width: 57px;
   }
 
   .footer .redes-sociales a {
@@ -1148,9 +1174,6 @@ section.menu-mobile-container .offcanvas-header h2 {
 section.menu-mobile-container .offcanvas-body {
   height: 80%;
 }
-section.menu-mobile-container small {
-  font-size: 0.8rem;
-}
 
 nav.menu-mobile ul {
   margin: 0;
@@ -1205,10 +1228,9 @@ nav.menu-mobile a:hover::before {
   margin: 0 auto;
   padding: 0;
   padding-bottom: 0.8rem;
-  width: 245px;
+  width: 225px;
 }
 .tarjeta-de-producto button {
-  display: block;
   margin: 0.6rem auto 0;
 }
 .tarjeta-de-producto figure img {
@@ -1221,22 +1243,12 @@ nav.menu-mobile a:hover::before {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  .tarjeta-de-producto {
-    width: 225px;
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   .tarjeta-de-producto button {
     font-size: 1.2rem;
     height: initial;
     position: static;
     width: initial;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .tarjeta-de-producto {
-    width: 225px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -1328,13 +1340,13 @@ button {
 }
 
 .btn-armala {
-  background-color: var(--color-queso) !important;
+  background-color: var(--color-queso);
   cursor: url("../img/mmm.png"), auto !important;
   font-family: var(--font-family-ipizza);
-  transition: 1s !important;
+  transition: 1s;
 }
 .btn-armala:hover {
-  background-color: var(--color-gris) !important;
+  background-color: var(--color-gris);
   border-color: var(--color-queso);
   color: var(--color-blanco);
 }
@@ -1417,7 +1429,6 @@ button {
     height: 4rem;
     position: fixed;
     bottom: 2vh;
-    left: 2vw;
     width: 96vw;
   }
 
@@ -1426,12 +1437,8 @@ button {
   }
 }
 @media only screen and (max-width: 575.98px) {
-  .btn-armala {
-    display: none;
-  }
-
   .btn-ver-todas {
-    width: 75%;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -1698,6 +1705,10 @@ html, body {
   section.nuestra-calidad article,
 section.nuestra-calidad article:hover {
     filter: unset;
+  }
+
+  section.nuestra-calidad article {
+    padding: 0 var(--padding-horizontal);
   }
 
   section.opiniones {

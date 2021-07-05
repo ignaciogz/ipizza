@@ -30,29 +30,25 @@ section.video-marketing {
 
 section.menu-de-pizzas {
     background: map-get($gradientes, UIg-Zinc);
-    padding: var(--padding-vertical) calc(var(--padding-horizontal)/2);
+    padding: var(--padding-vertical) calc(var(--padding-horizontal)/4);
 
     .maestro-pizzero {
         @include background-full(url(../img/background/bg-maestro-pizzero.svg), -39% 75%, 50% 110%);
         background-repeat: no-repeat;
     }
-
-    #carousel-productos {
-        height: 400px;
-    }
 } 
 
 section.nuestra-calidad {
-    padding: var(--padding-vertical) var(--padding-horizontal);
+    padding: var(--padding-vertical) 0;
 
     article {
         filter: grayscale(1);
-        padding: 0 var(--padding-horizontal);
+        padding: 0 calc(var(--padding-horizontal)*2);
         position: relative;
         transition: 1s;
 
         &:last-child {
-            padding-top: var(--padding-vertical);
+            margin-top: var(--padding-vertical);
         }
 
         &:hover {
@@ -75,15 +71,13 @@ section.nuestra-calidad figure {
     img {
         border-radius: var(--borde-general);
         height: 100%;
-        width: 100%;
+        width: 90%;
     }
 
     figcaption {
-        width: 100%;
-
         p {
-            line-height: 40px;
-            word-spacing: 4px;
+            line-height: 2rem;
+            word-spacing: 0.2rem;
         }
     }
 }
@@ -143,9 +137,13 @@ section.opiniones article {
         font-weight: bold;
         text-align: center;
 
-        h4::before {
-            content: 'Escrito por: ';
-            font-weight: normal;
+        h2 {
+            font-size: 1rem;
+            
+            &::before {
+                content: 'Escrito por: ';
+                font-weight: normal;
+            }
         }
     }
 }
@@ -219,14 +217,17 @@ section.opiniones article {
     }
     
     section.menu-de-pizzas{
-        padding: var(--padding-vertical) 0.5rem;
+        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
     }
 
     section.nuestra-calidad {
-        article,
-        article:hover {
-            filter: unset;
-        }
+        article {
+            padding: 0 calc(var(--padding-horizontal)/2);
+    
+            &:last-child {
+                margin-top: var(--padding-vertical-mobile);
+            }
+        } 
 
         .no-webp &::before {
             @include background(url(../img/background/bg-nuestra-calidad-mobile.jpg), top);
@@ -239,7 +240,6 @@ section.opiniones article {
     
     section.nuestra-calidad figure {
         figcaption {
-            width: 100%;
             text-align: center;
 
             p {
@@ -249,8 +249,6 @@ section.opiniones article {
     }
     
     section.opiniones {
-        padding: var(--padding-vertical) 0;
-
         .no-webp & {
             @include background(url(../img/background/bg-opiniones-mobile.jpg));
         }
@@ -296,22 +294,29 @@ section.opiniones article {
             }
         }
     }
+}
 
+@include media-breakpoint-between(xs, lg) {
     section.nuestra-calidad {
         article,
         article:hover {
             filter: unset;
          }
     }
-    
-    section.opiniones {
-        padding: var(--padding-vertical) 0;
-    }
-}
 
-@include media-breakpoint-between(xs, lg) {
+    section.nuestra-calidad figure {
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            margin-top: 1rem;
+        }
+    }
+
     section.opiniones {
         height: 600px;
+        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
     }
 }
 
@@ -326,5 +331,21 @@ section.opiniones article {
         h1 {
             font-size: 3.5rem;
         }
-    } 
+    }
+
+    section.nuestra-calidad {
+        article {
+            padding: 0 calc(var(--padding-horizontal)*3);
+        }
+    }
+
+    section.nuestra-calidad figure {
+        img {
+            width: 85%;
+        }
+    }
+
+    section.opiniones {
+        padding: var(--padding-vertical) calc(var(--padding-horizontal)*2);
+    }
 }
