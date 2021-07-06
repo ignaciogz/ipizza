@@ -17,7 +17,7 @@
 }
 
 @include media-breakpoint-only(xs) {
-    html, body {
+    html, body { /* Obtenido del Ryki Jaco y Filabe */
         overflow-x: hidden;
     }
 }
