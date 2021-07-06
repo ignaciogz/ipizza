@@ -36,11 +36,14 @@ a {
   text-decoration: none;
   width: fit-content;
 }
-a:visited {
-  color: var(--color-rojo-intenso);
-}
 a:active {
   color: var(--color-tomate);
+}
+a:hover {
+  color: var(--color-blanco);
+}
+a:visited {
+  color: var(--color-rojo-intenso);
 }
 
 body {
@@ -99,7 +102,7 @@ section {
 
 small {
   display: block;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 
@@ -107,6 +110,9 @@ strong {
   color: var(--color-queso);
   font-family: var(--font-family-ipizza);
   font-size: 0.9rem;
+}
+strong:hover {
+  color: var(--color-blanco);
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -125,6 +131,10 @@ strong {
 
   section {
     padding: var(--padding-vertical-mobile) var(--padding-horizontal);
+  }
+
+  small {
+    font-size: 0.7rem;
   }
 }
 /* -------- HEADER -------- */
@@ -349,11 +359,11 @@ section.nuestra-calidad::before {
 
 section.nuestra-calidad figure img {
   border-radius: var(--borde-general);
-  height: 100%;
   width: 90%;
 }
 section.nuestra-calidad figure figcaption p {
   line-height: 2rem;
+  margin-bottom: 0;
   word-spacing: 0.2rem;
 }
 
@@ -536,7 +546,6 @@ section.nuestra-calidad article:hover {
   }
 
   section.opiniones {
-    height: 600px;
     padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
 }
@@ -676,7 +685,7 @@ section.faq .desplegable details ul {
   }
 }
 /* -------- nosotros.html -------- */
-section.historia article {
+section.historia {
   padding: var(--padding-vertical) var(--padding-horizontal);
 }
 section.historia::before {
@@ -699,18 +708,25 @@ section.historia figure {
 }
 section.historia figure img {
   border: 0.5rem outset var(--color-gris);
-  height: 375px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
   transform: rotate(-5deg);
-  width: 563px;
+  width: 90%;
 }
 section.historia figure figcaption {
   width: 100%;
 }
 section.historia figure figcaption h1 {
   color: var(--color-queso);
+  text-align: center;
 }
 section.historia figure figcaption p {
   text-align: justify;
+}
+section.historia figure figcaption small {
+  font-style: italic;
+  text-align: right;
 }
 
 section.galeria {
@@ -722,28 +738,16 @@ section.galeria img {
   width: 100%;
 }
 
-@media only screen and (max-width: 767.98px) {
-  section.historia {
-    height: auto;
-  }
-  section.historia article {
-    padding: 0;
-  }
-
-  section.historia figure {
-    height: auto;
-  }
-
-  section.galeria img {
-    height: 30vh;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.historia::before {
     background: url(../img/background/bg-nosotros-tablet.jpg) center/cover;
   }
   .webp section.historia::before {
     background: url(../img/background/bg-nosotros-tablet.webp) center/cover;
+  }
+
+  section.historia figure figcaption {
+    margin-top: 2.5rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
@@ -755,8 +759,8 @@ section.galeria img {
   }
 }
 @media only screen and (max-width: 575.98px) {
-  section.historia article {
-    padding: 0;
+  section.historia {
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
   .no-webp section.historia::before {
     background: url(../img/background/bg-nosotros-mobile.jpg) center/cover;
@@ -765,11 +769,16 @@ section.galeria img {
     background: url(../img/background/bg-nosotros-mobile.webp) center/cover;
   }
 
-  section.historia figure img {
-    width: 90%;
-  }
   section.historia figure figcaption {
     margin-top: 2rem;
+  }
+  section.historia figure figcaption p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  section.galeria img {
+    height: 30vh;
   }
 }
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.opiniones article, section.consulta-pedido .contenedor {
@@ -1042,13 +1051,6 @@ section.detalle-de-pedido .precio-total {
   margin: 0;
 }
 
-.footer .otros-links a:hover {
-  color: var(--color-blanco);
-}
-.footer .otros-links:active, .footer .otros-links:visited {
-  color: var(--color-tomate);
-}
-
 .footer .redes-sociales {
   margin-top: 0.5rem;
 }
@@ -1100,10 +1102,6 @@ section.detalle-de-pedido .precio-total {
   .footer .redes-sociales a {
     margin-left: 0.5rem;
     margin-right: 0;
-  }
-
-  .footer small {
-    font-size: 0.4rem;
   }
 }
 /* -------- FLEX Footer -------- */
@@ -1317,15 +1315,11 @@ nav.menu-mobile a:hover::before {
   text-shadow: -2px -2px 4px var(--color-gris);
 }
 
-/* @include media-breakpoint-only(xs) {
-    #carousel-opiniones {
-        .btn-carousel-anterior,
-        .btn-carousel-siguiente {
-            visibility: hidden;
-            z-index: 1;
-        }
-    }
-} */
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  #carousel-opiniones {
+    height: 500px;
+  }
+}
 /* -------- BOTONES -------- */
 button {
   display: block;

@@ -31,12 +31,8 @@
     text-shadow: -2px -2px 4px var(--color-gris);
 }
 
-/* @include media-breakpoint-only(xs) {
+@include media-breakpoint-between(xs, lg) {
     #carousel-opiniones {
-        .btn-carousel-anterior,
-        .btn-carousel-siguiente {
-            visibility: hidden;
-            z-index: 1;
-        }
+        height: 500px;
     }
-} */
+}

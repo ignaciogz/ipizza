@@ -70,13 +70,13 @@ section.nuestra-calidad {
 section.nuestra-calidad figure {
     img {
         border-radius: var(--borde-general);
-        height: 100%;
         width: 90%;
     }
 
     figcaption {
         p {
             line-height: 2rem;
+            margin-bottom: 0;
             word-spacing: 0.2rem;
         }
     }
@@ -315,7 +315,6 @@ section.opiniones article {
     }
 
     section.opiniones {
-        height: 600px;
         padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
     }
 }

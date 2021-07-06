@@ -5,12 +5,16 @@ a {
     text-decoration: none;
     width: fit-content;
     
-    &:visited {
-        color: var(--color-rojo-intenso);
-    }
-    
     &:active {
         color: var(--color-tomate);
+    }
+
+    &:hover {
+        color: var(--color-blanco);
+    }
+
+    &:visited {
+        color: var(--color-rojo-intenso);
     }
 }
 
@@ -70,7 +74,7 @@ section {
 
 small {
     display: block;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -78,6 +82,10 @@ strong {
     color: var(--color-queso);
     font-family: var(--font-family-ipizza);
     font-size: 0.9rem;
+
+    &:hover {
+        color: var(--color-blanco);
+    }
 }
 
 @include media-breakpoint-down(md) {
@@ -97,5 +105,9 @@ strong {
 
     section {
         padding: var(--padding-vertical-mobile) var(--padding-horizontal);
-    } 
+    }
+
+    small {
+        font-size: 0.7rem;
+    }
 }

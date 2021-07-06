@@ -54,16 +54,6 @@
     }
 }
 
-.footer .otros-links {
-    a:hover {
-        color: var(--color-blanco);
-    }
-    &:active,
-    &:visited {
-        color: var(--color-tomate);
-    }
-}
-
 .footer .redes-sociales {
     margin-top: 0.5rem;
     a {
@@ -126,9 +116,5 @@
             margin-left: 0.5rem;
             margin-right: 0;
         }
-    }
-
-    .footer small {
-        font-size: 0.4rem;
     }
 }
