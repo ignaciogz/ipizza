@@ -134,6 +134,7 @@ strong {
   height: var(--altura-menu-fijo);
   padding: 0 var(--padding-horizontal);
   user-select: none;
+  width: 100vw;
 }
 
 .logotipo-y-menu-container {
@@ -151,7 +152,7 @@ strong {
 }
 /* -------- LOGOTIPO -------- */
 .logotipo {
-  color: var(--color-blanco);
+  color: var(--color-blanco) !important;
   font-family: "Finger Paint", cursive;
   font-size: 2.2rem;
   height: inherit;
@@ -1669,11 +1670,6 @@ html {
 }
 
 /* -------- CSS Tricks -------- */
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .wrap-animation {
   overflow: hidden;
 }
