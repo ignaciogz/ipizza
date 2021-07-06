@@ -15,7 +15,7 @@
   /* Responsive */
   --altura-menu-fijo-mobile: 67px;
   --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
-  --padding-horizontal-mobile: 0rem;
+  --padding-horizontal-mobile: 0.5rem;
   --padding-vertical-mobile: 2.2rem;
   /* Colores del sitio */
   --color-blanco: #F8F9F1;
@@ -783,12 +783,16 @@ section.galeria img {
 /* -------- contacto.html -------- */
 section.contacto {
   background: linear-gradient(to bottom, var(--color-queso), var(--color-gris));
+  padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
 section.contacto iframe {
   border: 0;
+  display: block;
+  height: 455px;
+  margin: 0 auto;
   transition: 1s;
-  width: 90%;
+  width: 95%;
 }
 section.contacto iframe:hover {
   transition: 1s;
@@ -798,8 +802,15 @@ section.contacto form#contacto-form {
   background-color: var(--color-gris);
   border-radius: 25px;
   padding: 1rem;
+  margin: 0 auto;
   transition: 1s;
-  width: 90%;
+  width: 95%;
+}
+section.contacto form#contacto-form label {
+  margin-top: 1rem;
+}
+section.contacto form#contacto-form label:first-child {
+  margin-top: 0;
 }
 section.contacto form#contacto-form h1 {
   color: inherit;
@@ -814,13 +825,37 @@ section.contacto form#contacto-form .campo-obligatorio::after {
   color: var(--color-queso);
   margin-left: 0.3rem;
 }
+section.contacto form#contacto-form .terminos-y-condiciones {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
 section.contacto form#contacto-form:hover {
   transition: 1s;
 }
 
+@media only screen and (max-width: 575.98px) {
+  section.contacto {
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+  }
+}
 @media only screen and (max-width: 767.98px) {
   section.contacto form#contacto-form {
     width: 95%;
+  }
+  section.contacto form#contacto-form .terminos-y-condiciones {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section.contacto iframe {
+    height: 570px;
+  }
+
+  section.contacto form#contacto-form textarea {
+    height: 168px;
+  }
+  section.contacto form#contacto-form label {
+    margin-top: 1.5rem;
   }
 }
 /* -------- armala.html --------*/
@@ -1096,11 +1131,6 @@ section.detalle-de-pedido .precio-total {
 }
 .consulta-pedido form.d-flex {
   row-gap: 0.5rem;
-}
-
-/* -------- FLEX contacto.html --------*/
-.contacto form.d-flex {
-  row-gap: 0.6rem;
 }
 
 /* -------- FLEX armala.html --------*/
@@ -1473,6 +1503,7 @@ form select:hover {
 }
 form textarea {
   border: 2px solid var(--color-queso);
+  margin-top: 8px;
 }
 form input[type=checkbox] {
   width: initial;
@@ -1505,7 +1536,8 @@ input[type=submit] {
   font-family: "Finger Paint", cursive;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 0.5vh 1vw;
+  /* padding: 0.5vh 1vw; */
+  margin-top: 1rem;
   text-transform: uppercase;
   user-select: none;
   cursor: pointer;
@@ -1688,6 +1720,7 @@ html {
 
 @media only screen and (max-width: 575.98px) {
   html, body {
+    /* Obtenido del Ryki Jaco y Filabe */
     overflow-x: hidden;
   }
 }

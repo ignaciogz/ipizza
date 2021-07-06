@@ -27,6 +27,7 @@ form {
 
     textarea {
         border: 2px solid var(--color-queso);
+        margin-top: 8px;
     }
     
     input[type=checkbox] {
@@ -65,7 +66,8 @@ input[type=submit] {
     font-family: 'Finger Paint', cursive;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.5vh 1vw;
+    /* padding: 0.5vh 1vw; */
+    margin-top: 1rem;
     text-transform: uppercase;
     user-select: none;
     cursor: pointer;

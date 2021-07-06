@@ -5,13 +5,17 @@
 /* -------- contacto.html -------- */
 section.contacto {
     background: map-get($gradientes, g-ipizza);
+    padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
 section.contacto iframe {
     @extend %sombra-contenedor;
     border: 0;
+    display: block;
+    height: 455px;
+    margin: 0 auto;
     transition: 1s;
-    width: 90%;
+    width: 95%;
 
     &:hover {
         @extend %sombra-contenedor-hover;
@@ -24,8 +28,17 @@ section.contacto form#contacto-form {
     background-color: var(--color-gris);
     border-radius: 25px;
     padding: 1rem;
+    margin: 0 auto;
     transition: 1s;
-    width: 90%;
+    width: 95%;
+
+    label {
+        margin-top: 1rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 
     h1 {
         color: inherit;
@@ -42,14 +55,45 @@ section.contacto form#contacto-form {
         margin-left: 0.3rem;
     }
 
+    .terminos-y-condiciones {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+
     &:hover {
         @extend %sombra-contenedor-hover;
         transition: 1s;
     }
 }
 
+@include media-breakpoint-only(xs) {
+    section.contacto {
+        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+    }
+}
+
 @include media-breakpoint-down(md) {
     section.contacto form#contacto-form {
         width: 95%;
+
+        .terminos-y-condiciones {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    section.contacto iframe {
+        height: 570px;
+    }
+
+    section.contacto form#contacto-form {
+        textarea {
+            height: 168px;
+        }
+
+        label {
+            margin-top: 1.5rem;
+        }
     }
 }

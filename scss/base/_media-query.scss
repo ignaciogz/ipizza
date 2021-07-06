@@ -1,7 +1,7 @@
 @import 'config';
 @import 'functions';
 
-// Creo lista auxiliar de claves para saber: El primer, el siguiente (si es necesario) y el ultimo media.
+// Creo lista auxiliar de claves para saber: El cero absoluto, el 1er breakpoint y el ultimo.
 $lista-mq-breakpoints:  map-keys($mq-breakpoints);
 
 // Obtengo la clave del cero absoluto

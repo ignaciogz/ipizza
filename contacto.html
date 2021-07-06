@@ -131,30 +131,30 @@
 
     <!-- Contacto -->
     <section class="contacto container-fluid h-visible wrap-animation">
-        <div class="row h-100">
-            <!-- INICIO mapa -->
-            <div class="d-none d-lg-block col-lg-6 h-100">
-                <iframe class="d-block mx-auto fadeInDown h-100" title="Ubicación de nuestra casa central en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.0039517383042!2d-58.3822621707935!3d-34.6037617987787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbd38273f76b%3A0x661f15386bdd4e0c!2sPrivados!5e0!3m2!1ses-419!2sar!4v1620594259369!5m2!1ses-419!2sar" allowfullscreen="" loading="eager"></iframe>
+        <div class="row h-100 align-items-center">
+            <!-- INICIO Mapa -->
+            <div class="d-none d-lg-block col-lg-6">
+                <iframe class="fadeInDown" title="Ubicación de nuestra casa central en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.0039517383042!2d-58.3822621707935!3d-34.6037617987787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbd38273f76b%3A0x661f15386bdd4e0c!2sPrivados!5e0!3m2!1ses-419!2sar!4v1620594259369!5m2!1ses-419!2sar" allowfullscreen="" loading="eager"></iframe>
             </div>
-            <!-- FIN mapa -->
+            <!-- FIN Mapa -->
 
             <!-- INICIO Formulario de contacto -->
-            <div class="col-12 col-sm-12 col-lg-6 d-flex justify-content-center h-100">
-                <form id="contacto-form" class="d-flex flex-column fadeInDown h-100" action="#" method="get" name="contacto">
+            <div class="col-12 col-sm-12 col-lg-6">
+                <form id="contacto-form" class="d-flex flex-column fadeInDown" action="#" method="get" name="contacto">
                     <label class="campo-obligatorio" for="contacto-email">Correo electrónico</label>
                     <input type="email" id="contacto-email" name="email" placeholder="nombre@dominio.com" autofocus required>
-
+                    
                     <label for="contacto-numero-pedido">Número de pedido</label>
                     <input type="number" id="contacto-numero-pedido" name="numero-pedido" placeholder="2107250001">
-
+                    
                     <label class="campo-obligatorio" for="contacto-consulta"><h1>Consulta</h1></label>
-                    <textarea name="consulta" id="contacto-consulta" rows="5" placeholder="Escriba aquí su consulta..." spellcheck="true" minlength="1" maxlength="1500" required></textarea>
-
+                    <textarea name="consulta" id="contacto-consulta" placeholder="Escriba aquí su consulta..." spellcheck="true" minlength="1" maxlength="1500" required></textarea>
+                    
                     <div class="check-personalizado">
                         <input type="checkbox" id="contacto-politicas" name="contacto-politicas" required>
-                        <label class="campo-obligatorio" for="contacto-politicas">Acepto condiciones de privacidad</label>
+                        <label class="campo-obligatorio terminos-y-condiciones" for="contacto-politicas">Acepto condiciones de privacidad</label>
                     </div>
-
+                    
                     <input type="submit" value="Enviar">
                 </form>
             </div>
