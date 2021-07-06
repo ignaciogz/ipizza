@@ -1710,6 +1710,11 @@ html {
   height: var(--altura-visible);
 }
 
+.row-v-align {
+  align-items: center;
+  height: 100%;
+}
+
 :target::before {
   /* Solucion a exceso de desplazamiento de links internos por menu fijo */
   content: "";
