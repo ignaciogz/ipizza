@@ -3,6 +3,8 @@
 
 /* -------- armala.html --------*/
 section.armala {
+    padding: var(--padding-vertical) var(--padding-horizontal);
+
     h1 {
         color: var(--color-blanco);
         text-align: center;
@@ -14,6 +16,7 @@ section.armala {
 
     &::before {
         @include background-full(url(../img/background/bg-armala.svg));
+        background-attachment: fixed;
         filter: brightness(0.3);
     }
 }
@@ -33,7 +36,6 @@ section.armado-de-pedido {
     
     .tarjeta-de-producto {
         height: 350px;
-        user-select: none;
 
         .datos-tarjeta-de-producto {
             height: 95px
@@ -58,6 +60,7 @@ section.armado-de-pedido {
     }
 }
 
+/* INICIO Estilos del FORMULARIO de armado de pedido */
 section.armado-de-pedido form#armala-form {
     h2 {
         color: var(--color-queso);
@@ -76,6 +79,12 @@ section.armado-de-pedido form#armala-form {
         margin-top: 1rem;
     }
 }
+/* FIN Estilos del FORMULARIO de armado de pedido */
+
+section.pegable-container {
+    position: sticky;
+        top: calc(var(--padding-vertical) / 4 + var(--altura-menu-fijo));
+}
 
 section.detalle-de-pedido {
     background-color: var(--color-queso);
@@ -83,11 +92,29 @@ section.detalle-de-pedido {
     color: var(--color-gris);
     font-size: 0.8rem;
     font-weight: bold;
-    position: sticky;
-        top: calc(var(--padding-vertical) / 4 + var(--altura-menu-fijo));
+
+    .canvas-container {
+        background: var(--color-gris); 
+        border-radius: var(--borde-general);
+        height: 180px;
+        margin: 0 auto;
+        width: 180px; 
+    }
     
     section {
         padding: 0;
+
+        &.detalle-ipizza {
+            h2 {
+                text-align: center;
+            }
+        }
+
+        &.detalle-extras,
+        &.detalle-cono,
+        &.detalle-envio {
+            border-top: 2px solid var(--color-gris);
+        }
     }
 
     ul {
@@ -100,12 +127,6 @@ section.detalle-de-pedido {
         }
     }
 
-    .detalle-extras,
-    .detalle-cono,
-    .detalle-envio {
-        border-top: 2px solid var(--color-gris);
-    }
-
     .precio::before {
         content: '$';
         margin-right: 1px;
@@ -116,20 +137,11 @@ section.detalle-de-pedido {
         font-family: 'Finger Paint', cursive;
         font-size: 2rem;
         text-align: center;
-        user-select: none;
     }
 }
 
 @include media-breakpoint-only(xs) {
     section.armala {
-        padding: var(--padding-vertical) 0;
+        padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
     }
-}
-
-.container-canvas {
-    background: var(--color-gris); 
-    border-radius: var(--borde-general);
-    height: 180px;
-    margin: 0 auto;
-    width: 180px; 
 }

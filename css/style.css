@@ -877,6 +877,9 @@ section.contacto form#contacto-form:hover {
   }
 }
 /* -------- armala.html --------*/
+section.armala {
+  padding: var(--padding-vertical) var(--padding-horizontal);
+}
 section.armala h1 {
   color: var(--color-blanco);
   text-align: center;
@@ -893,6 +896,7 @@ section.armala::before {
   bottom: 0;
   left: 0;
   right: 0;
+  background-attachment: fixed;
   filter: brightness(0.3);
 }
 
@@ -911,7 +915,6 @@ section.armado-de-pedido {
 }
 #armala-carousel-productos .tarjeta-de-producto {
   height: 350px;
-  user-select: none;
 }
 #armala-carousel-productos .tarjeta-de-producto .datos-tarjeta-de-producto {
   height: 95px;
@@ -931,6 +934,7 @@ section.armado-de-pedido {
   margin: 0 0.1rem;
 }
 
+/* INICIO Estilos del FORMULARIO de armado de pedido */
 section.armado-de-pedido form#armala-form h2 {
   color: var(--color-queso);
 }
@@ -945,17 +949,34 @@ section.armado-de-pedido form#armala-form > div {
   margin-top: 1rem;
 }
 
+/* FIN Estilos del FORMULARIO de armado de pedido */
+section.pegable-container {
+  position: sticky;
+  top: calc(var(--padding-vertical) / 4 + var(--altura-menu-fijo));
+}
+
 section.detalle-de-pedido {
   background-color: var(--color-queso);
   border-radius: var(--borde-general);
   color: var(--color-gris);
   font-size: 0.8rem;
   font-weight: bold;
-  position: sticky;
-  top: calc(var(--padding-vertical) / 4 + var(--altura-menu-fijo));
+}
+section.detalle-de-pedido .canvas-container {
+  background: var(--color-gris);
+  border-radius: var(--borde-general);
+  height: 180px;
+  margin: 0 auto;
+  width: 180px;
 }
 section.detalle-de-pedido section {
   padding: 0;
+}
+section.detalle-de-pedido section.detalle-ipizza h2 {
+  text-align: center;
+}
+section.detalle-de-pedido section.detalle-extras, section.detalle-de-pedido section.detalle-cono, section.detalle-de-pedido section.detalle-envio {
+  border-top: 2px solid var(--color-gris);
 }
 section.detalle-de-pedido ul {
   margin: 0;
@@ -964,11 +985,6 @@ section.detalle-de-pedido ul {
 }
 section.detalle-de-pedido ul li {
   font-style: italic;
-}
-section.detalle-de-pedido .detalle-extras,
-section.detalle-de-pedido .detalle-cono,
-section.detalle-de-pedido .detalle-envio {
-  border-top: 2px solid var(--color-gris);
 }
 section.detalle-de-pedido .precio::before {
   content: "$";
@@ -979,22 +995,13 @@ section.detalle-de-pedido .precio-total {
   font-family: "Finger Paint", cursive;
   font-size: 2rem;
   text-align: center;
-  user-select: none;
 }
 
 @media only screen and (max-width: 575.98px) {
   section.armala {
-    padding: var(--padding-vertical) 0;
+    padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
   }
 }
-.container-canvas {
-  background: var(--color-gris);
-  border-radius: var(--borde-general);
-  height: 180px;
-  margin: 0 auto;
-  width: 180px;
-}
-
 .error {
   background: linear-gradient(to top, #000000, #e74c3c);
   height: var(--altura-completa);
@@ -1143,6 +1150,11 @@ section.consulta-pedido .consulta-pedido-container {
 }
 #armala-form fieldset.d-flex {
   row-gap: 0.6rem;
+}
+
+/* -------- GRID Footer -------- */
+.footer .row {
+  row-gap: 1.5rem;
 }
 
 /* -------- GRID nosotros.html --------*/
@@ -1422,6 +1434,8 @@ button {
 
 .btn-pagar {
   border-color: var(--color-blanco);
+  margin: 0 auto;
+  width: 75%;
 }
 .btn-pagar:hover {
   border-color: var(--color-blanco);

@@ -14,7 +14,7 @@ const canvasPizza = (function () {
     const SALSA_COLOR = '#7A0B00';
     const VACIO_COLOR = '#212121';
 
-    const CANVAS = document.getElementById('canvas');
+    const CANVAS = document.getElementById('canvas-pizza');
     const contexto = CANVAS.getContext('2d');
 
     const UBICACION_EN_CANVAS = {

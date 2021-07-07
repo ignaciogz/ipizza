@@ -132,13 +132,13 @@
 
     <!-- Armala -->
     <section class="armala container-fluid ">
-        <div class="row m-0">
+        <div class="row">
             <!-- INICIO Armado del pedido -->
             <div class="col-12 col-sm-12 col-lg-8">
                 <section class="armado-de-pedido">
                     <h1>iPizza seleccionada</h1>
 
-                    <!-- INICIO carousel tarjetas de productos -->
+                    <!-- INICIO "Carousel" tarjetas de productos -->
                     <div id="armala-carousel-productos" class="carousel slide" data-bs-interval="false" data-bs-ride="false">
                         <div class="carousel-inner h-100 d-flex align-items-center">
                             <div class="carousel-item">
@@ -196,10 +196,11 @@
                             <span class="visually-hidden">Opinion posterior</span>
                         </button>
                     </div>
-                    <!-- FIN carousel tarjetas de productos -->
+                    <!-- FIN "Carousel" tarjetas de productos -->
 
+                    <!-- INICIO Formulario de armado de pedido -->
                     <form id="armala-form" class="d-flex flex-column" action="#" method="post" name="armala" autocomplete="off">
-                        <!-- Armado de la iPizza -->
+                        <!-- Seleccion de gustos -->
                         <fieldset class="gustos d-flex flex-column">
                             <h2>Gustos de las porciones</h2>
                             <select name="gusto1" data-ipizza-gusto-num=1 required>
@@ -234,7 +235,7 @@
                                 <option value="calabresa" >Calabresa</option>
                             </select>
                         </fieldset>
-                        <!-- FIN Armado de la iPizza -->
+                        <!-- FIN Seleccion de gustos -->
 
                         <!-- Extras -->
                         <fieldset class="extras d-flex flex-column">
@@ -337,14 +338,15 @@
                         </fieldset>
                         <!-- FIN Pago -->
                     </form>
+                    <!-- FIN Formulario de armado de pedido -->
                 </section>
             </div>
             <!-- FIN Armado del pedido -->
 
             <!-- INICIO Detalle del pedido -->
             <div class="col-12 col-sm-12 col-lg-4">
-                <section class="detalle-de-pedido">
-                    <div class="contenedor-pegable d-flex flex-column">
+                <section class="detalle-de-pedido pegable-container">
+                    <div class="d-flex flex-column">
                         <!-- Detalle  - iPizza -->
                         <section class="detalle-ipizza">
                             <!--<figure>  ****************** QUITAR si hay estilos en CSS ****************** 
@@ -352,10 +354,10 @@
                                 <figcaption class="text-center">i4-iPizza</figcaption>
                             </figure> -->
 
-                            <h2 class="text-center">Detalle del pedido</h2>
+                            <h2>Detalle del pedido</h2>
 
-                            <div class="container-canvas">
-                                <canvas id="canvas" width="180" height="180"></canvas>
+                            <div class="canvas-container">
+                                <canvas id="canvas-pizza" width="180" height="180"></canvas>
                             </div>
 
                             <ul class="detalle-porciones">
@@ -390,11 +392,11 @@
                             </ul>
                         </section>
 
-                        <section class="detalle-precio-total">
+                        <section>
                             <div class="precio precio-total">0</div>
                         </section>
 
-                        <input class="btn-pagar mx-auto w-75" type="submit" value="pagar" form="armala-form">
+                        <input class="btn-pagar" type="submit" value="pagar" form="armala-form">
                     </div>
                 </section>
             </div>
