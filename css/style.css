@@ -281,7 +281,7 @@ strong:hover {
     height: 87px;
   }
 }
-.tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .contenedor, section.opiniones article {
+.tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .consulta-pedido-container, section.opiniones article {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
@@ -571,7 +571,7 @@ section.nuestra-calidad article:hover {
     padding: var(--padding-vertical) calc(var(--padding-horizontal)*2);
   }
 }
-.tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .contenedor, section.opiniones article {
+.tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .consulta-pedido-container, section.opiniones article {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
@@ -580,6 +580,10 @@ section.nuestra-calidad article:hover {
 }
 
 /* -------- pedidos.html -------- */
+section.consulta-pedido {
+  padding: var(--padding-vertical) var(--padding-horizontal);
+  text-align: center;
+}
 section.consulta-pedido i {
   color: var(--color-gris);
   font-size: 1rem;
@@ -598,22 +602,18 @@ section.consulta-pedido::before {
   background: url(../img/background/bg-pedidos.jpg) bottom/cover;
 }
 
-section.consulta-pedido .contenedor {
+section.consulta-pedido .consulta-pedido-container {
   background-color: #F8F9F180;
   border-radius: var(--borde-general);
   color: var(--color-gris);
   padding: var(--padding-vertical) 1.5rem;
   position: relative;
 }
-section.consulta-pedido .contenedor form {
-  width: 100%;
-}
-section.consulta-pedido .contenedor h2 {
+section.consulta-pedido .consulta-pedido-container h2 {
   font-size: 1rem;
 }
-section.consulta-pedido .contenedor h2 i {
+section.consulta-pedido .consulta-pedido-container h2 i {
   color: var(--color-tomate);
-  text-align: center;
 }
 
 section.faq {
@@ -622,7 +622,6 @@ section.faq {
 section.faq h1 {
   color: var(--color-blanco);
   text-align: center;
-  margin-bottom: 0.67rem;
 }
 section.faq i {
   color: var(--color-queso);
@@ -630,7 +629,7 @@ section.faq i {
 }
 section.faq .desplegable details p {
   background-color: var(--color-negro-intenso);
-  border-left: 0.3rem solid var(--color-queso);
+  border-left: 4px solid var(--color-queso);
   font-size: 0.8rem;
   margin: 0;
   padding: 1.2rem;
@@ -638,7 +637,7 @@ section.faq .desplegable details p {
 }
 section.faq .desplegable details summary {
   background-color: var(--color-negro-intenso);
-  border-left: 0.3rem solid var(--color-queso);
+  border-left: 4px solid var(--color-queso);
   color: var(--color-queso);
   cursor: pointer;
   font-size: 0.9rem;
@@ -654,7 +653,7 @@ section.faq .desplegable details summary:hover {
 }
 section.faq .desplegable details ul {
   background-color: var(--color-negro-intenso);
-  border-left: 0.3rem solid var(--color-queso);
+  border-left: 4px solid var(--color-queso);
   font-size: 0.8rem;
   margin: 0;
   padding: 0 0 1.2rem 2.2rem;
@@ -677,11 +676,21 @@ section.faq .desplegable details ul {
   }
 }
 @media only screen and (max-width: 575.98px) {
+  section.consulta-pedido {
+    padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
+  }
   .no-webp section.consulta-pedido::before {
     background: url(../img/background/bg-pedidos-mobile.jpg) bottom/cover;
   }
   .webp section.consulta-pedido::before {
     background: url(../img/background/bg-pedidos-mobile.webp) bottom/cover;
+  }
+
+  section.consulta-pedido .consulta-pedido-container {
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+  }
+  section.consulta-pedido .consulta-pedido-container h2 {
+    height: 2rem;
   }
 }
 /* -------- nosotros.html -------- */
@@ -781,7 +790,7 @@ section.galeria img {
     height: 30vh;
   }
 }
-.tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.opiniones article, section.consulta-pedido .contenedor {
+.tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.opiniones article, section.consulta-pedido .consulta-pedido-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
@@ -1124,11 +1133,8 @@ section.detalle-de-pedido .precio-total {
 }
 
 /* -------- FLEX pedido.html --------*/
-.consulta-pedido div.d-flex {
+section.consulta-pedido .consulta-pedido-container {
   row-gap: 0.8rem;
-}
-.consulta-pedido form.d-flex {
-  row-gap: 0.5rem;
 }
 
 /* -------- FLEX armala.html --------*/
@@ -1137,6 +1143,14 @@ section.detalle-de-pedido .precio-total {
 }
 #armala-form fieldset.d-flex {
   row-gap: 0.6rem;
+}
+
+/* -------- GRID nosotros.html --------*/
+section.galeria .row {
+  margin: 0;
+}
+section.galeria .row > * {
+  padding: 0;
 }
 
 nav.menu {
@@ -1243,7 +1257,7 @@ nav.menu-mobile a:hover::before {
   width: 100%;
 }
 
-.tarjeta-de-producto, section.opiniones article, section.consulta-pedido .contenedor, section.contacto iframe, section.contacto form#contacto-form {
+.tarjeta-de-producto, section.opiniones article, section.consulta-pedido .consulta-pedido-container, section.contacto iframe, section.contacto form#contacto-form {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
@@ -1705,6 +1719,7 @@ html {
 }
 
 .row-v-align {
+  /* Mi propio hack, para trabajar con h-visible */
   align-items: center;
   height: 100%;
 }
@@ -1726,6 +1741,11 @@ html {
 @media only screen and (max-width: 991.98px) {
   .h-visible {
     height: auto;
+  }
+
+  :target::before {
+    height: var(--altura-menu-fijo-mobile);
+    margin-top: calc(0px - var(--altura-menu-fijo-mobile));
   }
 }
 @media only screen and (width: 1024px) and (height: 1366px) {

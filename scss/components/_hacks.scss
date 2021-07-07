@@ -9,7 +9,7 @@
     height: var(--altura-visible);
 }
 
-.row-v-align {
+.row-v-align { /* Mi propio hack, para trabajar con h-visible */
     align-items: center;
     height: 100%;
 }
@@ -30,5 +30,10 @@
 @include media-breakpoint-down(lg) {
     .h-visible {
         height: auto;
+    }
+
+    :target::before {
+        height: var(--altura-menu-fijo-mobile);
+        margin-top: calc(0px - var(--altura-menu-fijo-mobile));
     }
 }

@@ -18,14 +18,8 @@
 }
 
 /* -------- FLEX pedido.html --------*/
-.consulta-pedido {
-    div.d-flex {
-        row-gap: 0.8rem;
-    }
-
-    form.d-flex {
-        row-gap: 0.5rem;
-    }
+section.consulta-pedido .consulta-pedido-container {
+    row-gap: 0.8rem;
 }
 
 /* -------- FLEX armala.html --------*/
