@@ -1,8 +1,8 @@
-$font-family-general: 'Open Sans', sans-serif;
-$font-size-general: 21px;
+// Tipografia general
+$font-family-general: 'Open Sans', sans-serif !default;
 
 // Tipografia para elementos especiales: Logotipo, Titulos, etc.
-$font-family-artistico: 'Finger Paint', cursive;
+$font-family-artistico: 'Finger Paint', cursive !default;
 
 // Tipografia para firmas
-$font-family-firmas: 'Satisfy', cursive;
+$font-family-firmas: 'Satisfy', cursive !default;

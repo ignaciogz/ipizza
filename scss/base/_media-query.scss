@@ -2,19 +2,19 @@
 @import 'functions';
 
 // Creo lista auxiliar de claves para saber: El cero absoluto, el 1er breakpoint y el ultimo.
-$lista-mq-breakpoints:  map-keys($mq-breakpoints);
+$lista-mq-breakpoints:  map-keys($mq-breakpoints) !default;
 
 // Obtengo la clave del cero absoluto
-$clave-absoluta: nth($lista-mq-breakpoints, 1);
+$clave-absoluta: nth($lista-mq-breakpoints, 1) !default;
 
 // Obtengo la primera media y su valor
-$clave-primer-breakpoint: nth($lista-mq-breakpoints, 2);
-$valor-primer-breakpoint: map_get($mq-breakpoints,  $clave-primer-breakpoint);
+$clave-primer-breakpoint: nth($lista-mq-breakpoints, 2) !default;
+$valor-primer-breakpoint: map_get($mq-breakpoints,  $clave-primer-breakpoint) !default;
 
 // Obtengo la ultima media y su valor
-$posicion-ultimo-breakpoint: length($lista-mq-breakpoints);        
-$clave-ultimo-breakpoint: nth($lista-mq-breakpoints, $posicion-ultimo-breakpoint);
-$valor-ultimo-breakpoint: map_get($mq-breakpoints, $clave-ultimo-breakpoint);
+$posicion-ultimo-breakpoint: length($lista-mq-breakpoints) !default;        
+$clave-ultimo-breakpoint: nth($lista-mq-breakpoints, $posicion-ultimo-breakpoint) !default;
+$valor-ultimo-breakpoint: map_get($mq-breakpoints, $clave-ultimo-breakpoint) !default;
 
 @mixin media-breakpoint-only($media) {
     @if map_has_key($mq-breakpoints, $media) {

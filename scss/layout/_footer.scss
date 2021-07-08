@@ -10,9 +10,6 @@
     h2 {
         font-size: 1.2rem;
     }
-    h3 {
-        font-size: 1rem;
-    }
     i {
         color: var(--color-blanco);
     }
@@ -77,21 +74,19 @@
     margin-top: 1.5rem;
 
     .desarrollador {
-        display: inline;
-        font-size: 1rem;
+        @include desarrollador(inline);
+        margin-left: 0.3rem;
+    }
+}
+
+@include media-breakpoint-between(xs, lg) {
+    .footer {
+        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
     }
 }
 
 @include media-breakpoint-only(xs) {
     .footer {
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
-
-        h2 {
-            font-size: 1rem;
-        }
-        h3 {
-            font-size: 0.8rem;
-        }
         i {
             font-size: 1.8rem;
         }
@@ -115,6 +110,13 @@
         a {
             margin-left: 0.5rem;
             margin-right: 0;
+        }
+    }
+
+    .footer small {    
+        .desarrollador {
+            @include desarrollador;
+            margin-left: 0rem;
         }
     }
 }

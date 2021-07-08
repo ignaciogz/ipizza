@@ -2,11 +2,12 @@
 
 .tarjeta-de-producto {
     @extend %sombra-contenedor;
+    @extend %mx-auto;
     background-color: var(--color-gris);
     border-radius: var(--borde-general);
-    margin: 0 auto;
     padding: 0;
     padding-bottom: 0.8rem;
+    user-select: none;
     width: 225px;
 
     button {
@@ -29,6 +30,33 @@
         padding: 0 0.5rem;
         text-align: center;
     }    
+}
+
+#armala-carousel-productos {
+    .tarjeta-de-producto {
+        padding-bottom: 0.5rem;
+
+        .datos-tarjeta-de-producto {
+            height: 95px
+        }
+
+        figcaption {
+            padding: 0;
+            padding-right: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin: 0;
+            padding-left: 0.5rem;
+    
+            &::after {
+                content: '';
+                border-right: 4px solid var(--color-queso);
+                margin: 0 0.1rem;
+            }
+        }
+    }
 }
 
 @include media-breakpoint-between(sm, lg) {

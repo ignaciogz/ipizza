@@ -1,3 +1,4 @@
+@import '../base/extends';
 @import '../base/media-query';
 @import '../base/mixins';
 
@@ -7,15 +8,13 @@ section.armala {
 
     h1 {
         color: var(--color-blanco);
-        text-align: center;
     }
     h2 {
-        font-family: 'Finger Paint', cursive;
-        font-size: 1.5rem;
+        font-family: var(--font-family-ipizza);
     }
 
     &::before {
-        @include background-full(url(../img/background/bg-armala.svg));
+        @include background-full(url(../img/background/bg-armala.svg), top);
         background-attachment: fixed;
         filter: brightness(0.3);
     }
@@ -31,35 +30,6 @@ section.armado-de-pedido {
     background-color: var(--color-gris);
 }
 
-#armala-carousel-productos {
-    height: 380px;
-    
-    .tarjeta-de-producto {
-        height: 350px;
-
-        .datos-tarjeta-de-producto {
-            height: 95px
-        }
-
-        figcaption {
-            padding: 0;
-            padding-right: 0.5rem;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin: 0;
-            padding-left: 0.5rem;
-    
-            &::after {
-                content: '';
-                border-right: 4px solid var(--color-queso);
-                margin: 0 0.1rem;
-            }
-        }
-    }
-}
-
 /* INICIO Estilos del FORMULARIO de armado de pedido */
 section.armado-de-pedido form#armala-form {
     h2 {
@@ -68,6 +38,11 @@ section.armado-de-pedido form#armala-form {
 
     fieldset {
         margin-top: 2rem;
+    }
+
+    label,
+    select {
+        margin-top: 0.6rem;
     }
 
     fieldset.extras {
@@ -92,23 +67,18 @@ section.detalle-de-pedido {
     color: var(--color-gris);
     font-size: 0.8rem;
     font-weight: bold;
+    text-align: center;
 
     .canvas-container {
+        @extend %mx-auto;
         background: var(--color-gris); 
         border-radius: var(--borde-general);
         height: 180px;
-        margin: 0 auto;
         width: 180px; 
     }
     
     section {
         padding: 0;
-
-        &.detalle-ipizza {
-            h2 {
-                text-align: center;
-            }
-        }
 
         &.detalle-extras,
         &.detalle-cono,
@@ -134,14 +104,30 @@ section.detalle-de-pedido {
 
     .precio-total {
         color: var(--color-blanco);
-        font-family: 'Finger Paint', cursive;
+        font-family: var(--font-family-ipizza);
         font-size: 2rem;
-        text-align: center;
+    }
+}
+
+@include media-breakpoint-between(xs, lg) {
+    section.pegable-container {
+        position: relative;
+            top: unset;
+    }
+
+    section.detalle-de-pedido {
+        margin-top: 1rem;
     }
 }
 
 @include media-breakpoint-only(xs) {
     section.armala {
         padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
+    }
+
+    section.armado-de-pedido form#armala-form {
+        fieldset.extras {
+            padding: 0.6rem 0.5rem;
+        }
     }
 }

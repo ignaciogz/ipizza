@@ -148,6 +148,80 @@ section.opiniones article {
     }
 }
 
+@include media-breakpoint-up(xxl) {
+    section.menu-de-pizzas {
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+    section.nuestra-calidad {
+        article {
+            padding: 0 calc(var(--padding-horizontal)*3);
+        }
+    }
+
+    section.nuestra-calidad figure {
+        img {
+            width: 85%;
+        }
+    }
+
+    section.opiniones {
+        padding: var(--padding-vertical) calc(var(--padding-horizontal)*2);
+    }
+}
+
+@include media-breakpoint-between(sm, lg) {
+    section.video-marketing {
+        height: calc(var(--altura-visible-mobile) * 0.75); // Porque el height: auto de .h-visible no calcula bien la altura
+
+        video {
+            height: calc(var(--altura-visible-mobile) * 0.75);
+        }
+
+        .frase-publicitaria {
+            font-size: 2rem;
+            position: absolute;
+                top: 21vh;
+                right: 1%;
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-between(xs, lg) {
+    section.nuestra-calidad {
+        article,
+        article:hover {
+            filter: unset;
+         }
+    }
+
+    section.nuestra-calidad figure {
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            margin-top: 1rem;
+        }
+    }
+
+    section.opiniones {
+        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+    }
+}
+
+@include media-breakpoint-between(xs, md) {
+    section.opiniones article {
+        width: 90%;
+    }
+}
+
 @include media-breakpoint-only(md) {
     section.nuestra-calidad {
         .no-webp &::before {
@@ -272,79 +346,5 @@ section.opiniones article {
         header {
             text-align: center;
         }
-    }
-}
-
-@include media-breakpoint-between(sm, lg) {
-    section.video-marketing {
-        height: calc(var(--altura-visible-mobile) * 0.75); // Porque el height: auto de .h-visible no calcula bien la altura
-
-        video {
-            height: calc(var(--altura-visible-mobile) * 0.75);
-        }
-
-        .frase-publicitaria {
-            font-size: 2rem;
-            position: absolute;
-                top: 21vh;
-                right: 1%;
-            
-            h2 {
-                font-size: 1.2rem;
-            }
-        }
-    }
-}
-
-@include media-breakpoint-between(xs, lg) {
-    section.nuestra-calidad {
-        article,
-        article:hover {
-            filter: unset;
-         }
-    }
-
-    section.nuestra-calidad figure {
-        img {
-            width: 100%;
-        }
-
-        figcaption {
-            margin-top: 1rem;
-        }
-    }
-
-    section.opiniones {
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
-    }
-}
-
-@include media-breakpoint-between(xs, md) {
-    section.opiniones article {
-        width: 90%;
-    }
-}
-
-@include media-breakpoint-up(xxl) {
-    section.menu-de-pizzas {
-        h1 {
-            font-size: 3.5rem;
-        }
-    }
-
-    section.nuestra-calidad {
-        article {
-            padding: 0 calc(var(--padding-horizontal)*3);
-        }
-    }
-
-    section.nuestra-calidad figure {
-        img {
-            width: 85%;
-        }
-    }
-
-    section.opiniones {
-        padding: var(--padding-vertical) calc(var(--padding-horizontal)*2);
     }
 }

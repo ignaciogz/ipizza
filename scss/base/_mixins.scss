@@ -69,3 +69,9 @@
         // FIN Borde desde el centro hasta los costados
     }
 }
+
+@mixin desarrollador($display: block) {
+    display: $display;
+    font-family: var(--font-family-copyright);
+    font-size: 1rem;
+}

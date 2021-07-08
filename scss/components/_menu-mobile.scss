@@ -23,6 +23,10 @@ section.menu-mobile-container {
 
     .offcanvas-body {
         height: 80%;
+
+        .desarrollador {
+            @include desarrollador;
+        }
     }
 }
 

@@ -9,6 +9,10 @@
     height: 90%;
 }
 
+#armala-carousel-productos {
+    height: 380px;
+}
+
 .btn-carousel {
     color: var(--color-blanco);
     i {
@@ -31,8 +35,14 @@
     text-shadow: -2px -2px 4px var(--color-gris);
 }
 
-@include media-breakpoint-between(xs, lg) {
+@include media-breakpoint-down(lg) {
     #carousel-opiniones {
         height: 500px;
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    #armala-carousel-productos {
+        height: 420px;
     }
 }

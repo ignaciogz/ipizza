@@ -23,7 +23,6 @@ button {
 
     i {
         color: var(--color-blanco);
-        font-size: 1.8rem;
     }
 }
 
@@ -63,9 +62,9 @@ button {
 }
 
 .btn-ver-todas {
+    @extend %mx-auto;
     background-color: #F8F9F1E6;
     height: 50px;
-    margin: 0 auto;
     width: 25%;
 
     i {
@@ -95,8 +94,8 @@ button {
 }
 
 .btn-pagar {
+    @extend %mx-auto;
     border-color: var(--color-blanco);
-    margin: 0 auto;
     width: 75%;
     
     &:hover {
@@ -148,7 +147,7 @@ button {
 @include media-breakpoint-between(sm, lg) {
     .btn-armala {
         font-size: 2rem;
-        height: 4rem;
+        height: 3.6rem;
         position: fixed;
             bottom: 2vh;
         width: 96vw;

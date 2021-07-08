@@ -25,10 +25,10 @@ section.contacto iframe {
 
 section.contacto form#contacto-form {
     @extend %sombra-contenedor;
+    @extend %mx-auto;
     background-color: var(--color-gris);
     border-radius: 25px;
     padding: 1rem;
-    margin: 0 auto;
     transition: 1s;
     width: 95%;
 
@@ -66,22 +66,6 @@ section.contacto form#contacto-form {
     }
 }
 
-@include media-breakpoint-only(xs) {
-    section.contacto {
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
-    }
-}
-
-@include media-breakpoint-down(md) {
-    section.contacto form#contacto-form {
-        width: 95%;
-
-        .terminos-y-condiciones {
-            font-size: 0.7rem;
-        }
-    }
-}
-
 @include media-breakpoint-up(xxl) {
     section.contacto iframe {
         height: 570px;
@@ -95,5 +79,21 @@ section.contacto form#contacto-form {
         label {
             margin-top: 1.5rem;
         }
+    }
+}
+
+@include media-breakpoint-between(xs, md) {
+    section.contacto form#contacto-form {
+        width: 95%;
+
+        .terminos-y-condiciones {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@include media-breakpoint-only(xs) {
+    section.contacto {
+        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
     }
 }

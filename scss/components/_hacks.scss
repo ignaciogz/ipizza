@@ -21,12 +21,6 @@
     margin-top: calc(0px - var(--altura-menu-fijo)); // altura negativa de la cabecera fija
 }
 
-@include media-breakpoint-only(xs) {
-    html, body { /* Obtenido del Ryki Jaco y Filabe */
-        overflow-x: hidden;
-    }
-}
-
 @include media-breakpoint-down(lg) {
     .h-visible {
         height: auto;
@@ -35,5 +29,11 @@
     :target::before {
         height: var(--altura-menu-fijo-mobile);
         margin-top: calc(0px - var(--altura-menu-fijo-mobile));
+    }
+}
+
+@include media-breakpoint-only(xs) {
+    html, body { /* Tomado "prestado" de Ryki Jaco y Filabe */
+        overflow-x: hidden;
     }
 }

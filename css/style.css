@@ -34,7 +34,7 @@
 a {
   color: var(--color-queso);
   text-decoration: none;
-  width: fit-content;
+  /* width: fit-content; */
 }
 a:active {
   color: var(--color-tomate);
@@ -50,13 +50,8 @@ body {
   background-color: var(--color-gris);
   color: var(--color-blanco);
   font-family: var(--font-family-general);
-  padding-top: var(--altura-menu-fijo);
-}
-
-small .desarrollador {
-  font-family: var(--font-family-copyright);
   font-size: 1rem;
-  margin-left: 0.3rem;
+  padding-top: var(--altura-menu-fijo);
 }
 
 em {
@@ -69,26 +64,19 @@ figure {
 
 h1 {
   color: var(--color-gris);
-  font-size: 2.2rem;
   font-family: var(--font-family-ipizza);
+  font-size: 2.2rem;
   margin-bottom: 1.67rem;
+  text-align: center;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 1.2rem;
-}
-
-h4 {
   font-size: 1rem;
-}
-
-h5 {
-  font-size: 0.8rem;
 }
 
 i {
@@ -115,18 +103,32 @@ strong:hover {
   color: var(--color-blanco);
 }
 
-@media only screen and (max-width: 767.98px) {
+@media only screen and (min-width: 576px) and (max-width: 991.98px) {
   body {
-    padding-top: var(--altura-menu-fijo-mobile);
+    font-size: 0.9rem;
   }
-
-  h2 {
-    font-size: 1.6rem;
+}
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  body {
+    font-size: 0.9rem;
+    padding-top: var(--altura-menu-fijo-mobile);
   }
 }
 @media only screen and (max-width: 575.98px) {
+  body {
+    font-size: 0.8rem;
+  }
+
   h1 {
     font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 0.8rem;
   }
 
   section {
@@ -289,6 +291,10 @@ strong:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img {
+  margin: 0 auto;
+}
+
 /* -------- index.html -------- */
 section.video-marketing {
   padding: 0;
@@ -423,6 +429,62 @@ section.opiniones article header h2::before {
   font-weight: normal;
 }
 
+@media only screen and (min-width: 1400px) {
+  section.menu-de-pizzas h1 {
+    font-size: 3.5rem;
+  }
+
+  section.nuestra-calidad article {
+    padding: 0 calc(var(--padding-horizontal)*3);
+  }
+
+  section.nuestra-calidad figure img {
+    width: 85%;
+  }
+
+  section.opiniones {
+    padding: var(--padding-vertical) calc(var(--padding-horizontal)*2);
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+  section.video-marketing {
+    height: calc(var(--altura-visible-mobile) * 0.75);
+  }
+  section.video-marketing video {
+    height: calc(var(--altura-visible-mobile) * 0.75);
+  }
+  section.video-marketing .frase-publicitaria {
+    font-size: 2rem;
+    position: absolute;
+    top: 21vh;
+    right: 1%;
+  }
+  section.video-marketing .frase-publicitaria h2 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  section.nuestra-calidad article,
+section.nuestra-calidad article:hover {
+    filter: unset;
+  }
+
+  section.nuestra-calidad figure img {
+    width: 100%;
+  }
+  section.nuestra-calidad figure figcaption {
+    margin-top: 1rem;
+  }
+
+  section.opiniones {
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 767.98px) {
+  section.opiniones article {
+    width: 90%;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.nuestra-calidad::before {
     background: url(../img/background/bg-nuestra-calidad-tablet.jpg) top/cover;
@@ -515,68 +577,16 @@ section.opiniones article header h2::before {
     text-align: center;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 991.98px) {
-  section.video-marketing {
-    height: calc(var(--altura-visible-mobile) * 0.75);
-  }
-  section.video-marketing video {
-    height: calc(var(--altura-visible-mobile) * 0.75);
-  }
-  section.video-marketing .frase-publicitaria {
-    font-size: 2rem;
-    position: absolute;
-    top: 21vh;
-    right: 1%;
-  }
-  section.video-marketing .frase-publicitaria h2 {
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (min-width: 0) and (max-width: 991.98px) {
-  section.nuestra-calidad article,
-section.nuestra-calidad article:hover {
-    filter: unset;
-  }
-
-  section.nuestra-calidad figure img {
-    width: 100%;
-  }
-  section.nuestra-calidad figure figcaption {
-    margin-top: 1rem;
-  }
-
-  section.opiniones {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
-  }
-}
-@media only screen and (min-width: 0) and (max-width: 767.98px) {
-  section.opiniones article {
-    width: 90%;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  section.menu-de-pizzas h1 {
-    font-size: 3.5rem;
-  }
-
-  section.nuestra-calidad article {
-    padding: 0 calc(var(--padding-horizontal)*3);
-  }
-
-  section.nuestra-calidad figure img {
-    width: 85%;
-  }
-
-  section.opiniones {
-    padding: var(--padding-vertical) calc(var(--padding-horizontal)*2);
-  }
-}
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .consulta-pedido-container, section.opiniones article {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 .tarjeta-de-producto:hover, section.contacto form#contacto-form:hover, section.contacto iframe:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
+}
+
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img {
+  margin: 0 auto;
 }
 
 /* -------- pedidos.html -------- */
@@ -621,7 +631,6 @@ section.faq {
 }
 section.faq h1 {
   color: var(--color-blanco);
-  text-align: center;
 }
 section.faq i {
   color: var(--color-queso);
@@ -718,7 +727,6 @@ section.historia figure {
 section.historia figure img {
   border: 0.5rem outset var(--color-gris);
   display: block;
-  margin: 0 auto;
   text-align: center;
   transform: rotate(-5deg);
   width: 90%;
@@ -728,7 +736,6 @@ section.historia figure figcaption {
 }
 section.historia figure figcaption h1 {
   color: var(--color-queso);
-  text-align: center;
 }
 section.historia figure figcaption p {
   text-align: justify;
@@ -759,6 +766,11 @@ section.galeria img {
     margin-top: 2.5rem;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  section.galeria img {
+    height: 30vh;
+  }
+}
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .no-webp section.historia::before {
     background: url(../img/background/bg-nosotros-mobile-xl.jpg) center/cover;
@@ -769,7 +781,7 @@ section.galeria img {
 }
 @media only screen and (max-width: 575.98px) {
   section.historia {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+    padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
   }
   .no-webp section.historia::before {
     background: url(../img/background/bg-nosotros-mobile.jpg) center/cover;
@@ -781,13 +793,8 @@ section.galeria img {
   section.historia figure figcaption {
     margin-top: 2rem;
   }
-  section.historia figure figcaption p {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  section.galeria img {
-    height: 30vh;
+  section.historia figure h1 {
+    font-size: 1.7rem;
   }
 }
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.opiniones article, section.consulta-pedido .consulta-pedido-container {
@@ -796,6 +803,10 @@ section.galeria img {
 
 .tarjeta-de-producto:hover, section.contacto form#contacto-form:hover, section.contacto iframe:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
+}
+
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img {
+  margin: 0 auto;
 }
 
 /* -------- contacto.html -------- */
@@ -820,7 +831,6 @@ section.contacto form#contacto-form {
   background-color: var(--color-gris);
   border-radius: 25px;
   padding: 1rem;
-  margin: 0 auto;
   transition: 1s;
   width: 95%;
 }
@@ -851,19 +861,6 @@ section.contacto form#contacto-form:hover {
   transition: 1s;
 }
 
-@media only screen and (max-width: 575.98px) {
-  section.contacto {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  section.contacto form#contacto-form {
-    width: 95%;
-  }
-  section.contacto form#contacto-form .terminos-y-condiciones {
-    font-size: 0.7rem;
-  }
-}
 @media only screen and (min-width: 1400px) {
   section.contacto iframe {
     height: 570px;
@@ -876,21 +873,44 @@ section.contacto form#contacto-form:hover {
     margin-top: 1.5rem;
   }
 }
+@media only screen and (min-width: 0) and (max-width: 767.98px) {
+  section.contacto form#contacto-form {
+    width: 95%;
+  }
+  section.contacto form#contacto-form .terminos-y-condiciones {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  section.contacto {
+    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+  }
+}
+.tarjeta-de-producto, section.opiniones article, section.consulta-pedido .consulta-pedido-container, section.contacto iframe, section.contacto form#contacto-form {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
+}
+
+.tarjeta-de-producto:hover, section.contacto iframe:hover, section.contacto form#contacto-form:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
+}
+
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.historia figure img, section.contacto form#contacto-form {
+  margin: 0 auto;
+}
+
 /* -------- armala.html --------*/
 section.armala {
   padding: var(--padding-vertical) var(--padding-horizontal);
 }
 section.armala h1 {
   color: var(--color-blanco);
-  text-align: center;
 }
 section.armala h2 {
-  font-family: "Finger Paint", cursive;
-  font-size: 1.5rem;
+  font-family: var(--font-family-ipizza);
 }
 section.armala::before {
   content: "";
-  background: url(../img/background/bg-armala.svg) center/cover;
+  background: url(../img/background/bg-armala.svg) top/cover;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -910,36 +930,16 @@ section.armado-de-pedido {
   background-color: var(--color-gris);
 }
 
-#armala-carousel-productos {
-  height: 380px;
-}
-#armala-carousel-productos .tarjeta-de-producto {
-  height: 350px;
-}
-#armala-carousel-productos .tarjeta-de-producto .datos-tarjeta-de-producto {
-  height: 95px;
-}
-#armala-carousel-productos .tarjeta-de-producto figcaption {
-  padding: 0;
-  padding-right: 0.5rem;
-}
-#armala-carousel-productos .tarjeta-de-producto h2 {
-  font-size: 2.2rem;
-  margin: 0;
-  padding-left: 0.5rem;
-}
-#armala-carousel-productos .tarjeta-de-producto h2::after {
-  content: "";
-  border-right: 4px solid var(--color-queso);
-  margin: 0 0.1rem;
-}
-
 /* INICIO Estilos del FORMULARIO de armado de pedido */
 section.armado-de-pedido form#armala-form h2 {
   color: var(--color-queso);
 }
 section.armado-de-pedido form#armala-form fieldset {
   margin-top: 2rem;
+}
+section.armado-de-pedido form#armala-form label,
+section.armado-de-pedido form#armala-form select {
+  margin-top: 0.6rem;
 }
 section.armado-de-pedido form#armala-form fieldset.extras {
   border: 1px solid var(--color-blanco);
@@ -961,19 +961,16 @@ section.detalle-de-pedido {
   color: var(--color-gris);
   font-size: 0.8rem;
   font-weight: bold;
+  text-align: center;
 }
 section.detalle-de-pedido .canvas-container {
   background: var(--color-gris);
   border-radius: var(--borde-general);
   height: 180px;
-  margin: 0 auto;
   width: 180px;
 }
 section.detalle-de-pedido section {
   padding: 0;
-}
-section.detalle-de-pedido section.detalle-ipizza h2 {
-  text-align: center;
 }
 section.detalle-de-pedido section.detalle-extras, section.detalle-de-pedido section.detalle-cono, section.detalle-de-pedido section.detalle-envio {
   border-top: 2px solid var(--color-gris);
@@ -992,14 +989,27 @@ section.detalle-de-pedido .precio::before {
 }
 section.detalle-de-pedido .precio-total {
   color: var(--color-blanco);
-  font-family: "Finger Paint", cursive;
+  font-family: var(--font-family-ipizza);
   font-size: 2rem;
-  text-align: center;
 }
 
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  section.pegable-container {
+    position: relative;
+    top: unset;
+  }
+
+  section.detalle-de-pedido {
+    margin-top: 1rem;
+  }
+}
 @media only screen and (max-width: 575.98px) {
   section.armala {
     padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
+  }
+
+  section.armado-de-pedido form#armala-form fieldset.extras {
+    padding: 0.6rem 0.5rem;
   }
 }
 .error {
@@ -1028,9 +1038,6 @@ section.detalle-de-pedido .precio-total {
 }
 .footer h2 {
   font-size: 1.2rem;
-}
-.footer h3 {
-  font-size: 1rem;
 }
 .footer i {
   color: var(--color-blanco);
@@ -1088,19 +1095,17 @@ section.detalle-de-pedido .precio-total {
 }
 .footer small .desarrollador {
   display: inline;
+  font-family: var(--font-family-copyright);
   font-size: 1rem;
+  margin-left: 0.3rem;
 }
 
-@media only screen and (max-width: 575.98px) {
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
   .footer {
     padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
-  .footer h2 {
-    font-size: 1rem;
-  }
-  .footer h3 {
-    font-size: 0.8rem;
-  }
+}
+@media only screen and (max-width: 575.98px) {
   .footer i {
     font-size: 1.8rem;
   }
@@ -1118,6 +1123,13 @@ section.detalle-de-pedido .precio-total {
   .footer .redes-sociales a {
     margin-left: 0.5rem;
     margin-right: 0;
+  }
+
+  .footer small .desarrollador {
+    display: block;
+    font-family: var(--font-family-copyright);
+    font-size: 1rem;
+    margin-left: 0rem;
   }
 }
 /* -------- FLEX Footer -------- */
@@ -1145,11 +1157,8 @@ section.consulta-pedido .consulta-pedido-container {
 }
 
 /* -------- FLEX armala.html --------*/
-#armala-form div.d-flex {
+form#armala-form div.d-flex {
   column-gap: 1rem;
-}
-#armala-form fieldset.d-flex {
-  row-gap: 0.6rem;
 }
 
 /* -------- GRID Footer -------- */
@@ -1229,6 +1238,11 @@ section.menu-mobile-container .offcanvas-header h2 {
 section.menu-mobile-container .offcanvas-body {
   height: 80%;
 }
+section.menu-mobile-container .offcanvas-body .desarrollador {
+  display: block;
+  font-family: var(--font-family-copyright);
+  font-size: 1rem;
+}
 
 nav.menu-mobile ul {
   margin: 0;
@@ -1277,12 +1291,16 @@ nav.menu-mobile a:hover::before {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.historia figure img, section.contacto form#contacto-form, section.detalle-de-pedido .canvas-container {
+  margin: 0 auto;
+}
+
 .tarjeta-de-producto {
   background-color: var(--color-gris);
   border-radius: var(--borde-general);
-  margin: 0 auto;
   padding: 0;
   padding-bottom: 0.8rem;
+  user-select: none;
   width: 225px;
 }
 .tarjeta-de-producto button {
@@ -1296,6 +1314,27 @@ nav.menu-mobile a:hover::before {
 .tarjeta-de-producto figure figcaption {
   padding: 0 0.5rem;
   text-align: center;
+}
+
+#armala-carousel-productos .tarjeta-de-producto {
+  padding-bottom: 0.5rem;
+}
+#armala-carousel-productos .tarjeta-de-producto .datos-tarjeta-de-producto {
+  height: 95px;
+}
+#armala-carousel-productos .tarjeta-de-producto figcaption {
+  padding: 0;
+  padding-right: 0.5rem;
+}
+#armala-carousel-productos .tarjeta-de-producto h2 {
+  font-size: 2.2rem;
+  margin: 0;
+  padding-left: 0.5rem;
+}
+#armala-carousel-productos .tarjeta-de-producto h2::after {
+  content: "";
+  border-right: 4px solid var(--color-queso);
+  margin: 0 0.1rem;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
@@ -1320,6 +1359,10 @@ nav.menu-mobile a:hover::before {
   height: 90%;
 }
 
+#armala-carousel-productos {
+  height: 380px;
+}
+
 .btn-carousel {
   color: var(--color-blanco);
 }
@@ -1341,9 +1384,14 @@ nav.menu-mobile a:hover::before {
   text-shadow: -2px -2px 4px var(--color-gris);
 }
 
-@media only screen and (min-width: 0) and (max-width: 991.98px) {
+@media only screen and (max-width: 991.98px) {
   #carousel-opiniones {
     height: 500px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #armala-carousel-productos {
+    height: 420px;
   }
 }
 /* -------- BOTONES -------- */
@@ -1369,7 +1417,6 @@ button {
 }
 .btn-menu-mobile i {
   color: var(--color-blanco);
-  font-size: 1.8rem;
 }
 
 .btn-close {
@@ -1405,7 +1452,6 @@ button {
 .btn-ver-todas {
   background-color: #F8F9F1E6;
   height: 50px;
-  margin: 0 auto;
   width: 25%;
 }
 .btn-ver-todas i {
@@ -1434,7 +1480,6 @@ button {
 
 .btn-pagar {
   border-color: var(--color-blanco);
-  margin: 0 auto;
   width: 75%;
 }
 .btn-pagar:hover {
@@ -1479,7 +1524,7 @@ button {
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   .btn-armala {
     font-size: 2rem;
-    height: 4rem;
+    height: 3.6rem;
     position: fixed;
     bottom: 2vh;
     width: 96vw;
@@ -1746,12 +1791,6 @@ html {
   margin-top: calc(0px - var(--altura-menu-fijo));
 }
 
-@media only screen and (max-width: 575.98px) {
-  html, body {
-    /* Obtenido del Ryki Jaco y Filabe */
-    overflow-x: hidden;
-  }
-}
 @media only screen and (max-width: 991.98px) {
   .h-visible {
     height: auto;
@@ -1760,6 +1799,12 @@ html {
   :target::before {
     height: var(--altura-menu-fijo-mobile);
     margin-top: calc(0px - var(--altura-menu-fijo-mobile));
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  html, body {
+    /* Tomado "prestado" de Ryki Jaco y Filabe */
+    overflow-x: hidden;
   }
 }
 @media only screen and (width: 1024px) and (height: 1366px) {

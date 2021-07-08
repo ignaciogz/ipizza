@@ -20,9 +20,9 @@ section.historia figure {
     position: relative;
 
     img {
+        @extend %mx-auto;
         border: 0.5rem outset var(--color-gris);
         display: block;
-        margin: 0 auto;
         text-align: center;
         transform: rotate(-5deg);
         width: 90%;
@@ -33,7 +33,6 @@ section.historia figure {
         
         h1 {
             color: var(--color-queso);
-            text-align: center;
         }
         p {
             text-align: justify;
@@ -73,6 +72,12 @@ section.galeria {
     }
 }
 
+@include media-breakpoint-between(xs, lg) {
+    section.galeria img {
+        height: 30vh;
+    }
+}
+
 @include media-breakpoint-only(sm) {
     section.historia {
         .no-webp &::before {
@@ -87,7 +92,7 @@ section.galeria {
 
 @include media-breakpoint-only(xs) {
     section.historia {
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+        padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
 
         .no-webp &::before {
             @include background(url(../img/background/bg-nosotros-mobile.jpg));
@@ -101,16 +106,10 @@ section.galeria {
     section.historia figure {
         figcaption {
             margin-top: 2rem;
-
-            p {
-                text-align: center;
-            }
         }
-    }
-}
 
-@include media-breakpoint-down(md) {
-    section.galeria img {
-        height: 30vh;
+        h1 {
+            font-size: 1.7rem;
+        }
     }
 }
