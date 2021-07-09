@@ -448,6 +448,13 @@ section.opiniones article header h2::before {
 }
 
 @media only screen and (min-width: 1400px) {
+  section.video-marketing .frase-publicitaria h2 {
+    font-size: 2rem;
+  }
+  section.video-marketing .frase-publicitaria p {
+    font-size: 3.8rem;
+  }
+
   section.menu-de-pizzas h1 {
     font-size: 3.5rem;
   }

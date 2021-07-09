@@ -149,10 +149,15 @@ section.opiniones article {
 }
 
 @include media-breakpoint-up(xxl) {
-    section.menu-de-pizzas {
-        h1 {
-            font-size: 3.5rem;
+    section.video-marketing {
+        .frase-publicitaria {
+            h2 { font-size: 2rem; }
+            p { font-size: 3.8rem; }
         }
+    }
+
+    section.menu-de-pizzas {
+        h1 { font-size: 3.5rem; }
     }
 
     section.nuestra-calidad {
