@@ -1,6 +1,9 @@
 @import 'config';
 @import 'functions';
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
+
 // Creo lista auxiliar de claves para saber: El cero absoluto, el 1er breakpoint y el ultimo.
 $lista-mq-breakpoints:  map-keys($mq-breakpoints) !default;
 
@@ -15,6 +18,47 @@ $valor-primer-breakpoint: map_get($mq-breakpoints,  $clave-primer-breakpoint) !d
 $posicion-ultimo-breakpoint: length($lista-mq-breakpoints) !default;        
 $clave-ultimo-breakpoint: nth($lista-mq-breakpoints, $posicion-ultimo-breakpoint) !default;
 $valor-ultimo-breakpoint: map_get($mq-breakpoints, $clave-ultimo-breakpoint) !default;
+
+// Media desde 0 hasta el breakpoint pasado por parametro
+@mixin media-breakpoint-down($media-max) {
+    @if map_has_key($mq-breakpoints, $media-max) {   
+        
+        $valor-media-max: map_get($mq-breakpoints, $media-max); // Obtengo el valor de la media
+        
+        $valor-media-final: calcular-max-breakpoint($valor-media-max);
+
+        @media only screen and (max-width: $valor-media-final) {
+            @content;
+        }
+    }
+}
+
+// Media desde el breakpoint pasado por parametro
+@mixin media-breakpoint-up($media-min) {
+    @if map_has_key($mq-breakpoints, $media-min) {
+        
+        $valor-media-inicial: map_get($mq-breakpoints, $media-min); // Obtengo el valor de la media
+
+        @media only screen and (min-width: $valor-media-inicial) {
+            @content;
+        }
+    }
+}
+
+// Media desde el 1er parametro hasta el 2do
+@mixin media-breakpoint-between($media-inicial, $media-final) {
+    @if map_has_key($mq-breakpoints, $media-inicial) and map_has_key($mq-breakpoints, $media-final) {
+
+        $valor-media-inicial: map_get($mq-breakpoints, $media-inicial);
+        $valor-media-final: map_get($mq-breakpoints, $media-final);
+
+        $valor-media-final: calcular-max-breakpoint($valor-media-final);
+
+        @media only screen and (min-width: $valor-media-inicial) and (max-width: $valor-media-final) {
+            @content;
+        }
+    }
+}
 
 @mixin media-breakpoint-only($media) {
     @if map_has_key($mq-breakpoints, $media) {
@@ -50,47 +94,6 @@ $valor-ultimo-breakpoint: map_get($mq-breakpoints, $clave-ultimo-breakpoint) !de
             @media only screen and (min-width: $valor-media-inicial) and (max-width: $valor-media-final) {
                 @content;
             }
-        }
-    }
-}
-
-// Media desde el primer parametro hasta el 2do
-@mixin media-breakpoint-between($media-inicial, $media-final) {
-    @if map_has_key($mq-breakpoints, $media-inicial) and map_has_key($mq-breakpoints, $media-final) {
-
-        $valor-media-inicial: map_get($mq-breakpoints, $media-inicial);
-        $valor-media-final: map_get($mq-breakpoints, $media-final);
-
-        $valor-media-final: calcular-max-breakpoint($valor-media-final);
-
-        @media only screen and (min-width: $valor-media-inicial) and (max-width: $valor-media-final) {
-            @content;
-        }
-    }
-}
-
-// Media desde 0 hasta el breakpoint pasado por parametro
-@mixin media-breakpoint-down($media-max) {
-    @if map_has_key($mq-breakpoints, $media-max) {   
-        
-        $valor-media-max: map_get($mq-breakpoints, $media-max); // Obtengo el valor de la media
-        
-        $valor-media-final: calcular-max-breakpoint($valor-media-max);
-
-        @media only screen and (max-width: $valor-media-final) {
-            @content;
-        }
-    }
-}
-
-// Media desde el breakpoint pasado por parametro
-@mixin media-breakpoint-up($media-min) {
-    @if map_has_key($mq-breakpoints, $media-min) {
-        
-        $valor-media-inicial: map_get($mq-breakpoints, $media-min); // Obtengo el valor de la media
-
-        @media only screen and (min-width: $valor-media-inicial) {
-            @content;
         }
     }
 }

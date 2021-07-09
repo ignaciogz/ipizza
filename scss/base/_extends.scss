@@ -9,3 +9,15 @@
 %mx-auto {
     margin: 0 auto;
 }
+
+%button {
+    display: block;
+    border-color: transparent;
+    border-radius: 25px;
+    color: var(--color-gris);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.2rem 0.8rem;
+    text-transform: uppercase;
+    user-select: none;
+}

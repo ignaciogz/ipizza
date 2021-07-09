@@ -10,26 +10,26 @@ section.contacto {
 
 section.contacto iframe {
     @extend %sombra-contenedor;
+    @include prefix(transition, all 1s);
     border: 0;
     display: block;
     height: 455px;
     margin: 0 auto;
-    transition: 1s;
     width: 95%;
 
     &:hover {
         @extend %sombra-contenedor-hover;
-        transition: 1s;
+        @include prefix(transition, all 1s);
     }
 }
 
 section.contacto form#contacto-form {
     @extend %sombra-contenedor;
     @extend %mx-auto;
+    @include prefix(transition, all 1s);
     background-color: var(--color-gris);
     border-radius: 25px;
     padding: 1rem;
-    transition: 1s;
     width: 95%;
 
     label {
@@ -62,7 +62,7 @@ section.contacto form#contacto-form {
 
     &:hover {
         @extend %sombra-contenedor-hover;
-        transition: 1s;
+        @include prefix(transition, all 1s);
     }
 }
 

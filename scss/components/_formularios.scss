@@ -58,6 +58,7 @@ form input[type=number] {
 /* FIN Quitando botones de los input tipo number */
 
 input[type=submit] {
+    @include prefix(transition, all 1s);
     background-color: var(--color-gris);
     border-radius: 25px;
     border-color: var(--color-queso);
@@ -66,17 +67,17 @@ input[type=submit] {
     font-family: 'Finger Paint', cursive;
     font-size: 1.2rem;
     font-weight: bold;
-    /* padding: 0.5vh 1vw; */
     margin-top: 1rem;
+    padding: 8px 0 5px;
     text-transform: uppercase;
     user-select: none;
     cursor: pointer;
 
     &:hover {
+        @include prefix(transition, all 1s);
         background-color: var(--color-queso);
         border-bottom-color: var(--color-gris);
         color: var(--color-gris);
-        transition: 1s;
     }
 }
 

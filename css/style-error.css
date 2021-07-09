@@ -1,0 +1,181 @@
+:root {
+  font-size: 21px;
+  /* Tipografias */
+  --font-family-general: "Open Sans", sans-serif;
+  --font-family-ipizza: "Finger Paint", cursive;
+  --font-family-copyright: "Satisfy", cursive;
+  /* General */
+  --altura-completa: 100vh;
+  --altura-menu-fijo: 75px;
+  --altura-visible: calc(100vh - var(--altura-menu-fijo));
+  --borde-general: 12px;
+  --padding-horizontal: 2.5rem;
+  --padding-vertical: 2.5rem;
+  /* Responsive */
+  --altura-menu-fijo-mobile: 67px;
+  --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
+  --padding-horizontal-mobile: 0.5rem;
+  --padding-vertical-mobile: 2.2rem;
+  /* Colores del sitio */
+  --color-blanco: #F8F9F1;
+  --color-gris: #212121;
+  --color-masa: #D6934D;
+  --color-negro-intenso: #0a0a0a;
+  --color-queso: #FCC61A;
+  --color-rojo-intenso: #E50914;
+  --color-rojo-o: #7A0B00;
+  --color-tomate: #BF1304;
+  --color-facebook: #3b5998;
+  --color-instagram: #E1306C;
+  --color-youtube: #c4302b;
+}
+
+section.error .btn-volver-inicio {
+  margin: 0 auto;
+}
+
+body {
+  color: var(--color-blanco);
+  text-align: center;
+}
+
+section.error {
+  background: linear-gradient(to top, #000000, #e74c3c);
+  height: var(--altura-completa);
+}
+section.error i {
+  color: var(--color-blanco);
+  font-size: 8rem;
+  filter: drop-shadow(0 0 10px var(--color-negro-intenso));
+}
+section.error .codigo-error {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 10px var(--color-negro-intenso));
+}
+section.error h1 {
+  color: var(--color-negro-intenso);
+  font-size: 2.2rem;
+  font-family: var(--font-family-ipizza);
+  margin-bottom: 1.67rem;
+}
+section.error .btn-volver-inicio {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  width: 280px;
+}
+section.error .btn-volver-inicio:hover {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  background-color: var(--color-queso);
+}
+
+/* -------- BOTON -------- */
+button {
+  display: block;
+  border-color: transparent;
+  border-radius: 25px;
+  color: var(--color-gris);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.2rem 0.8rem;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+button:hover {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+/* -------- ANIMACIONES -------- */
+.bounce {
+  -webkit-animation: bounce 1.5s ease-in-out;
+  -moz-animation: bounce 1.5s ease-in-out;
+  -ms-animation: bounce 1.5s ease-in-out;
+  -o-animation: bounce 1.5s ease-in-out;
+  animation: bounce 1.5s ease-in-out;
+}
+
+/* -------- FLEX paginas de error --------*/
+section.error div.d-flex {
+  row-gap: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--color-queso);
+  color: var(--color-gris);
+}
+
+/* -------- Browser Chrome-------- */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--color-blanco);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-gris);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-queso);
+}
+
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
+/* -------- CSS Tricks -------- */
+.wrap-animation {
+  overflow: hidden;
+}
+
+.h-visible {
+  height: var(--altura-visible);
+}
+
+.row-v-align {
+  /* Mi propio hack, para trabajar con h-visible */
+  align-items: center;
+  height: 100%;
+}
+
+:target::before {
+  /* Solucion a exceso de desplazamiento de links internos por menu fijo */
+  content: "";
+  display: block;
+  height: var(--altura-menu-fijo);
+  margin-top: calc(0px - var(--altura-menu-fijo));
+}
+
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  .h-visible {
+    height: auto;
+  }
+
+  :target::before {
+    height: var(--altura-menu-fijo-mobile);
+    margin-top: calc(0px - var(--altura-menu-fijo-mobile));
+  }
+
+  html, body {
+    /* Tomado "prestado" de Ryki Jaco y Filabe */
+    overflow-x: hidden;
+  }
+}
+
+/*# sourceMappingURL=style-error.css.map */

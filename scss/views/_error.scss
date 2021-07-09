@@ -1,22 +1,62 @@
+@import '../base/extends';
 @import '../base/gradientes';
-@import '../base/media-query';
+@import '../base/mixins';
 
-.error {
+body {
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+section.error {
     background: map-get($gradientes, UIg-RedMist);
     height: var(--altura-completa);
-    padding: 0;
+
+    i {
+        color: var(--color-blanco);
+        font-size: 8rem;
+        filter: drop-shadow(0 0 10px var(--color-negro-intenso));
+    }
 
     .codigo-error {
         font-size: 2rem;
         filter: drop-shadow(0 0 10px var(--color-negro-intenso));
-    } 
+    }
 
     h1 {
         color: var(--color-negro-intenso);
+        font-size: 2.2rem;
+        font-family: var(--font-family-ipizza);
+        margin-bottom: 1.67rem;
     }
 
-    i {
-        font-size: 8rem;
-        filter: drop-shadow(0 0 10px var(--color-negro-intenso));
+    .btn-volver-inicio {
+        @extend %mx-auto;
+        @include prefix(transition, all 1s);
+        width: 280px;
+
+        &:hover {
+            @include prefix(transition, all 1s);
+            background-color: var(--color-queso);
+        }
     }
+}
+
+/* -------- BOTON -------- */
+button {
+    @include button;
+    @include prefix(transition, all 1s);
+
+    &:hover {
+        @include prefix(transition, all 1s);
+    }
+}
+
+/* -------- ANIMACIONES -------- */
+.bounce {
+    @include prefix(animation, bounce 1.5s ease-in-out);
+}
+
+/* -------- FLEX paginas de error --------*/
+section.error div.d-flex {
+    row-gap: 0.5rem;
 }

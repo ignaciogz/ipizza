@@ -42,18 +42,18 @@ section.nuestra-calidad {
     padding: var(--padding-vertical) 0;
 
     article {
+        @include prefix(transition, all 1s);
         filter: grayscale(1);
         padding: 0 calc(var(--padding-horizontal)*2);
         position: relative;
-        transition: 1s;
 
         &:last-child {
             margin-top: var(--padding-vertical);
         }
 
         &:hover {
+            @include prefix(transition, all 1s);
             filter: grayscale(0);
-            transition: 1s;
         }
     }
 

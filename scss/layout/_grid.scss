@@ -1,7 +1,17 @@
+@import '../base/media-query';
+
 /* -------- GRID Footer -------- */
 .footer {
     .row {
         row-gap: 1.5rem;
+    }
+}
+
+@include media-breakpoint-only(xs) {
+    .footer {
+        .row {
+            --bs-gutter-x: 0;
+        }
     }
 }
 

@@ -12,12 +12,30 @@
     background: $url $posicion / $tamano;
 }
 
+@mixin desarrollador($display: block) {
+    display: $display;
+    font-family: var(--font-family-copyright);
+    font-size: 1rem;
+}
+
 @mixin prefix($propiedad, $valor) {
     -webkit-#{$propiedad}: $valor;
     -moz-#{$propiedad}: $valor;
     -ms-#{$propiedad}: $valor;
     -o-#{$propiedad}: $valor;
     #{$propiedad}: $valor;
+}
+
+@mixin button($display: block, $padding: 0.2rem 0.8rem) {
+    display: $display;
+    border-color: transparent;
+    border-radius: 25px;
+    color: var(--color-gris);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: $padding;
+    text-transform: uppercase;
+    user-select: none;
 }
 
 @mixin menu($li_display) {
@@ -68,10 +86,4 @@
         }
         // FIN Borde desde el centro hasta los costados
     }
-}
-
-@mixin desarrollador($display: block) {
-    display: $display;
-    font-family: var(--font-family-copyright);
-    font-size: 1rem;
 }

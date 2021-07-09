@@ -31,10 +31,11 @@
   --color-youtube: #c4302b;
 }
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 a {
   color: var(--color-queso);
   text-decoration: none;
-  /* width: fit-content; */
 }
 a:active {
   color: var(--color-tomate);
@@ -139,6 +140,8 @@ strong:hover {
     font-size: 0.7rem;
   }
 }
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- HEADER -------- */
 .header {
   background-color: var(--color-gris);
@@ -162,6 +165,8 @@ strong:hover {
     height: var(--altura-menu-fijo-mobile);
   }
 }
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- LOGOTIPO -------- */
 .logotipo {
   color: var(--color-blanco) !important;
@@ -295,6 +300,8 @@ strong:hover {
   margin: 0 auto;
 }
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- index.html -------- */
 section.video-marketing {
   padding: 0;
@@ -337,17 +344,25 @@ section.nuestra-calidad {
   padding: var(--padding-vertical) 0;
 }
 section.nuestra-calidad article {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   filter: grayscale(1);
   padding: 0 calc(var(--padding-horizontal)*2);
   position: relative;
-  transition: 1s;
 }
 section.nuestra-calidad article:last-child {
   margin-top: var(--padding-vertical);
 }
 section.nuestra-calidad article:hover {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   filter: grayscale(0);
-  transition: 1s;
 }
 section.nuestra-calidad::before {
   content: "";
@@ -589,6 +604,8 @@ section.nuestra-calidad article:hover {
   margin: 0 auto;
 }
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- pedidos.html -------- */
 section.consulta-pedido {
   padding: var(--padding-vertical) var(--padding-horizontal);
@@ -702,6 +719,8 @@ section.faq .desplegable details ul {
     height: 2rem;
   }
 }
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- nosotros.html -------- */
 section.historia {
   padding: var(--padding-vertical) var(--padding-horizontal);
@@ -809,6 +828,8 @@ section.galeria img {
   margin: 0 auto;
 }
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- contacto.html -------- */
 section.contacto {
   background: linear-gradient(to bottom, var(--color-queso), var(--color-gris));
@@ -816,22 +837,34 @@ section.contacto {
 }
 
 section.contacto iframe {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   border: 0;
   display: block;
   height: 455px;
   margin: 0 auto;
-  transition: 1s;
   width: 95%;
 }
 section.contacto iframe:hover {
-  transition: 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 section.contacto form#contacto-form {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   background-color: var(--color-gris);
   border-radius: 25px;
   padding: 1rem;
-  transition: 1s;
   width: 95%;
 }
 section.contacto form#contacto-form label {
@@ -858,7 +891,11 @@ section.contacto form#contacto-form .terminos-y-condiciones {
   margin-top: 0.5rem;
 }
 section.contacto form#contacto-form:hover {
-  transition: 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -898,6 +935,8 @@ section.contacto form#contacto-form:hover {
   margin: 0 auto;
 }
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- armala.html --------*/
 section.armala {
   padding: var(--padding-vertical) var(--padding-horizontal);
@@ -1012,23 +1051,8 @@ section.detalle-de-pedido .precio-total {
     padding: 0.6rem 0.5rem;
   }
 }
-.error {
-  background: linear-gradient(to top, #000000, #e74c3c);
-  height: var(--altura-completa);
-  padding: 0;
-}
-.error .codigo-error {
-  font-size: 2rem;
-  filter: drop-shadow(0 0 10px var(--color-negro-intenso));
-}
-.error h1 {
-  color: var(--color-negro-intenso);
-}
-.error i {
-  font-size: 8rem;
-  filter: drop-shadow(0 0 10px var(--color-negro-intenso));
-}
-
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- Footer -------- */
 .footer {
   background-color: var(--color-gris);
@@ -1133,10 +1157,6 @@ section.detalle-de-pedido .precio-total {
   }
 }
 /* -------- FLEX Footer -------- */
-.footer div.row {
-  row-gap: 1.5rem;
-}
-
 .footer .nuestras-apps.d-flex {
   column-gap: 1rem;
   row-gap: 1rem;
@@ -1161,11 +1181,18 @@ form#armala-form div.d-flex {
   column-gap: 1rem;
 }
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- GRID Footer -------- */
 .footer .row {
   row-gap: 1.5rem;
 }
 
+@media only screen and (max-width: 575.98px) {
+  .footer .row {
+    --bs-gutter-x: 0;
+  }
+}
 /* -------- GRID nosotros.html --------*/
 section.galeria .row {
   margin: 0;
@@ -1350,6 +1377,8 @@ nav.menu-mobile a:hover::before {
     width: 275px;
   }
 }
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- CAROUSEL -------- */
 #carousel-productos {
   height: 400px;
@@ -1364,6 +1393,11 @@ nav.menu-mobile a:hover::before {
 }
 
 .btn-carousel {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
   color: var(--color-blanco);
 }
 .btn-carousel i {
@@ -1371,9 +1405,13 @@ nav.menu-mobile a:hover::before {
   font-size: 2.5rem;
 }
 .btn-carousel:hover {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
   color: var(--color-queso);
   filter: drop-shadow(0 0 10px #F8F9F166);
-  transition: 0.6s;
 }
 
 .btn-carousel-anterior i {
@@ -1394,17 +1432,48 @@ nav.menu-mobile a:hover::before {
     height: 420px;
   }
 }
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- BOTONES -------- */
 button {
   display: block;
-  border-radius: 25px;
   border-color: transparent;
+  border-radius: 25px;
   color: var(--color-gris);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.2rem 0.8rem;
   text-transform: uppercase;
   user-select: none;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+button:hover {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.btn-menu-mobile,
+.btn-close {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -ms-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+.btn-menu-mobile:hover,
+.btn-close:hover {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -ms-transition: unset;
+  -o-transition: unset;
+  transition: unset;
 }
 
 .btn-menu-mobile {
@@ -1420,7 +1489,6 @@ button {
 }
 
 .btn-close {
-  background: unset;
   height: auto;
   position: absolute;
   right: 1rem;
@@ -1441,7 +1509,6 @@ button {
   background-color: var(--color-queso);
   cursor: url("../img/mmm.png"), auto !important;
   font-family: var(--font-family-ipizza);
-  transition: 1s;
 }
 .btn-armala:hover {
   background-color: var(--color-gris);
@@ -1459,14 +1526,12 @@ button {
 }
 .btn-ver-todas:hover {
   background-color: var(--color-queso);
-  transition: 0.6s;
 }
 
 .btn-mostrar-mas-fotos {
   background-color: var(--color-gris);
   border-radius: unset;
   color: var(--color-blanco);
-  padding: 0.5vh 0;
   width: 100%;
 }
 .btn-mostrar-mas-fotos i {
@@ -1475,7 +1540,6 @@ button {
 .btn-mostrar-mas-fotos:hover {
   background-color: var(--color-queso);
   color: var(--color-gris);
-  transition: 1s;
 }
 
 .btn-pagar {
@@ -1494,16 +1558,25 @@ button {
   cursor: pointer;
 }
 .btn-switch .switch-label {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
   background: var(--color-gris);
   border: 2px solid var(--color-queso);
   border-radius: 25px;
   display: inline-block;
   height: 33px;
   position: relative;
-  transition: 0.4s;
   width: 65px;
 }
 .btn-switch .switch-label::before {
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
   content: "";
   background: var(--color-blanco);
   border-radius: 25px;
@@ -1512,7 +1585,6 @@ button {
   position: absolute;
   top: 2px;
   left: 3px;
-  transition: 0.4s;
   width: 25px;
 }
 .btn-switch input[type=checkbox].switch-input:checked + label.switch-label::before {
@@ -1521,6 +1593,11 @@ button {
 }
 
 /* FIN Botones de switch */
+@media only screen and (min-width: 1400px) {
+  .btn-ver-todas {
+    width: 30%;
+  }
+}
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   .btn-armala {
     font-size: 2rem;
@@ -1537,11 +1614,6 @@ button {
 @media only screen and (max-width: 575.98px) {
   .btn-ver-todas {
     width: 60%;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .btn-ver-todas {
-    width: 30%;
   }
 }
 /* -------- FORMULARIOS -------- */
@@ -1595,6 +1667,11 @@ form input[type=number]::-webkit-inner-spin-button, form input[type=number]::-we
 
 /* FIN Quitando botones de los input tipo number */
 input[type=submit] {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   background-color: var(--color-gris);
   border-radius: 25px;
   border-color: var(--color-queso);
@@ -1603,17 +1680,21 @@ input[type=submit] {
   font-family: "Finger Paint", cursive;
   font-size: 1.2rem;
   font-weight: bold;
-  /* padding: 0.5vh 1vw; */
   margin-top: 1rem;
+  padding: 8px 0 5px;
   text-transform: uppercase;
   user-select: none;
   cursor: pointer;
 }
 input[type=submit]:hover {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   background-color: var(--color-queso);
   border-bottom-color: var(--color-gris);
   color: var(--color-gris);
-  transition: 1s;
 }
 
 /* INICIO Checkbox Personalizado */
@@ -1688,36 +1769,80 @@ input[type=submit]:hover {
 
 @keyframes shake-that {
   0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+    -moz-transform: translate(1px, 1px) rotate(0deg);
+    -ms-transform: translate(1px, 1px) rotate(0deg);
+    -o-transform: translate(1px, 1px) rotate(0deg);
     transform: translate(1px, 1px) rotate(0deg);
   }
   10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+    -moz-transform: translate(-1px, -2px) rotate(-1deg);
+    -ms-transform: translate(-1px, -2px) rotate(-1deg);
+    -o-transform: translate(-1px, -2px) rotate(-1deg);
     transform: translate(-1px, -2px) rotate(-1deg);
   }
   20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+    -moz-transform: translate(-3px, 0px) rotate(1deg);
+    -ms-transform: translate(-3px, 0px) rotate(1deg);
+    -o-transform: translate(-3px, 0px) rotate(1deg);
     transform: translate(-3px, 0px) rotate(1deg);
   }
   30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+    -moz-transform: translate(3px, 2px) rotate(0deg);
+    -ms-transform: translate(3px, 2px) rotate(0deg);
+    -o-transform: translate(3px, 2px) rotate(0deg);
     transform: translate(3px, 2px) rotate(0deg);
   }
   40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+    -moz-transform: translate(1px, -1px) rotate(1deg);
+    -ms-transform: translate(1px, -1px) rotate(1deg);
+    -o-transform: translate(1px, -1px) rotate(1deg);
     transform: translate(1px, -1px) rotate(1deg);
   }
   50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+    -moz-transform: translate(-1px, 2px) rotate(-1deg);
+    -ms-transform: translate(-1px, 2px) rotate(-1deg);
+    -o-transform: translate(-1px, 2px) rotate(-1deg);
     transform: translate(-1px, 2px) rotate(-1deg);
   }
   60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+    -moz-transform: translate(-3px, 1px) rotate(0deg);
+    -ms-transform: translate(-3px, 1px) rotate(0deg);
+    -o-transform: translate(-3px, 1px) rotate(0deg);
     transform: translate(-3px, 1px) rotate(0deg);
   }
   70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+    -moz-transform: translate(3px, 1px) rotate(-1deg);
+    -ms-transform: translate(3px, 1px) rotate(-1deg);
+    -o-transform: translate(3px, 1px) rotate(-1deg);
     transform: translate(3px, 1px) rotate(-1deg);
   }
   80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+    -moz-transform: translate(-1px, -1px) rotate(1deg);
+    -ms-transform: translate(-1px, -1px) rotate(1deg);
+    -o-transform: translate(-1px, -1px) rotate(1deg);
     transform: translate(-1px, -1px) rotate(1deg);
   }
   90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+    -moz-transform: translate(1px, 2px) rotate(0deg);
+    -ms-transform: translate(1px, 2px) rotate(0deg);
+    -o-transform: translate(1px, 2px) rotate(0deg);
     transform: translate(1px, 2px) rotate(0deg);
   }
   100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+    -moz-transform: translate(1px, -2px) rotate(-1deg);
+    -ms-transform: translate(1px, -2px) rotate(-1deg);
+    -o-transform: translate(1px, -2px) rotate(-1deg);
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
@@ -1731,9 +1856,17 @@ input[type=submit]:hover {
 
 @keyframes chorreando-queso {
   50% {
+    -webkit-transform: translate(-10px, -10px);
+    -moz-transform: translate(-10px, -10px);
+    -ms-transform: translate(-10px, -10px);
+    -o-transform: translate(-10px, -10px);
     transform: translate(-10px, -10px);
   }
   100% {
+    -webkit-transform: translate(-14px, -14px);
+    -moz-transform: translate(-14px, -14px);
+    -ms-transform: translate(-14px, -14px);
+    -o-transform: translate(-14px, -14px);
     transform: translate(-14px, -14px);
   }
 }
@@ -1768,6 +1901,8 @@ html {
   background-color: var(--color-queso);
 }
 
+/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
+/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- CSS Tricks -------- */
 .wrap-animation {
   overflow: hidden;
@@ -1791,7 +1926,7 @@ html {
   margin-top: calc(0px - var(--altura-menu-fijo));
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
   .h-visible {
     height: auto;
   }
@@ -1800,8 +1935,7 @@ html {
     height: var(--altura-menu-fijo-mobile);
     margin-top: calc(0px - var(--altura-menu-fijo-mobile));
   }
-}
-@media only screen and (max-width: 575.98px) {
+
   html, body {
     /* Tomado "prestado" de Ryki Jaco y Filabe */
     overflow-x: hidden;
@@ -1832,6 +1966,7 @@ section.nuestra-calidad article:hover {
     width: 80%;
   }
 
+  /* -------- CSS Tricks -------- */
   .h-visible {
     height: auto;
   }
