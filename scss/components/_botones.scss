@@ -13,6 +13,7 @@ button {
 .btn-menu-mobile, 
 .btn-close {
     @include prefix(transition, unset);
+    line-height: 1.2rem;
 
     &:hover {
         @include prefix(transition, unset);
@@ -33,6 +34,7 @@ button {
 }
 
 .btn-close {
+    background: unset;
     height: auto;
     position: absolute;
         right: 1rem;
@@ -44,7 +46,7 @@ button {
 
     &:hover {
         color: var(--color-queso) !important;
-        filter: drop-shadow(0 0 10px #F8F9F166);
+        filter: drop-shadow(0 0 10px var(--color-blanco-alpha40));
     }
 
     &:focus {
@@ -66,7 +68,7 @@ button {
 
 .btn-ver-todas {
     @extend %mx-auto;
-    background-color: #F8F9F1E6;
+    background-color: var(--color-blanco-alpha90);
     height: 50px;
     width: 25%;
 

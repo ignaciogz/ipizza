@@ -3,7 +3,7 @@
 /* -------- HEADER -------- */
 .header {
     background-color: var(--color-gris);
-    box-shadow: 0 10px 6px -6px #F8F9F166;
+    box-shadow: 0 10px 6px -6px var(--color-blanco-alpha40);
     height: var(--altura-menu-fijo);
     padding: 0 var(--padding-horizontal);
     user-select: none;

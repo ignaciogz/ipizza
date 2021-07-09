@@ -2,3 +2,13 @@
     $resultado: $valor-media-final - $mq-breakpoints-subtract;
     @return $resultado;
 }
+
+@function aplicar-transparencia($porcentaje, $color-hexadecimal) {
+    $transparencia-hexadecimal: obtener-transparencia-hexadecimal($porcentaje);
+    @return $color-hexadecimal + $transparencia-hexadecimal;
+}
+
+@function obtener-transparencia-hexadecimal($porcentaje) {
+    $transparencia-hexadecimal: map_get($porcentaje-a-hexadecimal, $porcentaje);
+    @return $transparencia-hexadecimal;
+}

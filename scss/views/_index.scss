@@ -95,7 +95,7 @@ section.opiniones {
 
 section.opiniones article {
     @extend %sombra-contenedor;
-    background-color: #F8F9F1E6;
+    background-color: var(--color-blanco-alpha90);
     border-radius: var(--borde-general);
     color: var(--color-gris);
     margin: 0 auto;

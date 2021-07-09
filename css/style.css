@@ -29,6 +29,9 @@
   --color-facebook: #3b5998;
   --color-instagram: #E1306C;
   --color-youtube: #c4302b;
+  --color-blanco-alpha40: #F8F9F166;
+  --color-blanco-alpha50: #F8F9F180;
+  --color-blanco-alpha90: #F8F9F1E6;
 }
 
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
@@ -145,7 +148,7 @@ strong:hover {
 /* -------- HEADER -------- */
 .header {
   background-color: var(--color-gris);
-  box-shadow: 0 10px 6px -6px #F8F9F166;
+  box-shadow: 0 10px 6px -6px var(--color-blanco-alpha40);
   height: var(--altura-menu-fijo);
   padding: 0 var(--padding-horizontal);
   user-select: none;
@@ -399,7 +402,7 @@ section.opiniones {
 }
 
 section.opiniones article {
-  background-color: #F8F9F1E6;
+  background-color: var(--color-blanco-alpha90);
   border-radius: var(--borde-general);
   color: var(--color-gris);
   margin: 0 auto;
@@ -630,7 +633,7 @@ section.consulta-pedido::before {
 }
 
 section.consulta-pedido .consulta-pedido-container {
-  background-color: #F8F9F180;
+  background-color: var(--color-blanco-alpha50);
   border-radius: var(--borde-general);
   color: var(--color-gris);
   padding: var(--padding-vertical) 1.5rem;
@@ -1466,6 +1469,7 @@ button:hover {
   -ms-transition: unset;
   -o-transition: unset;
   transition: unset;
+  line-height: 1.2rem;
 }
 .btn-menu-mobile:hover,
 .btn-close:hover {
@@ -1489,6 +1493,7 @@ button:hover {
 }
 
 .btn-close {
+  background: unset;
   height: auto;
   position: absolute;
   right: 1rem;
@@ -1499,7 +1504,7 @@ button:hover {
 }
 .btn-close:hover {
   color: var(--color-queso) !important;
-  filter: drop-shadow(0 0 10px #F8F9F166);
+  filter: drop-shadow(0 0 10px var(--color-blanco-alpha40));
 }
 .btn-close:focus {
   box-shadow: unset;
@@ -1517,7 +1522,7 @@ button:hover {
 }
 
 .btn-ver-todas {
-  background-color: #F8F9F1E6;
+  background-color: var(--color-blanco-alpha90);
   height: 50px;
   width: 25%;
 }

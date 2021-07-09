@@ -1,6 +1,7 @@
 @use 'sass:meta';
 @import '../base/config';
 @import '../base/colores';
+@import '../base/functions';
 @import '../base/tipografias';
 
 :root {
@@ -9,7 +10,7 @@
         /* Tipografias */
         --font-family-general: #{meta.inspect($font-family-general)};
         --font-family-ipizza: #{meta.inspect($font-family-artistico)};
-        --font-family-copyright: #{meta.inspect($font-family-firmas)};  
+        --font-family-copyright: #{meta.inspect($font-family-firmas)};
 
         /* General */
         --altura-completa: #{$altura-completa};
@@ -38,4 +39,8 @@
         --color-facebook: #{$color-facebook};
         --color-instagram: #{$color-instagram};
         --color-youtube: #{$color-youtube};
+
+        --color-blanco-alpha40: #{aplicar-transparencia(40%, $color-blanco)};
+        --color-blanco-alpha50: #{aplicar-transparencia(50%, $color-blanco)};
+        --color-blanco-alpha90: #{aplicar-transparencia(90%, $color-blanco)};
 }
