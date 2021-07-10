@@ -9,7 +9,6 @@ section.consulta-pedido {
 
     i {
         color: var(--color-gris);
-        font-size: 1rem;
     }
 
     &::before {
@@ -38,6 +37,13 @@ section.consulta-pedido .consulta-pedido-container {
     }
 }
 
+section.consulta-pedido,
+section.faq {
+    i {
+        font-size: 0.6rem;
+    }
+}
+
 section.faq {
     background-color: var(--color-negro-intenso);
     
@@ -46,7 +52,6 @@ section.faq {
     }
     i {
         color: var(--color-queso);
-        font-size: 1rem;
     }
     .desplegable details {
         p {

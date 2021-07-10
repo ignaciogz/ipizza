@@ -14,9 +14,10 @@
     height: var(--altura-menu-fijo);
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .header {
         height: var(--altura-menu-fijo-mobile);
+        padding: 0;
     }
 
     .logotipo-y-menu-container {

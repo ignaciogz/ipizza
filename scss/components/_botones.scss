@@ -18,13 +18,16 @@ button {
     &:hover {
         @include prefix(transition, unset);
     }
+
+    i {
+        font-size: 1.5rem;
+    }
 }
 
 .btn-menu-mobile {
-    background-color: var(--color-gris);
+    background-color: transparent;
     border-radius: unset;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: 0;
     position: absolute;
         left: 0;
 
@@ -39,10 +42,6 @@ button {
     position: absolute;
         right: 1rem;
     width: auto;
-
-    i {
-        font-size: 1.5rem;
-    }
 
     &:hover {
         color: var(--color-queso) !important;

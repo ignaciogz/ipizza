@@ -159,9 +159,10 @@ strong:hover {
   height: var(--altura-menu-fijo);
 }
 
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .header {
     height: var(--altura-menu-fijo-mobile);
+    padding: 0;
   }
 
   .logotipo-y-menu-container {
@@ -282,9 +283,9 @@ strong:hover {
   width: 4px;
 }
 
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .logotipo {
-    margin-left: 50px;
+    margin-left: 40px;
   }
 
   .logo-container {
@@ -624,7 +625,6 @@ section.consulta-pedido {
 }
 section.consulta-pedido i {
   color: var(--color-gris);
-  font-size: 1rem;
 }
 section.consulta-pedido::before {
   content: "";
@@ -654,6 +654,11 @@ section.consulta-pedido .consulta-pedido-container h2 i {
   color: var(--color-tomate);
 }
 
+section.consulta-pedido i,
+section.faq i {
+  font-size: 0.6rem;
+}
+
 section.faq {
   background-color: var(--color-negro-intenso);
 }
@@ -662,7 +667,6 @@ section.faq h1 {
 }
 section.faq i {
   color: var(--color-queso);
-  font-size: 1rem;
 }
 section.faq .desplegable details p {
   background-color: var(--color-negro-intenso);
@@ -1488,12 +1492,15 @@ button:hover {
   -o-transition: unset;
   transition: unset;
 }
+.btn-menu-mobile i,
+.btn-close i {
+  font-size: 1.5rem;
+}
 
 .btn-menu-mobile {
-  background-color: var(--color-gris);
+  background-color: transparent;
   border-radius: unset;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 0;
   position: absolute;
   left: 0;
 }
@@ -1507,9 +1514,6 @@ button:hover {
   position: absolute;
   right: 1rem;
   width: auto;
-}
-.btn-close i {
-  font-size: 1.5rem;
 }
 .btn-close:hover {
   color: var(--color-queso) !important;

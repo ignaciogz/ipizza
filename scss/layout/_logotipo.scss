@@ -125,9 +125,9 @@
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .logotipo {
-        margin-left: 50px;
+        margin-left: 40px;
     }
 
     .logo-container {
