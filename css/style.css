@@ -513,6 +513,36 @@ section.nuestra-calidad article:hover {
     width: 90%;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .no-webp section.nuestra-calidad::before {
+    background: url(../img/background/bg-nuestra-calidad-xxl.jpg) top/cover;
+  }
+  .webp section.nuestra-calidad::before {
+    background: url(../img/background/bg-nuestra-calidad-xxl.webp) top/cover;
+  }
+
+  .no-webp section.opiniones {
+    background: url(../img/background/bg-opiniones-xxl.jpg) center/cover;
+  }
+  .webp section.opiniones {
+    background: url(../img/background/bg-opiniones-xxl.webp) center/cover;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .no-webp section.nuestra-calidad::before {
+    background: url(../img/background/bg-nuestra-calidad-lg.jpg) top/cover;
+  }
+  .webp section.nuestra-calidad::before {
+    background: url(../img/background/bg-nuestra-calidad-lg.webp) top/cover;
+  }
+
+  .no-webp section.opiniones {
+    background: url(../img/background/bg-opiniones-lg.jpg) center/cover;
+  }
+  .webp section.opiniones {
+    background: url(../img/background/bg-opiniones-lg.webp) center/cover;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.nuestra-calidad::before {
     background: url(../img/background/bg-nuestra-calidad-tablet.jpg) top/cover;
@@ -701,6 +731,22 @@ section.faq .desplegable details ul {
   padding: 0 0 1.2rem 2.2rem;
 }
 
+@media only screen and (min-width: 1400px) {
+  .no-webp section.consulta-pedido::before {
+    background: url(../img/background/bg-pedidos-xxl.jpg) bottom/cover;
+  }
+  .webp section.consulta-pedido::before {
+    background: url(../img/background/bg-pedidos-xxl.webp) bottom/cover;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .no-webp section.consulta-pedido::before {
+    background: url(../img/background/bg-pedidos-lg.jpg) bottom/cover;
+  }
+  .webp section.consulta-pedido::before {
+    background: url(../img/background/bg-pedidos-lg.webp) bottom/cover;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.consulta-pedido::before {
     background: url(../img/background/bg-pedidos-tablet.jpg) bottom/cover;
@@ -789,6 +835,27 @@ section.galeria img {
   width: 100%;
 }
 
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
+  section.galeria img {
+    height: 30vh;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .no-webp section.historia::before {
+    background: url(../img/background/bg-nosotros-xxl.jpg) center/cover;
+  }
+  .webp section.historia::before {
+    background: url(../img/background/bg-nosotros-xxl.webp) center/cover;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .no-webp section.historia::before {
+    background: url(../img/background/bg-nosotros-lg.jpg) center/cover;
+  }
+  .webp section.historia::before {
+    background: url(../img/background/bg-nosotros-lg.webp) center/cover;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .no-webp section.historia::before {
     background: url(../img/background/bg-nosotros-tablet.jpg) center/cover;
@@ -799,11 +866,6 @@ section.galeria img {
 
   section.historia figure figcaption {
     margin-top: 2.5rem;
-  }
-}
-@media only screen and (min-width: 0) and (max-width: 991.98px) {
-  section.galeria img {
-    height: 30vh;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {

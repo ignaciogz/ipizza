@@ -228,6 +228,50 @@ section.opiniones article {
     }
 }
 
+@include media-breakpoint-only(xxl) {
+    section.nuestra-calidad {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-xxl.jpg), top);
+        }
+    
+        .webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-xxl.webp), top);
+        }
+    }
+
+    section.opiniones {
+        .no-webp & {
+            @include background(url(../img/background/bg-opiniones-xxl.jpg));
+        }
+    
+        .webp & {
+            @include background(url(../img/background/bg-opiniones-xxl.webp));
+        }
+    }
+}
+
+@include media-breakpoint-only(lg) {
+    section.nuestra-calidad {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-lg.jpg), top);
+        }
+    
+        .webp &::before {
+            @include background(url(../img/background/bg-nuestra-calidad-lg.webp), top);
+        }
+    }
+
+    section.opiniones {
+        .no-webp & {
+            @include background(url(../img/background/bg-opiniones-lg.jpg));
+        }
+    
+        .webp & {
+            @include background(url(../img/background/bg-opiniones-lg.webp));
+        }
+    }
+}
+
 @include media-breakpoint-only(md) {
     section.nuestra-calidad {
         .no-webp &::before {

@@ -54,6 +54,36 @@ section.galeria {
     }
 }
 
+@include media-breakpoint-between(xs, lg) {
+    section.galeria img {
+        height: 30vh;
+    }
+}
+
+@include media-breakpoint-only(xxl){
+    section.historia {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nosotros-xxl.jpg));
+        }
+        
+        .webp &::before {
+            @include background(url(../img/background/bg-nosotros-xxl.webp));
+        }
+    }
+}
+
+@include media-breakpoint-only(lg){
+    section.historia {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-nosotros-lg.jpg));
+        }
+        
+        .webp &::before {
+            @include background(url(../img/background/bg-nosotros-lg.webp));
+        }
+    }
+}
+
 @include media-breakpoint-only(md) {
     section.historia {
         .no-webp &::before {
@@ -69,12 +99,6 @@ section.galeria {
         figcaption {
             margin-top: 2.5rem;
         }
-    }
-}
-
-@include media-breakpoint-between(xs, lg) {
-    section.galeria img {
-        height: 30vh;
     }
 }
 

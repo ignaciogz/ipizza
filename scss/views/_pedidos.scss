@@ -89,6 +89,30 @@ section.faq {
     }
 }
 
+@include media-breakpoint-only(xxl) {
+    section.consulta-pedido {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-pedidos-xxl.jpg), bottom);
+        }
+    
+        .webp &::before {
+            @include background(url(../img/background/bg-pedidos-xxl.webp), bottom);
+        }  
+    }
+}
+
+@include media-breakpoint-only(lg) {
+    section.consulta-pedido {
+        .no-webp &::before {
+            @include background(url(../img/background/bg-pedidos-lg.jpg), bottom);
+        }
+    
+        .webp &::before {
+            @include background(url(../img/background/bg-pedidos-lg.webp), bottom);
+        }  
+    }
+}
+
 @include media-breakpoint-only(md) {
     section.consulta-pedido {
         .no-webp &::before {
