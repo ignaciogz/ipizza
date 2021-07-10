@@ -60,6 +60,12 @@
     }
 }
 
+@include media-breakpoint-up(xxl) {
+    .tarjeta-de-producto {
+        width: 275px;
+    }
+}
+
 @include media-breakpoint-between(sm, lg) {
     .tarjeta-de-producto {
         button {
@@ -71,8 +77,8 @@
     }
 }
 
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-only(xs) {
     .tarjeta-de-producto {
-        width: 275px;
+        width: 200px;
     }
 }

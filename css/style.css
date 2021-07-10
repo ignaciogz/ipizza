@@ -16,7 +16,7 @@
   --altura-menu-fijo-mobile: 67px;
   --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
   --padding-horizontal-mobile: 0.5rem;
-  --padding-vertical-mobile: 2.2rem;
+  --padding-vertical-mobile: 2rem;
   /* Colores del sitio */
   --color-blanco: #F8F9F1;
   --color-gris: #212121;
@@ -124,7 +124,8 @@ strong:hover {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
   }
 
   h2 {
@@ -827,9 +828,6 @@ section.galeria img {
   section.historia figure figcaption {
     margin-top: 2rem;
   }
-  section.historia figure h1 {
-    font-size: 1.7rem;
-  }
 }
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.opiniones article, section.consulta-pedido .consulta-pedido-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
@@ -1380,6 +1378,11 @@ nav.menu-mobile a:hover::before {
   margin: 0 0.1rem;
 }
 
+@media only screen and (min-width: 1400px) {
+  .tarjeta-de-producto {
+    width: 275px;
+  }
+}
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   .tarjeta-de-producto button {
     font-size: 1.2rem;
@@ -1388,9 +1391,9 @@ nav.menu-mobile a:hover::before {
     width: initial;
   }
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (max-width: 575.98px) {
   .tarjeta-de-producto {
-    width: 275px;
+    width: 200px;
   }
 }
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
