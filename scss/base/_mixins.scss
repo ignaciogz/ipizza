@@ -1,3 +1,7 @@
+@mixin background($url, $posicion: center, $tamano: cover) {
+    background: $url $posicion / $tamano;
+}
+
 @mixin background-full($url, $posicion: center, $tamano: cover) {
     content:'';
     background: $url $posicion / $tamano;
@@ -6,24 +10,6 @@
         bottom: 0;
         left: 0;
         right: 0;
-}
-
-@mixin background($url, $posicion: center, $tamano: cover) {
-    background: $url $posicion / $tamano;
-}
-
-@mixin desarrollador($display: block) {
-    display: $display;
-    font-family: var(--font-family-copyright);
-    font-size: 1rem;
-}
-
-@mixin prefix($propiedad, $valor) {
-    -webkit-#{$propiedad}: $valor;
-    -moz-#{$propiedad}: $valor;
-    -ms-#{$propiedad}: $valor;
-    -o-#{$propiedad}: $valor;
-    #{$propiedad}: $valor;
 }
 
 @mixin button($display: block, $padding: 0.2rem 0.8rem) {
@@ -38,6 +24,12 @@
     user-select: none;
 }
 
+@mixin desarrollador($display: block) {
+    display: $display;
+    font-family: var(--font-family-copyright);
+    font-size: 1rem;
+}
+
 @mixin menu($li_display) {
     ul {
         margin: 0;
@@ -47,6 +39,7 @@
     li {
         display: $li_display;
         @content;
+        text-align: center;
 
         &:first-child {
             margin: 0;
@@ -86,4 +79,12 @@
         }
         // FIN Borde desde el centro hasta los costados
     }
+}
+
+@mixin prefix($propiedad, $valor) {
+    -webkit-#{$propiedad}: $valor;
+    -moz-#{$propiedad}: $valor;
+    -ms-#{$propiedad}: $valor;
+    -o-#{$propiedad}: $valor;
+    #{$propiedad}: $valor;
 }

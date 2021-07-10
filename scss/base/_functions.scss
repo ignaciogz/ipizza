@@ -1,11 +1,11 @@
-@function calcular-max-breakpoint($valor-media-final) {
-    $resultado: $valor-media-final - $mq-breakpoints-subtract;
-    @return $resultado;
-}
-
 @function aplicar-transparencia($porcentaje, $color-hexadecimal) {
     $transparencia-hexadecimal: obtener-transparencia-hexadecimal($porcentaje);
     @return $color-hexadecimal + $transparencia-hexadecimal;
+}
+
+@function calcular-max-breakpoint($valor-media-final) {
+    $resultado: $valor-media-final - $mq-breakpoints-subtract;
+    @return $resultado;
 }
 
 @function obtener-transparencia-hexadecimal($porcentaje) {

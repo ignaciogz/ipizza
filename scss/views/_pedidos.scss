@@ -9,6 +9,10 @@ section.consulta-pedido {
 
     i {
         color: var(--color-gris);
+
+        &.fa-heart {
+            font-size: 1rem;
+        }
     }
 
     &::before {
@@ -154,7 +158,7 @@ section.faq {
         padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
 
         h2 {
-            height: 2rem;
+            height: 2.4rem;
         }
     }
 }

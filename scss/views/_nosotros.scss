@@ -23,6 +23,7 @@ section.historia figure {
         @extend %mx-auto;
         border: 0.5rem outset var(--color-gris);
         display: block;
+        height: 100%;
         text-align: center;
         transform: rotate(-5deg);
         width: 90%;

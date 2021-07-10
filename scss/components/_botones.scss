@@ -44,7 +44,6 @@ button {
     width: auto;
 
     &:hover {
-        color: var(--color-queso) !important;
         filter: drop-shadow(0 0 10px var(--color-blanco-alpha40));
     }
 

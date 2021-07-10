@@ -95,11 +95,11 @@ section.opiniones {
 }
 
 section.opiniones article {
+    @extend %mx-auto;
     @extend %sombra-contenedor;
     background-color: var(--color-blanco-alpha90);
     border-radius: var(--borde-general);
     color: var(--color-gris);
-    margin: 0 auto;
     padding: 1rem;
     width: 50%;
 

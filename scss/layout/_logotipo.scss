@@ -2,7 +2,7 @@
 
 /* -------- LOGOTIPO -------- */
 .logotipo {
-    color: var(--color-blanco) !important;
+    color: var(--color-blanco);
     font-family: 'Finger Paint', cursive;
     font-size: 2.2rem;
     height: inherit;
@@ -125,7 +125,7 @@
     }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-between(xs, lg) {
     .logotipo {
         margin-left: 40px;
     }

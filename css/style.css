@@ -114,7 +114,6 @@ strong:hover {
 }
 @media only screen and (min-width: 0) and (max-width: 991.98px) {
   body {
-    font-size: 0.9rem;
     padding-top: var(--altura-menu-fijo-mobile);
   }
 }
@@ -160,7 +159,7 @@ strong:hover {
   height: var(--altura-menu-fijo);
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
   .header {
     height: var(--altura-menu-fijo-mobile);
     padding: 0;
@@ -174,7 +173,7 @@ strong:hover {
 /* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- LOGOTIPO -------- */
 .logotipo {
-  color: var(--color-blanco) !important;
+  color: var(--color-blanco);
   font-family: "Finger Paint", cursive;
   font-size: 2.2rem;
   height: inherit;
@@ -284,7 +283,7 @@ strong:hover {
   width: 4px;
 }
 
-@media only screen and (max-width: 991.98px) {
+@media only screen and (min-width: 0) and (max-width: 991.98px) {
   .logotipo {
     margin-left: 40px;
   }
@@ -293,16 +292,16 @@ strong:hover {
     height: 87px;
   }
 }
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img, section.opiniones article {
+  margin: 0 auto;
+}
+
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .consulta-pedido-container, section.opiniones article {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 .tarjeta-de-producto:hover, section.contacto form#contacto-form:hover, section.contacto iframe:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
-}
-
-.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img {
-  margin: 0 auto;
 }
 
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
@@ -408,7 +407,6 @@ section.opiniones article {
   background-color: var(--color-blanco-alpha90);
   border-radius: var(--borde-general);
   color: var(--color-gris);
-  margin: 0 auto;
   padding: 1rem;
   width: 50%;
 }
@@ -635,16 +633,16 @@ section.nuestra-calidad article:hover {
     text-align: center;
   }
 }
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img, section.opiniones article {
+  margin: 0 auto;
+}
+
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.consulta-pedido .consulta-pedido-container, section.opiniones article {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 .tarjeta-de-producto:hover, section.contacto form#contacto-form:hover, section.contacto iframe:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
-}
-
-.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img {
-  margin: 0 auto;
 }
 
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
@@ -656,6 +654,9 @@ section.consulta-pedido {
 }
 section.consulta-pedido i {
   color: var(--color-gris);
+}
+section.consulta-pedido i.fa-heart {
+  font-size: 1rem;
 }
 section.consulta-pedido::before {
   content: "";
@@ -778,7 +779,7 @@ section.faq .desplegable details ul {
     padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
   section.consulta-pedido .consulta-pedido-container h2 {
-    height: 2rem;
+    height: 2.4rem;
   }
 }
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
@@ -808,6 +809,7 @@ section.historia figure {
 section.historia figure img {
   border: 0.5rem outset var(--color-gris);
   display: block;
+  height: 100%;
   text-align: center;
   transform: rotate(-5deg);
   width: 90%;
@@ -891,16 +893,16 @@ section.galeria img {
     margin-top: 2rem;
   }
 }
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.opiniones article, section.historia figure img {
+  margin: 0 auto;
+}
+
 .tarjeta-de-producto, section.contacto form#contacto-form, section.contacto iframe, section.opiniones article, section.consulta-pedido .consulta-pedido-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 .tarjeta-de-producto:hover, section.contacto form#contacto-form:hover, section.contacto iframe:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
-}
-
-.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.historia figure img {
-  margin: 0 auto;
 }
 
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
@@ -998,16 +1000,16 @@ section.contacto form#contacto-form:hover {
     padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
 }
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.opiniones article, section.historia figure img, section.contacto form#contacto-form {
+  margin: 0 auto;
+}
+
 .tarjeta-de-producto, section.opiniones article, section.consulta-pedido .consulta-pedido-container, section.contacto iframe, section.contacto form#contacto-form {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 .tarjeta-de-producto:hover, section.contacto iframe:hover, section.contacto form#contacto-form:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
-}
-
-.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.historia figure img, section.contacto form#contacto-form {
-  margin: 0 auto;
 }
 
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
@@ -1286,6 +1288,7 @@ nav.menu ul {
 nav.menu li {
   display: inline-block;
   margin-left: 0.5rem;
+  text-align: center;
 }
 nav.menu li:first-child {
   margin: 0;
@@ -1353,6 +1356,7 @@ nav.menu-mobile ul {
 nav.menu-mobile li {
   display: block;
   margin-top: 1rem;
+  text-align: center;
 }
 nav.menu-mobile li:first-child {
   margin: 0;
@@ -1385,16 +1389,16 @@ nav.menu-mobile a:hover::before {
   width: 100%;
 }
 
+.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.opiniones article, section.historia figure img, section.contacto form#contacto-form, section.detalle-de-pedido .canvas-container {
+  margin: 0 auto;
+}
+
 .tarjeta-de-producto, section.opiniones article, section.consulta-pedido .consulta-pedido-container, section.contacto iframe, section.contacto form#contacto-form {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 .tarjeta-de-producto:hover, section.contacto iframe:hover, section.contacto form#contacto-form:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
-}
-
-.btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.historia figure img, section.contacto form#contacto-form, section.detalle-de-pedido .canvas-container {
-  margin: 0 auto;
 }
 
 .tarjeta-de-producto {
@@ -1581,7 +1585,6 @@ button:hover {
   width: auto;
 }
 .btn-close:hover {
-  color: var(--color-queso) !important;
   filter: drop-shadow(0 0 10px var(--color-blanco-alpha40));
 }
 .btn-close:focus {
@@ -2047,6 +2050,10 @@ section.nuestra-calidad article:hover {
 
   section.opiniones article {
     width: 80%;
+  }
+
+  section.galeria img {
+    height: 16vh;
   }
 
   /* -------- CSS Tricks -------- */

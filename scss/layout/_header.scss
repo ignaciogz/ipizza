@@ -14,7 +14,7 @@
     height: var(--altura-menu-fijo);
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-between(xs, lg) {
     .header {
         height: var(--altura-menu-fijo-mobile);
         padding: 0;

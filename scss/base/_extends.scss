@@ -1,23 +1,23 @@
-%sombra-contenedor {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
-}
-
-%sombra-contenedor-hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
+%button {
+    border-color: transparent;
+    border-radius: 25px;
+    color: var(--color-gris);
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.2rem 0.8rem;
+    text-transform: uppercase;
+    user-select: none;
 }
 
 %mx-auto {
     margin: 0 auto;
 }
 
-%button {
-    display: block;
-    border-color: transparent;
-    border-radius: 25px;
-    color: var(--color-gris);
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 0.2rem 0.8rem;
-    text-transform: uppercase;
-    user-select: none;
+%sombra-contenedor {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
+}
+
+%sombra-contenedor-hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
