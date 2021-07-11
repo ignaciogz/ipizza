@@ -51,7 +51,7 @@ h3 { font-size: 1rem; }
 i { font-size: 2rem; }
 
 section {
-    padding: var(--padding-vertical) var(--padding-horizontal); // Quitar al terminar los html
+    padding: var(--padding-vertical) 0;
     position: relative;
 }
 
@@ -79,6 +79,10 @@ strong {
     body {
         padding-top: var(--altura-menu-fijo-mobile);
     }
+
+    section {
+        padding: var(--padding-vertical-mobile) 0;
+    }
 }
 
 @include media-breakpoint-only(xs) {
@@ -89,10 +93,6 @@ strong {
     }
     h2 { font-size: 1.3rem; }
     h3 { font-size: 0.8rem; }
-
-    section { 
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal);
-    }
 
     small { font-size: 0.7rem; }
 }

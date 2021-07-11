@@ -4,7 +4,6 @@
 
 /* -------- pedidos.html -------- */
 section.consulta-pedido {
-    padding: var(--padding-vertical) var(--padding-horizontal);
     text-align: center;
 
     i {
@@ -143,8 +142,6 @@ section.faq {
 
 @include media-breakpoint-only(xs) {
     section.consulta-pedido {
-        padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
-
         .no-webp &::before {
             @include background(url(../img/background/bg-pedidos-mobile.jpg), bottom);
         }

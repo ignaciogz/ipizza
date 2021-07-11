@@ -88,7 +88,7 @@ i {
 }
 
 section {
-  padding: var(--padding-vertical) var(--padding-horizontal);
+  padding: var(--padding-vertical) 0;
   position: relative;
 }
 
@@ -116,6 +116,10 @@ strong:hover {
   body {
     padding-top: var(--altura-menu-fijo-mobile);
   }
+
+  section {
+    padding: var(--padding-vertical-mobile) 0;
+  }
 }
 @media only screen and (max-width: 575.98px) {
   body {
@@ -135,10 +139,6 @@ strong:hover {
     font-size: 0.8rem;
   }
 
-  section {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal);
-  }
-
   small {
     font-size: 0.7rem;
   }
@@ -152,7 +152,6 @@ strong:hover {
   height: var(--altura-menu-fijo);
   padding: 0 var(--padding-horizontal);
   user-select: none;
-  width: 100vw;
 }
 
 .logotipo-y-menu-container {
@@ -174,7 +173,7 @@ strong:hover {
 /* -------- LOGOTIPO -------- */
 .logotipo {
   color: var(--color-blanco);
-  font-family: "Finger Paint", cursive;
+  font-family: var(--font-family-ipizza);
   font-size: 2.2rem;
   height: inherit;
   user-select: none;
@@ -320,8 +319,8 @@ section.video-marketing .frase-publicitaria {
   font-size: 2.8rem;
   font-weight: bold;
   position: absolute;
-  top: 30vh;
-  left: 68vw;
+  top: 30%;
+  right: 5%;
   text-shadow: 2px 2px 4px var(--color-blanco);
 }
 section.video-marketing .frase-publicitaria h2,
@@ -331,7 +330,6 @@ section.video-marketing .frase-publicitaria p {
 
 section.menu-de-pizzas {
   background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
-  padding: var(--padding-vertical) calc(var(--padding-horizontal)/4);
 }
 section.menu-de-pizzas .maestro-pizzero {
   content: "";
@@ -344,9 +342,6 @@ section.menu-de-pizzas .maestro-pizzero {
   background-repeat: no-repeat;
 }
 
-section.nuestra-calidad {
-  padding: var(--padding-vertical) 0;
-}
 section.nuestra-calidad article {
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -397,7 +392,6 @@ section.opiniones {
   background: url(../img/background/bg-opiniones.webp) center/cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding: var(--padding-vertical) var(--padding-horizontal);
 }
 .no-webp section.opiniones {
   background: url(../img/background/bg-opiniones.jpg) center/cover;
@@ -449,11 +443,12 @@ section.opiniones article header h2::before {
 }
 
 @media only screen and (min-width: 1400px) {
-  section.video-marketing .frase-publicitaria h2 {
-    font-size: 2rem;
+  section.video-marketing .frase-publicitaria {
+    font-size: 3.5rem;
+    right: 8%;
   }
-  section.video-marketing .frase-publicitaria p {
-    font-size: 3.8rem;
+  section.video-marketing .frase-publicitaria h2 {
+    font-size: 2.3rem;
   }
 
   section.menu-de-pizzas h1 {
@@ -474,19 +469,17 @@ section.opiniones article header h2::before {
 }
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   section.video-marketing {
-    height: calc(var(--altura-visible-mobile) * 0.75);
+    height: calc(var(--altura-visible-mobile) * 0.70);
   }
   section.video-marketing video {
-    height: calc(var(--altura-visible-mobile) * 0.75);
+    height: calc(var(--altura-visible-mobile) * 0.70);
   }
   section.video-marketing .frase-publicitaria {
-    font-size: 2rem;
-    position: absolute;
-    top: 21vh;
+    font-size: 2.4rem;
     right: 1%;
   }
   section.video-marketing .frase-publicitaria h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 991.98px) {
@@ -500,10 +493,6 @@ section.nuestra-calidad article:hover {
   }
   section.nuestra-calidad figure figcaption {
     margin-top: 1rem;
-  }
-
-  section.opiniones {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
 }
 @media only screen and (min-width: 0) and (max-width: 767.98px) {
@@ -583,21 +572,15 @@ section.nuestra-calidad article:hover {
     height: calc(var(--altura-visible-mobile) * 0.5);
   }
   section.video-marketing .frase-publicitaria {
-    font-size: 1.5rem;
-    position: absolute;
-    top: 15vh;
-    right: 2%;
+    font-size: 1.3rem;
+    right: 1%;
   }
   section.video-marketing .frase-publicitaria h2 {
     font-size: 0.7rem;
   }
 
-  section.menu-de-pizzas {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
-  }
-
   section.nuestra-calidad article {
-    padding: 0 calc(var(--padding-horizontal)/2);
+    padding: 0 var(--padding-horizontal-mobile);
   }
   section.nuestra-calidad article:last-child {
     margin-top: var(--padding-vertical-mobile);
@@ -649,7 +632,6 @@ section.nuestra-calidad article:hover {
 /* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- pedidos.html -------- */
 section.consulta-pedido {
-  padding: var(--padding-vertical) var(--padding-horizontal);
   text-align: center;
 }
 section.consulta-pedido i {
@@ -765,9 +747,6 @@ section.faq .desplegable details ul {
   }
 }
 @media only screen and (max-width: 575.98px) {
-  section.consulta-pedido {
-    padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
-  }
   .no-webp section.consulta-pedido::before {
     background: url(../img/background/bg-pedidos-mobile.jpg) bottom/cover;
   }
@@ -785,8 +764,8 @@ section.faq .desplegable details ul {
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
 /* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- nosotros.html -------- */
-section.historia {
-  padding: var(--padding-vertical) var(--padding-horizontal);
+section.historia article {
+  height: 100%;
 }
 section.historia::before {
   content: "";
@@ -803,6 +782,7 @@ section.historia::before {
 }
 
 section.historia figure {
+  height: 100%;
   margin: 0;
   position: relative;
 }
@@ -879,9 +859,6 @@ section.galeria img {
   }
 }
 @media only screen and (max-width: 575.98px) {
-  section.historia {
-    padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
-  }
   .no-webp section.historia::before {
     background: url(../img/background/bg-nosotros-mobile.jpg) center/cover;
   }
@@ -910,7 +887,6 @@ section.galeria img {
 /* -------- contacto.html -------- */
 section.contacto {
   background: linear-gradient(to bottom, var(--color-queso), var(--color-gris));
-  padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
 section.contacto iframe {
@@ -989,15 +965,10 @@ section.contacto form#contacto-form:hover {
 }
 @media only screen and (min-width: 0) and (max-width: 767.98px) {
   section.contacto form#contacto-form {
-    width: 95%;
+    width: 100%;
   }
   section.contacto form#contacto-form .terminos-y-condiciones {
     font-size: 0.7rem;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  section.contacto {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
   }
 }
 .btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.opiniones article, section.historia figure img, section.contacto form#contacto-form {
@@ -1015,9 +986,6 @@ section.contacto form#contacto-form:hover {
 /* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
 /* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- armala.html --------*/
-section.armala {
-  padding: var(--padding-vertical) var(--padding-horizontal);
-}
 section.armala h1 {
   color: var(--color-blanco);
 }
@@ -1062,7 +1030,7 @@ section.armado-de-pedido form#armala-form fieldset.extras {
   padding: 1.2rem 1rem;
 }
 section.armado-de-pedido form#armala-form > div {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 /* FIN Estilos del FORMULARIO de armado de pedido */
@@ -1120,8 +1088,9 @@ section.detalle-de-pedido .precio-total {
   }
 }
 @media only screen and (max-width: 575.98px) {
-  section.armala {
-    padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
+  section.armado-de-pedido,
+section.detalle-de-pedido {
+    padding: 0.75rem;
   }
 
   section.armado-de-pedido form#armala-form fieldset.extras {
@@ -1134,7 +1103,7 @@ section.detalle-de-pedido .precio-total {
 .footer {
   background-color: var(--color-gris);
   border-top: 2.5px solid var(--color-blanco);
-  padding: var(--padding-vertical) var(--padding-horizontal);
+  padding: var(--padding-vertical) 0;
   user-select: none;
 }
 .footer h2 {
@@ -1150,7 +1119,7 @@ section.detalle-de-pedido .precio-total {
   width: 202px;
 }
 .footer .nuestras-apps img:hover {
-  filter: drop-shadow(0 0 10px #F8F9F166);
+  filter: opacity(1) drop-shadow(0 0 10px var(--color-blanco-alpha40));
 }
 
 .footer .iconos-formas-de-pago img {
@@ -1203,7 +1172,11 @@ section.detalle-de-pedido .precio-total {
 
 @media only screen and (min-width: 0) and (max-width: 991.98px) {
   .footer {
-    padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+    padding: var(--padding-vertical-mobile) 0;
+  }
+
+  .footer .nuestras-apps img {
+    filter: unset;
   }
 }
 @media only screen and (max-width: 575.98px) {
@@ -1258,24 +1231,14 @@ form#armala-form div.d-flex {
   column-gap: 1rem;
 }
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
+/* -------- GRID General -------- */
+.container-fluid {
+  height: 100%;
+}
+
 /* -------- GRID Footer -------- */
 .footer .row {
   row-gap: 1.5rem;
-}
-
-@media only screen and (max-width: 575.98px) {
-  .footer .row {
-    --bs-gutter-x: 0;
-  }
-}
-/* -------- GRID nosotros.html --------*/
-section.galeria .row {
-  margin: 0;
-}
-section.galeria .row > * {
-  padding: 0;
 }
 
 nav.menu {
@@ -1699,7 +1662,7 @@ button:hover {
 }
 @media only screen and (max-width: 575.98px) {
   .btn-ver-todas {
-    width: 60%;
+    width: 70%;
   }
 }
 /* -------- FORMULARIOS -------- */
@@ -2022,17 +1985,16 @@ html {
     margin-top: calc(0px - var(--altura-menu-fijo-mobile));
   }
 
-  html, body {
-    /* Tomado "prestado" de Ryki Jaco y Filabe */
-    overflow-x: hidden;
-  }
+  /* html, body { // Tomado "prestado" de Ryki Jaco y Filabe
+      overflow-x: hidden; // No lo uso, pero seria util si aplico AOS a los botones del carousel de armala.html
+  } */
 }
 @media only screen and (width: 1024px) and (height: 1366px) {
   section.video-marketing {
-    height: calc(var(--altura-visible-mobile) * 0.75);
+    height: calc(var(--altura-visible-mobile) * 0.70);
   }
   section.video-marketing video {
-    height: calc(var(--altura-visible-mobile) * 0.75);
+    height: calc(var(--altura-visible-mobile) * 0.70);
   }
 
   section.nuestra-calidad article,

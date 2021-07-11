@@ -3,7 +3,9 @@
 
 /* -------- nosotros.html -------- */
 section.historia {
-    padding: var(--padding-vertical) var(--padding-horizontal);
+    article {
+        height: 100%;
+    }
 
     &::before {
         @include background-full(url(../img/background/bg-nosotros.webp));
@@ -16,6 +18,7 @@ section.historia {
 }
 
 section.historia figure {
+    height: 100%;
     margin: 0;
     position: relative;
 
@@ -117,8 +120,6 @@ section.galeria {
 
 @include media-breakpoint-only(xs) {
     section.historia {
-        padding: var(--padding-vertical-mobile) calc(var(--padding-horizontal-mobile)*2);
-
         .no-webp &::before {
             @include background(url(../img/background/bg-nosotros-mobile.jpg));
         }

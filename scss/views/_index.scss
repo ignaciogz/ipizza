@@ -12,13 +12,14 @@ section.video-marketing {
         object-fit: fill;
         width: 100%;
     }
+
     .frase-publicitaria {
         color: var(--color-gris);
         font-size: 2.8rem;
         font-weight: bold;
         position: absolute;
-            top: 30vh;
-            left: 68vw;
+            top: 30%;
+            right: 5%;
         text-shadow: 2px 2px 4px var(--color-blanco);
 
         h2,
@@ -30,7 +31,6 @@ section.video-marketing {
 
 section.menu-de-pizzas {
     background: map-get($gradientes, UIg-Zinc);
-    padding: var(--padding-vertical) calc(var(--padding-horizontal)/4);
 
     .maestro-pizzero {
         @include background-full(url(../img/background/bg-maestro-pizzero.svg), -39% 75%, 50% 110%);
@@ -39,8 +39,6 @@ section.menu-de-pizzas {
 } 
 
 section.nuestra-calidad {
-    padding: var(--padding-vertical) 0;
-
     article {
         @include prefix(transition, all 1s);
         filter: grayscale(1);
@@ -87,7 +85,6 @@ section.opiniones {
     @include background(url(../img/background/bg-opiniones.webp));
     background-attachment: fixed;
     background-repeat: no-repeat;
-    padding: var(--padding-vertical) var(--padding-horizontal);
 
     .no-webp & {
         @include background(url(../img/background/bg-opiniones.jpg));
@@ -152,8 +149,12 @@ section.opiniones article {
 @include media-breakpoint-up(xxl) {
     section.video-marketing {
         .frase-publicitaria {
-            h2 { font-size: 2rem; }
-            p { font-size: 3.8rem; }
+            font-size: 3.5rem;
+                right: 8%;
+            
+            h2 {
+                font-size: 2.3rem;
+            }
         }
     }
 
@@ -180,20 +181,18 @@ section.opiniones article {
 
 @include media-breakpoint-between(sm, lg) {
     section.video-marketing {
-        height: calc(var(--altura-visible-mobile) * 0.75); // Porque el height: auto de .h-visible no calcula bien la altura
+        height: calc(var(--altura-visible-mobile) * 0.70); // Porque el height: auto de .h-visible no calcula bien la altura
 
         video {
-            height: calc(var(--altura-visible-mobile) * 0.75);
+            height: calc(var(--altura-visible-mobile) * 0.70);
         }
 
         .frase-publicitaria {
-            font-size: 2rem;
-            position: absolute;
-                top: 21vh;
+            font-size: 2.4rem;
                 right: 1%;
             
             h2 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
         }
     }
@@ -215,10 +214,6 @@ section.opiniones article {
         figcaption {
             margin-top: 1rem;
         }
-    }
-
-    section.opiniones {
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
     }
 }
 
@@ -329,24 +324,18 @@ section.opiniones article {
         }
 
         .frase-publicitaria {
-            font-size: 1.5rem;
-            position: absolute;
-                top: 15vh;
-                right: 2%;
+            font-size: 1.3rem;
+                right: 1%;
             
             h2 {
                 font-size: 0.7rem;
             }
         }
     }
-    
-    section.menu-de-pizzas{
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
-    }
 
     section.nuestra-calidad {
         article {
-            padding: 0 calc(var(--padding-horizontal)/2);
+            padding: 0 var(--padding-horizontal-mobile);
     
             &:last-child {
                 margin-top: var(--padding-vertical-mobile);

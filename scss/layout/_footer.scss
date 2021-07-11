@@ -4,7 +4,7 @@
 .footer {
     background-color: var(--color-gris);
     border-top: 2.5px solid var(--color-blanco);
-    padding: var(--padding-vertical) var(--padding-horizontal);
+    padding: var(--padding-vertical) 0;
     user-select: none;
 
     h2 {
@@ -22,7 +22,7 @@
         width: 202px;
 
         &:hover {
-            filter: drop-shadow(0 0 10px #F8F9F166);
+            filter: opacity(1) drop-shadow(0 0 10px var(--color-blanco-alpha40));
         }
     }
 }
@@ -81,7 +81,13 @@
 
 @include media-breakpoint-between(xs, lg) {
     .footer {
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
+        padding: var(--padding-vertical-mobile) 0;
+    }
+
+    .footer .nuestras-apps {
+        img {
+            filter: unset;
+        }
     }
 }
 

@@ -130,121 +130,125 @@
     </div>
 
     <!-- Contacto -->
-    <section class="contacto container-fluid h-visible wrap-animation">
-        <div class="row row-v-align">
-            <!-- INICIO Mapa -->
-            <div class="d-none d-lg-block col-lg-6">
-                <iframe class="fadeInDown" title="Ubicación de nuestra casa central en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.0039517383042!2d-58.3822621707935!3d-34.6037617987787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbd38273f76b%3A0x661f15386bdd4e0c!2sPrivados!5e0!3m2!1ses-419!2sar!4v1620594259369!5m2!1ses-419!2sar" allowfullscreen="" loading="eager"></iframe>
-            </div>
-            <!-- FIN Mapa -->
+    <section class="contacto h-visible wrap-animation">
+        <div class="container-fluid px-3">
+            <div class="row row-v-align gx-4">
+                <!-- INICIO Mapa -->
+                <div class="d-none d-lg-block col-lg-6 col-xxl-5 offset-xxl-1">
+                    <iframe class="fadeInDown" title="Ubicación de nuestra casa central en Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.0039517383042!2d-58.3822621707935!3d-34.6037617987787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbd38273f76b%3A0x661f15386bdd4e0c!2sPrivados!5e0!3m2!1ses-419!2sar!4v1620594259369!5m2!1ses-419!2sar" allowfullscreen="" loading="eager"></iframe>
+                </div>
+                <!-- FIN Mapa -->
 
-            <!-- INICIO Formulario de contacto -->
-            <div class="col-12 col-sm-12 col-lg-6">
-                <form id="contacto-form" class="d-flex flex-column fadeInDown" action="#" method="post" name="contacto" autocomplete="off">
-                    <label class="campo-obligatorio" for="contacto-email">Correo electrónico</label>
-                    <input type="email" id="contacto-email" name="email" placeholder="nombre@dominio.com" autofocus required>
-                    
-                    <label for="contacto-numero-pedido">Número de pedido</label>
-                    <input type="number" id="contacto-numero-pedido" name="numero-pedido" placeholder="2107250001">
-                    
-                    <label class="campo-obligatorio" for="contacto-consulta"><h1>Consulta</h1></label>
-                    <textarea name="consulta" id="contacto-consulta" placeholder="Escriba aquí su consulta..." spellcheck="true" minlength="1" maxlength="1500" required></textarea>
-                    
-                    <div class="check-personalizado">
-                        <input type="checkbox" id="contacto-politicas" name="contacto-politicas" required>
-                        <label class="campo-obligatorio terminos-y-condiciones" for="contacto-politicas">Acepto condiciones de privacidad</label>
-                    </div>
-                    
-                    <input type="submit" value="Enviar">
-                </form>
+                <!-- INICIO Formulario de contacto -->
+                <div class="col-12 col-sm-12 col-md-10 col-lg-6 col-xxl-5 offset-md-1 offset-lg-0">
+                    <form id="contacto-form" class="d-flex flex-column fadeInDown" action="#" method="post" name="contacto" autocomplete="off">
+                        <label class="campo-obligatorio" for="contacto-email">Correo electrónico</label>
+                        <input type="email" id="contacto-email" name="email" placeholder="nombre@dominio.com" autofocus required>
+                        
+                        <label for="contacto-numero-pedido">Número de pedido</label>
+                        <input type="number" id="contacto-numero-pedido" name="numero-pedido" placeholder="2107250001">
+                        
+                        <label class="campo-obligatorio" for="contacto-consulta"><h1>Consulta</h1></label>
+                        <textarea name="consulta" id="contacto-consulta" placeholder="Escriba aquí su consulta..." spellcheck="true" minlength="1" maxlength="1500" required></textarea>
+                        
+                        <div class="check-personalizado">
+                            <input type="checkbox" id="contacto-politicas" name="contacto-politicas" required>
+                            <label class="campo-obligatorio terminos-y-condiciones" for="contacto-politicas">Acepto condiciones de privacidad</label>
+                        </div>
+                        
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+                <!-- FIN Formulario de contacto -->
             </div>
-            <!-- FIN Formulario de contacto -->
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="footer container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-lg-3 order-last order-lg-first col-xxl offset-xxl-1">
-                <!-- Footer - nuestras-apps -->
-                <div class="nuestras-apps d-flex flex-column flex-sm-row flex-lg-column align-items-center align-items-sm-start justify-content-center justify-content-lg-start">
-                    <a href="https://play.google.com/" target="_blank" rel="noreferrer">
-                        <picture>
-                            <source srcset="img/apps/ipizza-google-play.webp">
-                            <img src="img/apps/ipizza-google-play.png" title="Acceso directo a nuestra app en Google Play" alt="Link a nuestra aplicación para Android" loading="lazy">
-                        </picture>
-                    </a>
-                    <a href="https://www.apple.com/la/app-store/" target="_blank" rel="noreferrer">
-                        <picture>
-                            <source srcset="img/apps/ipizza-app-store.webp">
-                            <img src="img/apps/ipizza-app-store.png" title="Acceso directo a nuestra app en la App Store iOS" alt="Link a nuestra aplicación para iOS" loading="lazy">
-                        </picture>
-                    </a>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg offset-lg-1 order-last order-lg-first">
+                    <!-- Footer - nuestras-apps -->
+                    <div class="nuestras-apps d-flex flex-column flex-sm-row flex-lg-column align-items-center align-items-sm-start justify-content-center justify-content-lg-start">
+                        <a href="https://play.google.com/" target="_blank" rel="noreferrer">
+                            <picture>
+                                <source srcset="img/apps/ipizza-google-play.webp">
+                                <img src="img/apps/ipizza-google-play.png" title="Acceso directo a nuestra app en Google Play" alt="Link a nuestra aplicación para Android" loading="lazy">
+                            </picture>
+                        </a>
+                        <a href="https://www.apple.com/la/app-store/" target="_blank" rel="noreferrer">
+                            <picture>
+                                <source srcset="img/apps/ipizza-app-store.webp">
+                                <img src="img/apps/ipizza-app-store.png" title="Acceso directo a nuestra app en la App Store iOS" alt="Link a nuestra aplicación para iOS" loading="lazy">
+                            </picture>
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-12 col-sm-4 col-lg-3 col-xxl">
-                <!-- Footer - formas de pago -->
-                <div class="formas-de-pago d-flex flex-column align-items-center align-items-lg-start">
-                    <h2>Formas de pago</h2>
-                    
-                    <div class="iconos-formas-de-pago">
-                        <img src="img/medios-de-pago/visa.svg" title="Icono medio de pago Visa" alt="Medio de pago Visa">
-                        <img src="img/medios-de-pago/mastercard.svg" title="Icono Medio de pago Mastercard" alt="Medio de pago Mastercard">
-                        <img src="img/medios-de-pago/amex.svg" title="Icono Medio de pago American Express" alt="Medio de pago American Express">
+    
+                <div class="col-12 col-sm-4 col-lg">
+                    <!-- Footer - formas de pago -->
+                    <div class="formas-de-pago d-flex flex-column align-items-center align-items-lg-start">
+                        <h2>Formas de pago</h2>
+                        
+                        <div class="iconos-formas-de-pago">
+                            <img src="img/medios-de-pago/visa.svg" title="Icono medio de pago Visa" alt="Medio de pago Visa">
+                            <img src="img/medios-de-pago/mastercard.svg" title="Icono Medio de pago Mastercard" alt="Medio de pago Mastercard">
+                            <img src="img/medios-de-pago/amex.svg" title="Icono Medio de pago American Express" alt="Medio de pago American Express">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="d-none d-sm-block col-sm-4 col-lg">
+                    <!-- Footer - datos de contacto -->
+                    <address class="d-flex flex-column">
+                        <a class="d-flex" title="Acceso directo a nuestro número de teléfono" href="tel:+54911123456">
+                            <div class="iconos-address">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <p class="d-flex align-items-center"><span>+</span>54 9 11 123 456</p>
+                        </a>
+                        <a class="d-flex" title="Acceso directo a nuestro correo electrónico" href="mailto:ipizza@gmail.com">
+                            <div class="iconos-address">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p class="d-flex align-items-center">ipizza@gmail.com</p>
+                        </a>
+                        <a class="d-flex" title="Acceso directo a nuestra ubicación en google maps" href="https://goo.gl/maps/tUrCwJuNhYBzBX9G6" target="_blank" rel="noreferrer">
+                            <div class="iconos-address">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <p class="d-flex align-items-center">Calle falsa 123. CABA</p>
+                        </a>
+                    </address>
+                </div>
+    
+                <div class="col-12 col-sm-4 col-lg">
+                    <!-- Footer - otros links -->
+                    <div class="otros-links d-flex flex-column align-items-center align-items-sm-start">
+                        <h3><a title="Acceso directo a nuestra página de pedidos" href="pedidos.html">Pedidos</a></h3>
+                        <h3><a title="Acceso directo a nuestra página de promociones vigentes" href="#">Promociones</a></h3>
+                        <h3><a title="Acceso directo a nuestra página de empleos" href="#">Bolsa de trabajo</a></h3>
+                    </div>
+                    <!-- Footer - redes sociales -->
+                    <div class="redes-sociales d-flex justify-content-center justify-content-sm-start">
+                        <a href="https://facebook.com" title="Acceso directo a nuestra cuenta de Facebook" target="_blank" rel="noreferrer">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="https://instagram.com" title="Acceso directo a nuestra cuenta de Instagram" target="_blank" rel="noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" title="Acceso directo a nuestra cuenta de Youtube" target="_blank" rel="noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class="d-none d-sm-block col-sm-4 col-lg-3 col-xxl">
-                <!-- Footer - datos de contacto -->
-                <address class="d-flex flex-column">
-                    <a class="d-flex" title="Acceso directo a nuestro número de teléfono" href="tel:+54911123456">
-                        <div class="iconos-address">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <p class="d-flex align-items-center"><span>+</span>54 9 11 123 456</p>
-                    </a>
-                    <a class="d-flex" title="Acceso directo a nuestro correo electrónico" href="mailto:ipizza@gmail.com">
-                        <div class="iconos-address">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <p class="d-flex align-items-center">ipizza@gmail.com</p>
-                    </a>
-                    <a class="d-flex" title="Acceso directo a nuestra ubicación en google maps" href="https://goo.gl/maps/tUrCwJuNhYBzBX9G6" target="_blank" rel="noreferrer">
-                        <div class="iconos-address">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <p class="d-flex align-items-center">Calle falsa 123. CABA</p>
-                    </a>
-                </address>
-            </div>
-
-            <div class="col-12 col-sm-4 col-lg-3 col-xxl">
-                <!-- Footer - otros links -->
-                <div class="otros-links d-flex flex-column align-items-center align-items-sm-start">
-                    <h3><a title="Acceso directo a nuestra página de pedidos" href="pedidos.html">Pedidos</a></h3>
-                    <h3><a title="Acceso directo a nuestra página de promociones vigentes" href="#">Promociones</a></h3>
-                    <h3><a title="Acceso directo a nuestra página de empleos" href="#">Bolsa de trabajo</a></h3>
-                </div>
-                <!-- Footer - redes sociales -->
-                <div class="redes-sociales d-flex justify-content-center justify-content-sm-start">
-                    <a href="https://facebook.com" title="Acceso directo a nuestra cuenta de Facebook" target="_blank" rel="noreferrer">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="https://instagram.com" title="Acceso directo a nuestra cuenta de Instagram" target="_blank" rel="noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://youtube.com" title="Acceso directo a nuestra cuenta de Youtube" target="_blank" rel="noreferrer">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
+            
+            <small>
+                intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="desarrollador">Ignacio Gutierrez</h2>
+            </small>
         </div>
-
-        <small>
-            intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="desarrollador">Ignacio Gutierrez</h2>
-        </small>
     </footer>
 
     <!-- JS Animaciones -->

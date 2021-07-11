@@ -5,7 +5,6 @@
 /* -------- contacto.html -------- */
 section.contacto {
     background: map-get($gradientes, g-ipizza);
-    padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
 section.contacto iframe {
@@ -84,16 +83,10 @@ section.contacto form#contacto-form {
 
 @include media-breakpoint-between(xs, md) {
     section.contacto form#contacto-form {
-        width: 95%;
+        width: 100%;
 
         .terminos-y-condiciones {
             font-size: 0.7rem;
         }
-    }
-}
-
-@include media-breakpoint-only(xs) {
-    section.contacto {
-        padding: var(--padding-vertical-mobile) var(--padding-horizontal-mobile);
     }
 }

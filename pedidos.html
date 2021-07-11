@@ -130,148 +130,157 @@
     </div>
 
     <!-- Consulta de estado del pedido -->
-    <section class="consulta-pedido container-fluid h-visible">
-        <div class="row row-v-align">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                <div class="consulta-pedido-container d-flex flex-column">
-                    <h2 id="texto-tipeado">Estamos preparando tu iPizza con mucho <i class="fas fa-heart"></i></h2>
-                    <form id="consulta-pedido-form" action="#" method="post" name="estado-pedido">
-                        <input type="number" name="numero-pedido" placeholder="Número de pedido" min="2105100001" max="2105109999">
-                        <input type="submit" value="Consultar">
-                    </form>
-                    <small>
-                        Puede mirar las <a title="Acceso directo a nuestra sección de FAQ" href="#faq">preguntas frecuentes <i class="fas fa-level-down-alt"></i></a>
-                    </small>
+    <section class="consulta-pedido h-visible">
+        <div class="container-fluid px-3">
+            <div class="row row-v-align gx-4">
+                <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                    <div class="consulta-pedido-container d-flex flex-column">
+                        <h2 id="texto-tipeado">Estamos preparando tu iPizza con mucho <i class="fas fa-heart"></i></h2>
+                        
+                        <form id="consulta-pedido-form" action="#" method="post" name="estado-pedido">
+                            <input type="number" name="numero-pedido" placeholder="Número de pedido" min="2105100001" max="2105109999">
+                            <input type="submit" value="Consultar">
+                        </form>
+                        
+                        <small>
+                            Puede mirar las <a title="Acceso directo a nuestra sección de FAQ" href="#faq">preguntas frecuentes <i class="fas fa-level-down-alt"></i></a>
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-10 offset-sm-1">
-                <h1 id="faq">Preguntas frecuentes</h1>
-                <div class="desplegable">
-                    <details open>
-                        <summary>¿En cuánto tiempo estará listo mi pedido?</summary>
-                        <p>Nuestro sistema le dará un horario estimado de entrega, el cuál se calcula automáticamente en base de cantidad de pedidos que tenemos en el momento.</p>
-                    </details>
-                    <details>
-                        <summary>¿Otra persona puede recibir el pedido?</summary>
-                        <p>Puede recibirlo cualquier persona, que se encuentre en el domicilio acordado, presentando su documento de identidad.</p>
-                    </details>
-                    <details>
-                        <summary>¿Aplican algún protocolo para las entregas?</summary>                 
-                        <p>De nuestra parte:</p>
-                        <ul>
-                            <li>Monitoreamos la temperatura de nuestros colaboradores y estamos trabajando profundamente en la desinfección de cada elemento de trabajo. </li>
-                            <li>Durante la producción de tu producto, cada trabajador cumplió con las normas establecidas como utilización de barbijos y guantes. </li>
-                            <li>En cuanto a los elementos de trabajo utilizados, tanto en la fabricación como en la logística de entrega, también se procede a la limpieza y desinfección profunda.</li>
-                        </ul>
+    <section class="faq">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1">
+                    <h1 id="faq">Preguntas frecuentes</h1>
 
-                        <p>De su lado, le pedimos los siguientes pasos de higiene:</p>
-                        <ul>
-                            <li>Que reciba a nuestros colaboradores en la puerta del domicilio de entrega, manteniendo una
-                                distancia mínima de un metro y medio.</li>
-                            <li>Que utilice su propia lapicera para firmar.</li>
-                            <li>Abra su envío y deseche el envoltorio.</li>
-                            <li>Desinfecte los sectores donde ha apoyado el envío.</li>
-                            <li>Lávase las manos con agua y jabón durante 30 segundos.</li>
-                        </ul>
-                    </details>
-                    <details>
-                        <summary>Mi pedido no ha llegado o se encuentra incompleto ¿Cómo reclamo?</summary>
-                        <p>Tendrá que consultar por su pedido en la parte superior de <a title="Acceso directo a nuestra sección de consulta de pedidos" href="#">la página <i class="fas fa-level-up-alt"></i></a>, y nuestro sistema lo guiará en el proceso de reclamo. Como alternativa puede contactarnos desde <a href="contacto.html">nuestro formulario</a>.</p>
-                    </details>
+                    <div class="desplegable">
+                        <details open>
+                            <summary>¿En cuánto tiempo estará listo mi pedido?</summary>
+                            <p>Nuestro sistema le dará un horario estimado de entrega, el cuál se calcula automáticamente en base de cantidad de pedidos que tenemos en el momento.</p>
+                        </details>
+                        <details>
+                            <summary>¿Otra persona puede recibir el pedido?</summary>
+                            <p>Puede recibirlo cualquier persona, que se encuentre en el domicilio acordado, presentando su documento de identidad.</p>
+                        </details>
+                        <details>
+                            <summary>¿Aplican algún protocolo para las entregas?</summary>                 
+                            <p>De nuestra parte:</p>
+                            <ul>
+                                <li>Monitoreamos la temperatura de nuestros colaboradores y estamos trabajando profundamente en la desinfección de cada elemento de trabajo. </li>
+                                <li>Durante la producción de tu producto, cada trabajador cumplió con las normas establecidas como utilización de barbijos y guantes. </li>
+                                <li>En cuanto a los elementos de trabajo utilizados, tanto en la fabricación como en la logística de entrega, también se procede a la limpieza y desinfección profunda.</li>
+                            </ul>
+
+                            <p>De su lado, le pedimos los siguientes pasos de higiene:</p>
+                            <ul>
+                                <li>Que reciba a nuestros colaboradores en la puerta del domicilio de entrega, manteniendo una
+                                    distancia mínima de un metro y medio.</li>
+                                <li>Que utilice su propia lapicera para firmar.</li>
+                                <li>Abra su envío y deseche el envoltorio.</li>
+                                <li>Desinfecte los sectores donde ha apoyado el envío.</li>
+                                <li>Lávase las manos con agua y jabón durante 30 segundos.</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Mi pedido no ha llegado o se encuentra incompleto ¿Cómo reclamo?</summary>
+                            <p>Tendrá que consultar por su pedido en la parte superior de <a title="Acceso directo a nuestra sección de consulta de pedidos" href="#">la página <i class="fas fa-level-up-alt"></i></a>, y nuestro sistema lo guiará en el proceso de reclamo. Como alternativa puede contactarnos desde <a href="contacto.html">nuestro formulario</a>.</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="footer container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-lg-3 order-last order-lg-first col-xxl offset-xxl-1">
-                <!-- Footer - nuestras-apps -->
-                <div class="nuestras-apps d-flex flex-column flex-sm-row flex-lg-column align-items-center align-items-sm-start justify-content-center justify-content-lg-start">
-                    <a href="https://play.google.com/" target="_blank" rel="noreferrer">
-                        <picture>
-                            <source srcset="img/apps/ipizza-google-play.webp">
-                            <img src="img/apps/ipizza-google-play.png" title="Acceso directo a nuestra app en Google Play" alt="Link a nuestra aplicación para Android" loading="lazy">
-                        </picture>
-                    </a>
-                    <a href="https://www.apple.com/la/app-store/" target="_blank" rel="noreferrer">
-                        <picture>
-                            <source srcset="img/apps/ipizza-app-store.webp">
-                            <img src="img/apps/ipizza-app-store.png" title="Acceso directo a nuestra app en la App Store iOS" alt="Link a nuestra aplicación para iOS" loading="lazy">
-                        </picture>
-                    </a>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg offset-lg-1 order-last order-lg-first">
+                    <!-- Footer - nuestras-apps -->
+                    <div class="nuestras-apps d-flex flex-column flex-sm-row flex-lg-column align-items-center align-items-sm-start justify-content-center justify-content-lg-start">
+                        <a href="https://play.google.com/" target="_blank" rel="noreferrer">
+                            <picture>
+                                <source srcset="img/apps/ipizza-google-play.webp">
+                                <img src="img/apps/ipizza-google-play.png" title="Acceso directo a nuestra app en Google Play" alt="Link a nuestra aplicación para Android" loading="lazy">
+                            </picture>
+                        </a>
+                        <a href="https://www.apple.com/la/app-store/" target="_blank" rel="noreferrer">
+                            <picture>
+                                <source srcset="img/apps/ipizza-app-store.webp">
+                                <img src="img/apps/ipizza-app-store.png" title="Acceso directo a nuestra app en la App Store iOS" alt="Link a nuestra aplicación para iOS" loading="lazy">
+                            </picture>
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-12 col-sm-4 col-lg-3 col-xxl">
-                <!-- Footer - formas de pago -->
-                <div class="formas-de-pago d-flex flex-column align-items-center align-items-lg-start">
-                    <h2>Formas de pago</h2>
-                    
-                    <div class="iconos-formas-de-pago">
-                        <img src="img/medios-de-pago/visa.svg" title="Icono medio de pago Visa" alt="Medio de pago Visa">
-                        <img src="img/medios-de-pago/mastercard.svg" title="Icono Medio de pago Mastercard" alt="Medio de pago Mastercard">
-                        <img src="img/medios-de-pago/amex.svg" title="Icono Medio de pago American Express" alt="Medio de pago American Express">
+    
+                <div class="col-12 col-sm-4 col-lg">
+                    <!-- Footer - formas de pago -->
+                    <div class="formas-de-pago d-flex flex-column align-items-center align-items-lg-start">
+                        <h2>Formas de pago</h2>
+                        
+                        <div class="iconos-formas-de-pago">
+                            <img src="img/medios-de-pago/visa.svg" title="Icono medio de pago Visa" alt="Medio de pago Visa">
+                            <img src="img/medios-de-pago/mastercard.svg" title="Icono Medio de pago Mastercard" alt="Medio de pago Mastercard">
+                            <img src="img/medios-de-pago/amex.svg" title="Icono Medio de pago American Express" alt="Medio de pago American Express">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="d-none d-sm-block col-sm-4 col-lg">
+                    <!-- Footer - datos de contacto -->
+                    <address class="d-flex flex-column">
+                        <a class="d-flex" title="Acceso directo a nuestro número de teléfono" href="tel:+54911123456">
+                            <div class="iconos-address">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <p class="d-flex align-items-center"><span>+</span>54 9 11 123 456</p>
+                        </a>
+                        <a class="d-flex" title="Acceso directo a nuestro correo electrónico" href="mailto:ipizza@gmail.com">
+                            <div class="iconos-address">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p class="d-flex align-items-center">ipizza@gmail.com</p>
+                        </a>
+                        <a class="d-flex" title="Acceso directo a nuestra ubicación en google maps" href="https://goo.gl/maps/tUrCwJuNhYBzBX9G6" target="_blank" rel="noreferrer">
+                            <div class="iconos-address">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <p class="d-flex align-items-center">Calle falsa 123. CABA</p>
+                        </a>
+                    </address>
+                </div>
+    
+                <div class="col-12 col-sm-4 col-lg">
+                    <!-- Footer - otros links -->
+                    <div class="otros-links d-flex flex-column align-items-center align-items-sm-start">
+                        <h3><a title="Acceso directo a nuestra página de pedidos" href="pedidos.html">Pedidos</a></h3>
+                        <h3><a title="Acceso directo a nuestra página de promociones vigentes" href="#">Promociones</a></h3>
+                        <h3><a title="Acceso directo a nuestra página de empleos" href="#">Bolsa de trabajo</a></h3>
+                    </div>
+                    <!-- Footer - redes sociales -->
+                    <div class="redes-sociales d-flex justify-content-center justify-content-sm-start">
+                        <a href="https://facebook.com" title="Acceso directo a nuestra cuenta de Facebook" target="_blank" rel="noreferrer">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="https://instagram.com" title="Acceso directo a nuestra cuenta de Instagram" target="_blank" rel="noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com" title="Acceso directo a nuestra cuenta de Youtube" target="_blank" rel="noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class="d-none d-sm-block col-sm-4 col-lg-3 col-xxl">
-                <!-- Footer - datos de contacto -->
-                <address class="d-flex flex-column">
-                    <a class="d-flex" title="Acceso directo a nuestro número de teléfono" href="tel:+54911123456">
-                        <div class="iconos-address">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <p class="d-flex align-items-center"><span>+</span>54 9 11 123 456</p>
-                    </a>
-                    <a class="d-flex" title="Acceso directo a nuestro correo electrónico" href="mailto:ipizza@gmail.com">
-                        <div class="iconos-address">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <p class="d-flex align-items-center">ipizza@gmail.com</p>
-                    </a>
-                    <a class="d-flex" title="Acceso directo a nuestra ubicación en google maps" href="https://goo.gl/maps/tUrCwJuNhYBzBX9G6" target="_blank" rel="noreferrer">
-                        <div class="iconos-address">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <p class="d-flex align-items-center">Calle falsa 123. CABA</p>
-                    </a>
-                </address>
-            </div>
-
-            <div class="col-12 col-sm-4 col-lg-3 col-xxl">
-                <!-- Footer - otros links -->
-                <div class="otros-links d-flex flex-column align-items-center align-items-sm-start">
-                    <h3><a title="Acceso directo a nuestra página de pedidos" href="pedidos.html">Pedidos</a></h3>
-                    <h3><a title="Acceso directo a nuestra página de promociones vigentes" href="#">Promociones</a></h3>
-                    <h3><a title="Acceso directo a nuestra página de empleos" href="#">Bolsa de trabajo</a></h3>
-                </div>
-                <!-- Footer - redes sociales -->
-                <div class="redes-sociales d-flex justify-content-center justify-content-sm-start">
-                    <a href="https://facebook.com" title="Acceso directo a nuestra cuenta de Facebook" target="_blank" rel="noreferrer">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="https://instagram.com" title="Acceso directo a nuestra cuenta de Instagram" target="_blank" rel="noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://youtube.com" title="Acceso directo a nuestra cuenta de Youtube" target="_blank" rel="noreferrer">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
+            
+            <small>
+                intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="desarrollador">Ignacio Gutierrez</h2>
+            </small>
         </div>
-
-        <small>
-            intelligentPizza <span>&copy;</span> 2021 <span>|</span> Desarrollado por <h2 class="desarrollador">Ignacio Gutierrez</h2>
-        </small>
     </footer>
 
     <!-- JS Animaciones -->

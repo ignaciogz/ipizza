@@ -1,10 +1,10 @@
 
 @media only screen and (width: 1024px) and (height: 1366px) {
     section.video-marketing {
-        height: calc(var(--altura-visible-mobile) * 0.75); // Porque el height: auto de .h-visible no calcula bien la altura
+        height: calc(var(--altura-visible-mobile) * 0.70); // Porque el height: auto de .h-visible no calcula bien la altura
 
         video {
-            height: calc(var(--altura-visible-mobile) * 0.75);
+            height: calc(var(--altura-visible-mobile) * 0.70);
         }
     }
 

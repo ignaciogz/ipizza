@@ -15,7 +15,7 @@
   --altura-menu-fijo-mobile: 67px;
   --altura-visible-mobile: calc(100vh - var(--altura-menu-fijo-mobile));
   --padding-horizontal-mobile: 0.5rem;
-  --padding-vertical-mobile: 2.2rem;
+  --padding-vertical-mobile: 2rem;
   /* Colores del sitio */
   --color-blanco: #F8F9F1;
   --color-gris: #212121;
@@ -28,6 +28,9 @@
   --color-facebook: #3b5998;
   --color-instagram: #E1306C;
   --color-youtube: #c4302b;
+  --color-blanco-alpha40: #F8F9F166;
+  --color-blanco-alpha50: #F8F9F180;
+  --color-blanco-alpha90: #F8F9F1E6;
 }
 
 section.error .btn-volver-inicio {
@@ -172,10 +175,9 @@ html {
     margin-top: calc(0px - var(--altura-menu-fijo-mobile));
   }
 
-  html, body {
-    /* Tomado "prestado" de Ryki Jaco y Filabe */
-    overflow-x: hidden;
-  }
+  /* html, body { // Tomado "prestado" de Ryki Jaco y Filabe
+      overflow-x: hidden; // No lo uso, pero seria util si aplico AOS a los botones del carousel de armala.html
+  } */
 }
 
 /*# sourceMappingURL=style-error.css.map */

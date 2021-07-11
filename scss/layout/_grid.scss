@@ -1,27 +1,11 @@
-@import '../base/media-query';
+/* -------- GRID General -------- */
+.container-fluid {
+    height: 100%;
+}
 
 /* -------- GRID Footer -------- */
 .footer {
     .row {
         row-gap: 1.5rem;
-    }
-}
-
-@include media-breakpoint-only(xs) {
-    .footer {
-        .row {
-            --bs-gutter-x: 0;
-        }
-    }
-}
-
-/* -------- GRID nosotros.html --------*/
-section.galeria {
-    .row {
-        margin: 0;
-    }
-
-    .row > * {
-        padding: 0;
     }
 }

@@ -31,7 +31,7 @@
         margin-top: calc(0px - var(--altura-menu-fijo-mobile));
     }
 
-    html, body { /* Tomado "prestado" de Ryki Jaco y Filabe */
-        overflow-x: hidden;
-    }
+    /* html, body { // Tomado "prestado" de Ryki Jaco y Filabe
+        overflow-x: hidden; // No lo uso, pero seria util si aplico AOS a los botones del carousel de armala.html
+    } */
 }
