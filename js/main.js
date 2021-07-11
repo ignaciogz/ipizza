@@ -29,10 +29,10 @@ function removeShake() {
 function cargarFilaDeImagenes() {
     let imagenesSinMostrar = document.querySelectorAll('.galeria .d-none');
     imagenesSinMostrar[0].classList.remove('d-none');
-    AOS.init();
+    AOS.refreshHard();
 
     if(imagenesSinMostrar.length == 1) {
-        this.classList.add('d-none');
+        this.classList.add('d-none'); // Quito el boton de carga de imagenes
     }
 }
 /* -------- FIN Funciones de la galeria de imagenes -------- */
