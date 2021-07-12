@@ -72,7 +72,14 @@ strong {
 }
 
 @include media-breakpoint-between(sm, lg) {
-    body { font-size: 0.9rem; } 
+    body { 
+        font-size: 0.9rem;
+        padding-bottom: 3.5rem;
+    }
+
+    body.armala-padding-bottom {
+        padding-bottom: 0rem; // Solo en armala.html, por JS
+    }
 }
 
 @include media-breakpoint-between(xs, lg) {

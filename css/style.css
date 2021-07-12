@@ -110,6 +110,11 @@ strong:hover {
 @media only screen and (min-width: 576px) and (max-width: 991.98px) {
   body {
     font-size: 0.9rem;
+    padding-bottom: 3.5rem;
+  }
+
+  body.armala-padding-bottom {
+    padding-bottom: 0rem;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 991.98px) {
@@ -1652,8 +1657,8 @@ button:hover {
     font-size: 2rem;
     height: 3.6rem;
     position: fixed;
-    bottom: 2vh;
-    width: 96vw;
+    bottom: 1rem;
+    width: 96%;
   }
 
   .btn-ver-todas {

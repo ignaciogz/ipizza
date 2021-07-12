@@ -32,17 +32,23 @@ function cargarFilaDeImagenes() {
     AOS.refreshHard();
 
     if(imagenesSinMostrar.length == 1) {
-        this.classList.add('d-none'); // Quito el boton de carga de imagenes
+        // Quito el boton de carga de imagenes
+        this.classList.add('d-none');
     }
 }
 /* -------- FIN Funciones de la galeria de imagenes -------- */
+
+/* -------- INICIO Funciones relacionadas con media query -------- */
+function quitarPaddingBottom() {
+    document.body.classList.add('armala-padding-bottom');
+}
+/* -------- FIN Funciones relacionadas con media query -------- */
 
 function init() {
     /* Animacion de shake inicial */
     const $btnArmalaHeader = document.getElementById('btn-armala-header');
     $btnArmalaHeader.addEventListener('animationend', removeShake, {once: true});
     shakeInicial($btnArmalaHeader);
-  
 
     /* Controlador frontal basico */
     const paginaActual = location.pathname;
@@ -57,10 +63,27 @@ function init() {
                 const $btnMostrarMasFotos = document.getElementById('btn-mostrar-mas-fotos');
                 $btnMostrarMasFotos.addEventListener('click', cargarFilaDeImagenes);
             break;
-        case "/armala.html": 
-                // Logica de desplegables
+        case "/armala.html":
+                // Oculto boton armala
+                $btnArmalaHeader.classList.add('d-sm-none');
+
+                // Quito padding bottom, por ocultamiento de boton armala
+                const mediaQuery = window.matchMedia("(min-width: 576px) and (max-width: 991.98px)");
+                if(mediaQuery.matches) {
+                    quitarPaddingBottom(); // Por carga de pagina
+                }
+                mediaQuery.addEventListener("change", function(eventoMediaQuery) {
+                    if(eventoMediaQuery.matches) {
+                        quitarPaddingBottom(); // Por redimensionado
+                    }
+                });
+                
+                // Pizza sin gustos seleccionados
+                armala.limpiarCanvas();
+
+                // Desplegables
                 const $desplegables = document.querySelectorAll('.gustos select');
-                $desplegables.forEach(function (desplegable) {
+                $desplegables.forEach(function(desplegable) {
                     desplegable.addEventListener('change', armala.calcularCostos);
                     desplegable.addEventListener('change', armala.mostrarPorciones);
                 });
@@ -71,8 +94,7 @@ function init() {
 
                 // Botones de switch de la seccion extras
                 const $extraChecks = document.querySelectorAll('.extras input[type=checkbox]');
-
-                $extraChecks.forEach (function (inputCheck) {
+                $extraChecks.forEach (function(inputCheck) {
                     inputCheck.addEventListener('change', armala.actualizarDetalleExtras);
                 });
 

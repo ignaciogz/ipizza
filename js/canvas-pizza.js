@@ -145,6 +145,3 @@ const canvasPizza = (function () {
         "obtenerUbicacionEnCanvas" : obtenerUbicacionEnCanvas
     }
 })();
-
-
-canvasPizza.limpiarCanvas();
