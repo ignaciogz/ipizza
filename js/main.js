@@ -79,7 +79,7 @@ function init() {
                 });
                 
                 // Pizza sin gustos seleccionados
-                armala.limpiarCanvas();
+                canvasPizza.mostrarCanvasInicial();
 
                 // Desplegables
                 const $desplegables = document.querySelectorAll('.gustos select');

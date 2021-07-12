@@ -1,5 +1,5 @@
 const armala = (function () {
-    const listaDePrecios = {
+    const LISTA_DE_PRECIOS = {
         precioPorcion: {
             'muzzarella': 30, 
             'jamon': 42,
@@ -22,6 +22,34 @@ const armala = (function () {
         'cheddar'
     ]
 
+    const IPIZZAS = {
+        i1: {
+            cantidadDeGustos: 1,
+            cantidadDePorcionesPorGusto: 8,
+            porciones: [
+                {index: 8, gusto: null}
+            ]
+        },
+        i2: {
+            cantidadDeGustos: 2,
+            cantidadDePorcionesPorGusto: 4,
+            porciones: [
+                {index: 8, gusto: null}, 
+                {index: 4, gusto: null}
+            ]
+        },
+        i4: {
+            cantidadDeGustos: 4,
+            cantidadDePorcionesPorGusto: 2,
+            porciones: [
+                {index: 8, gusto: null}, 
+                {index: 6, gusto: null},
+                {index: 4, gusto: null},
+                {index: 2, gusto: null}
+            ]
+        }
+    }
+
     /* Logica de desplegables en armala.html */
     function mostrarPorciones(event) {
         const nombreGusto = event.target.value;
@@ -30,9 +58,16 @@ const armala = (function () {
 
         const IDSelect = obtenerIDdelDesplegable(event);
         const iPizzaSeleccionada = obtenerInfoDeiPizzaSeleccionada();
+        
+        const ubicacionEnCanvas = iPizzaSeleccionada.porciones[IDSelect].index;
+        // Guardo el gusto que selecciono el usuario
+        iPizzaSeleccionada.porciones[IDSelect].gusto = (nombreGusto != "Default") ? canvasPizza[nombreGustoPatron] : null;
 
-        const ubicacionEnCanvas = canvasPizza.obtenerUbicacionEnCanvas(IDSelect, iPizzaSeleccionada.cantidadDeGustos);
-        canvasPizza.dibujarPorciones(iPizzaSeleccionada.nPorcionesPorGusto, canvasPizza[nombreGustoPatron], ubicacionEnCanvas, mostrar);
+        if(mostrar) {
+            canvasPizza.dibujarPorciones(iPizzaSeleccionada.cantidadDePorcionesPorGusto, canvasPizza[nombreGustoPatron], ubicacionEnCanvas);
+        } else {
+            canvasPizza.reDibujarPorciones(iPizzaSeleccionada);
+        }
     }
 
     function calcularCostos(event) {
@@ -44,15 +79,15 @@ const armala = (function () {
 
         if (event.target.value != "Default") {
             nombreGusto = event.target.value;
-            const precioGusto = listaDePrecios["precioPorcion"][nombreGusto];
+            const precioGusto = LISTA_DE_PRECIOS["precioPorcion"][nombreGusto];
             
-            precioFinalGusto = iPizzaSeleccionada.nPorcionesPorGusto * precioGusto;
+            precioFinalGusto = iPizzaSeleccionada.cantidadDePorcionesPorGusto * precioGusto;
         }
 
         let $detallePorciones = obtenerDetallePorciones();
 
         // Muestro los li necesarios
-        let liNuevo = crearElementoDeLista(iPizzaSeleccionada.nPorcionesPorGusto, nombreGusto, precioFinalGusto);
+        let liNuevo = crearElementoDeLista(iPizzaSeleccionada.cantidadDePorcionesPorGusto, nombreGusto, precioFinalGusto);
         mostrarDetallePorciones($detallePorciones, IDSelect, liNuevo);
 
         const costoTotal = calcularCostoTotal();
@@ -73,7 +108,7 @@ const armala = (function () {
             $desplegables[i].selectedIndex = 0;
             
             // Muestro los li necesarios
-            let liGenerico = crearElementoDeLista(iPizzaSeleccionada.nPorcionesPorGusto, '***', '***', false);
+            let liGenerico = crearElementoDeLista(iPizzaSeleccionada.cantidadDePorcionesPorGusto, '***', '***', false);
             mostrarDetallePorciones($detallePorciones, i, liGenerico);
         }
         
@@ -85,26 +120,13 @@ const armala = (function () {
             $detallePorciones[i].classList.toggle('d-none');
         }
         
-        canvasPizza.limpiarCanvas();
+        canvasPizza.mostrarCanvasInicial();
+        inicializarUbicacionesDePorciones(iPizzaSeleccionada);
 
         const costoTotal = calcularCostoTotal();
         mostrarCostoTotal(costoTotal);
     }
     /* FIN Control de tarjeta visible en el carousel */
-
-    function obtenerCantidadPorciones(cantidadDeGustos) {
-        switch(cantidadDeGustos) {
-            case 1: {
-                return 8;
-            }
-            case 2: {
-                return 4;
-            }
-            case 4: {
-                return 2;
-            }
-        }
-    }
 
     function obtenerDesplegables() {
         return $desplegables = document.querySelectorAll('.gustos select');
@@ -116,13 +138,9 @@ const armala = (function () {
 
     function obtenerInfoDeiPizzaSeleccionada() {
         const $tarjetaSeleccionada = document.querySelector('.active .tarjeta-de-producto');
-        const cantidadDeGustos = parseInt($tarjetaSeleccionada.getAttribute('data-ipizza-cant-gustos'));
-        const nPorcionesPorGusto = obtenerCantidadPorciones(cantidadDeGustos);
+        const modelo = $tarjetaSeleccionada.getAttribute('data-ipizza-modelo');
 
-        return {
-            "cantidadDeGustos" : cantidadDeGustos,
-            "nPorcionesPorGusto" : nPorcionesPorGusto
-        }
+        return informacionDeiPizza = obtenerInfoDeiPizza(modelo);
     }
 
     function obtenerDetallePorciones() {
@@ -156,6 +174,16 @@ const armala = (function () {
 
     function obtenerUbicacionDetalleExtras(IDCheckbox) {
         return UBICACION_EN_DETALLE_EXTRAS.indexOf(IDCheckbox);
+    }
+
+    function obtenerInfoDeiPizza(modelo) {
+        return IPIZZAS[modelo];
+    }
+
+    function inicializarUbicacionesDePorciones(iPizzaSeleccionada) {
+        iPizzaSeleccionada.porciones.forEach(function(porcion) {
+            porcion.gusto = null;
+        });
     }
 
     /* INICIO Creacion de Elemento de Lista */
@@ -211,7 +239,7 @@ const armala = (function () {
     function actualizarDetalleCono() {
         const $seccionDetalleCono = document.querySelector('.detalle-cono');
         $seccionDetalleCono.classList.toggle('d-none');
-        const precio = listaDePrecios['papas'];
+        const precio = LISTA_DE_PRECIOS['papas'];
         
         const divPrecio = crearDivPrecio(precio);
 
@@ -228,7 +256,7 @@ const armala = (function () {
     function actualizarDetalleExtras(event) {
         const $seccionDetalleExtras = document.querySelector('.detalle-extras');
         const IDCheckbox = event.target.id;
-        const precio = listaDePrecios[IDCheckbox];
+        const precio = LISTA_DE_PRECIOS[IDCheckbox];
 
         const ubicacion = obtenerUbicacionDetalleExtras(IDCheckbox);
         const algunoChecked = verificarChecked('.extras input[type=checkbox]');
@@ -253,7 +281,7 @@ const armala = (function () {
     /* Radio de envio a domicilio ! */
     function actualizarDetalleEnvio(event) {
         const IDRadio = event.target.id;
-        const precio = listaDePrecios[IDRadio];
+        const precio = LISTA_DE_PRECIOS[IDRadio];
         
         const divPrecio = crearDivPrecio(precio);
 
@@ -264,17 +292,12 @@ const armala = (function () {
         mostrarCostoTotal(costoTotal);   
     }
 
-    function limpiarCanvas() {
-        canvasPizza.limpiarCanvas();
-    }
-
     return {
         "mostrarPorciones" : mostrarPorciones,
         "calcularCostos" : calcularCostos,
         "actualizarPaginaArmala" : actualizarPaginaArmala,
         "actualizarDetalleCono": actualizarDetalleCono,
         "actualizarDetalleExtras" : actualizarDetalleExtras,
-        "actualizarDetalleEnvio" : actualizarDetalleEnvio,
-        "limpiarCanvas": limpiarCanvas
+        "actualizarDetalleEnvio" : actualizarDetalleEnvio
     }
 })();

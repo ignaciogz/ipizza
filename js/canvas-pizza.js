@@ -16,12 +16,6 @@ const canvasPizza = (function () {
 
     const CANVAS = document.getElementById('canvas-pizza');
     const contexto = CANVAS.getContext('2d');
-
-    const UBICACION_EN_CANVAS = {
-        i1 : [8],
-        i2 : [8, 4],
-        i4 : [8, 6, 4, 2]
-    }
     
     function crearPatronDeGusto(color= MUZZARELLA_COLOR, dibujo = false) {
         // Creo una capa para el patron
@@ -92,12 +86,12 @@ const canvasPizza = (function () {
         contexto.fill();
     }
 
-    function dibujarPorciones(cantidadPorciones, gusto, indexInicial, dibujar = true) {
+    function dibujarPorciones(cantidadDePorcionesPorGusto, gusto, indexInicial, dibujar = true) {
         let i = 0;
         let radianInicial, radianFinal, radianIntermedio, cx, cy;
         const porcionSize = MAX_RADIO / CANTIDAD_PORCIONES;
     
-        while (i < cantidadPorciones) {
+        while (i < cantidadDePorcionesPorGusto) {
             radianInicial = MAX_RADIO * (indexInicial / CANTIDAD_PORCIONES);
             radianFinal = radianInicial + porcionSize;
             radianIntermedio = radianInicial + (porcionSize / 2);
@@ -119,19 +113,45 @@ const canvasPizza = (function () {
         }
     }
 
-    function limpiarCanvas(){
+    function limpiarCanvas() {
         contexto.clearRect(0, 0, CANVAS.width, CANVAS.height);
+    }
+
+    function mostrarCanvasInicial() {
+        limpiarCanvas();
         dibujarPorciones(8, muzzarellaPatron, 8, false);
     }
 
-    function obtenerUbicacionEnCanvas(IDSelect, cantidadGustos) {
-        switch (cantidadGustos) {
-            case 1:
-                return UBICACION_EN_CANVAS.i1[IDSelect];
-            case 2:
-                return UBICACION_EN_CANVAS.i2[IDSelect];
-            case 4:
-                return UBICACION_EN_CANVAS.i4[IDSelect];
+    function reDibujarPorciones(iPizzaSeleccionada) {
+        let radianInicial, radianFinal, radianIntermedio, cx, cy;
+        const porcionSize = MAX_RADIO / CANTIDAD_PORCIONES;
+
+        limpiarCanvas();
+
+        for (let j = 0; j < iPizzaSeleccionada.cantidadDeGustos; j++) {
+            let i = 0;
+            let index = iPizzaSeleccionada.porciones[j].index;
+            
+            while (i < iPizzaSeleccionada.cantidadDePorcionesPorGusto) {
+                radianInicial = MAX_RADIO * (index / CANTIDAD_PORCIONES);
+                radianFinal = radianInicial + porcionSize;
+                radianIntermedio = radianInicial + (porcionSize / 2);
+                
+                cx = 3 * Math.cos(radianIntermedio) + CX;
+                cy = 3 * Math.sin(radianIntermedio) + CY;
+                
+                if(iPizzaSeleccionada.porciones[j].gusto !== null) {
+                    dibujarPorcion(cx, cy, PIZZA_RADIO, radianInicial, radianFinal, BORDER_COLOR);
+                    dibujarPorcion(cx, cy, PIZZA_RADIO * 0.93, radianInicial, radianFinal, SALSA_COLOR);
+                    dibujarPorcion(cx, cy, PIZZA_RADIO * 0.9, radianInicial, radianFinal, iPizzaSeleccionada.porciones[j].gusto);
+                } else {
+                    dibujarPorcion(cx, cy, PIZZA_RADIO, radianInicial, radianFinal, BORDER_COLOR);
+                    dibujarPorcion(cx, cy, PIZZA_RADIO, radianInicial, radianFinal, VACIO_COLOR);
+                }
+                
+                index--;
+                i++;
+            }
         }
     }
     
@@ -141,7 +161,7 @@ const canvasPizza = (function () {
         "jamonPatron" : jamonPatron,
         "napolitanaPatron" : napolitanaPatron,
         "dibujarPorciones": dibujarPorciones,
-        "limpiarCanvas" : limpiarCanvas,
-        "obtenerUbicacionEnCanvas" : obtenerUbicacionEnCanvas
+        "mostrarCanvasInicial" : mostrarCanvasInicial,
+        "reDibujarPorciones": reDibujarPorciones
     }
 })();
