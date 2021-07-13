@@ -23,8 +23,8 @@ section.contacto iframe {
 }
 
 section.contacto form#contacto-form {
-    @extend %sombra-contenedor;
     @extend %mx-auto;
+    @extend %sombra-contenedor;
     @include prefix(transition, all 1s);
     background-color: var(--color-gris);
     border-radius: 25px;

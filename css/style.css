@@ -101,7 +101,6 @@ small {
 strong {
   color: var(--color-queso);
   font-family: var(--font-family-ipizza);
-  font-size: 0.9rem;
 }
 strong:hover {
   color: var(--color-blanco);
@@ -602,6 +601,9 @@ section.nuestra-calidad article:hover {
     background: url(../img/background/bg-opiniones-mobile.webp) center/cover;
   }
 
+  section.opiniones article {
+    padding: 0.5rem;
+  }
   section.opiniones article .opinion-estrellas i {
     font-size: 1.5rem;
   }
@@ -862,7 +864,6 @@ section.galeria img {
     margin-top: 2rem;
   }
   section.historia figure figcaption p {
-    font-size: 0.9rem;
     text-align: center;
   }
 }

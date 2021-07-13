@@ -7,8 +7,10 @@
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://getbootstrap.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> </p>
 
+
 <h2 align="left">Description</h2>
 <p align="left">iPizza is a web project where users can create their own pizza in a simple way.</p>
+
 
 <h3 align="left">Features:</h3>
 
@@ -20,8 +22,10 @@
 - Video in WebM format. MP4 format as an alternative.
 - Bootstrap's carousel adapted to display product cards and user reviews.
 - Custom checkbox and switch buttons.
-- When viewing the website on a desktop screen or higher, flexible units are used to determine the viewable height and assign it to certain sections. Flexible units are also used to assign the height to the fixed menu.
-- In the project, the clip-path property is used to cut product images, filter to stylize or modify backgrounds, the drop-shadow function to apply an identical shadow to a specific object with an irregular shape, such as app store images.
+- Custom product cards.
 - Pizza maker developed with HTML canvas element and JS.
 - Order quote web tool developed with HTML form, Bootstrap's carousel and JS.
-- Own media query mixins that respect the Bootstrap's mixin interface for media query. Useful to work with the framework when it is brought by a CDN.
+- Added modernizr.js to detect if the WebP format is available or not, to be able to change the backgrounds from CSS.
+- Added own media query mixins that respect the Bootstrap's mixin interface for media query. Useful to work with the framework when it is brought by a CDN.
+- When viewing the website on a desktop screen or higher, flexible units are used to determine the viewable height and assign it to certain sections. Flexible units are also used on lower screens to assign the height of the advertising video. In addition, these units are used in the image gallery of the page about us.
+- In the project, the clip-path property is used to cut product images, filter to stylize or modify backgrounds, the drop-shadow function to apply an identical shadow to a specific object with an irregular shape, such as app store images.
