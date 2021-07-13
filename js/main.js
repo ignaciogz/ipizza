@@ -51,19 +51,19 @@ function init() {
     shakeInicial($btnArmalaHeader);
 
     /* Controlador frontal basico */
-    const paginaActual = location.pathname;
+    const paginaActual = location.pathname.split("/").pop();
     switch (paginaActual) {
-        case "/pedidos.html":
+        case "pedidos.html":
                 // Tipeo h2 en pedidos.html
                 document.getElementById('texto-tipeado').innerHTML = "";
                 tipearMensaje();
             break;
-        case "/nosotros.html":
+        case "nosotros.html":
                 // Carga de imagenes ocultas en nosotros.html
                 const $btnMostrarMasFotos = document.getElementById('btn-mostrar-mas-fotos');
                 $btnMostrarMasFotos.addEventListener('click', cargarFilaDeImagenes);
             break;
-        case "/armala.html":
+        case "armala.html":
                 // Oculto boton armala
                 $btnArmalaHeader.classList.add('d-sm-none');
 
