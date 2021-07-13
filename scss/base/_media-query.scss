@@ -1,8 +1,11 @@
 @import 'config';
 @import 'functions';
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
+// -------- Estos mixins respetan la interfaz de mixins de bootstrap para media query  --------
+// -------- Se agrega a style.scss cuando el framework es traido por CDN --------
+
+// -------- En los archivos que usan estos mixins los @includes respetan el orden de aparicion --------
+// -------- ----------> down, up, between, only (Media querys mas generales a mas especificas) --------
 
 // Creo lista auxiliar de claves para saber: El cero absoluto, el 1er breakpoint y el ultimo.
 $lista-mq-breakpoints:  map-keys($mq-breakpoints) !default;
