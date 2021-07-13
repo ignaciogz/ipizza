@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* -------- CSS Custom properties -------- */
 :root {
   font-size: 21px;
   /* Tipografias */
@@ -34,8 +35,7 @@
   --color-blanco-alpha90: #F8F9F1E6;
 }
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
+/* -------- GENERAL -------- */
 a {
   color: var(--color-queso);
   text-decoration: none;
@@ -148,8 +148,6 @@ strong:hover {
     font-size: 0.7rem;
   }
 }
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- HEADER -------- */
 .header {
   background-color: var(--color-gris);
@@ -173,8 +171,6 @@ strong:hover {
     height: var(--altura-menu-fijo-mobile);
   }
 }
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- LOGOTIPO -------- */
 .logotipo {
   color: var(--color-blanco);
@@ -308,8 +304,6 @@ strong:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- index.html -------- */
 section.video-marketing {
   padding: 0;
@@ -600,9 +594,6 @@ section.nuestra-calidad article:hover {
   section.nuestra-calidad figure figcaption {
     text-align: center;
   }
-  section.nuestra-calidad figure figcaption p {
-    font-size: 0.8rem;
-  }
 
   .no-webp section.opiniones {
     background: url(../img/background/bg-opiniones-mobile.jpg) center/cover;
@@ -633,8 +624,6 @@ section.nuestra-calidad article:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- pedidos.html -------- */
 section.consulta-pedido {
   text-align: center;
@@ -766,8 +755,6 @@ section.faq .desplegable details ul {
     height: 2.4rem;
   }
 }
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- nosotros.html -------- */
 section.historia article {
   height: 100%;
@@ -874,6 +861,10 @@ section.galeria img {
   section.historia figure figcaption {
     margin-top: 2rem;
   }
+  section.historia figure figcaption p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 .btn-pagar, .btn-ver-todas, .tarjeta-de-producto, section.detalle-de-pedido .canvas-container, section.contacto form#contacto-form, section.opiniones article, section.historia figure img {
   margin: 0 auto;
@@ -887,8 +878,6 @@ section.galeria img {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- contacto.html -------- */
 section.contacto {
   background: linear-gradient(to bottom, var(--color-queso), var(--color-gris));
@@ -988,8 +977,6 @@ section.contacto form#contacto-form:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- armala.html --------*/
 section.armala h1 {
   color: var(--color-blanco);
@@ -1093,6 +1080,10 @@ section.detalle-de-pedido .precio-total {
   }
 }
 @media only screen and (max-width: 575.98px) {
+  section.armala h1 {
+    font-size: 1.5rem;
+  }
+
   section.armado-de-pedido,
 section.detalle-de-pedido {
     padding: 0.75rem;
@@ -1102,9 +1093,7 @@ section.detalle-de-pedido {
     padding: 0.6rem 0.5rem;
   }
 }
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
-/* -------- Footer -------- */
+/* -------- FOOTER -------- */
 .footer {
   background-color: var(--color-gris);
   border-top: 2.5px solid var(--color-blanco);
@@ -1246,6 +1235,7 @@ form#armala-form div.d-flex {
   row-gap: 1.5rem;
 }
 
+/* -------- MENU -------- */
 nav.menu {
   margin-left: 1rem;
 }
@@ -1289,6 +1279,7 @@ nav.menu a:hover::before {
   width: 100%;
 }
 
+/* -------- MENU MOBILE -------- */
 #menu-mobile {
   background-color: var(--color-gris);
   user-select: none;
@@ -1369,6 +1360,7 @@ nav.menu-mobile a:hover::before {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
+/* -------- TARJETAS -------- */
 .tarjeta-de-producto {
   background-color: var(--color-gris);
   border-radius: var(--borde-general);
@@ -1430,8 +1422,6 @@ nav.menu-mobile a:hover::before {
     width: 200px;
   }
 }
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- CAROUSEL -------- */
 #carousel-productos {
   height: 400px;
@@ -1485,8 +1475,6 @@ nav.menu-mobile a:hover::before {
     height: 420px;
   }
 }
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- BOTONES -------- */
 button {
   display: block;
@@ -1666,6 +1654,10 @@ button:hover {
   }
 }
 @media only screen and (max-width: 575.98px) {
+  button {
+    font-size: 1rem;
+  }
+
   .btn-ver-todas {
     width: 70%;
   }
@@ -1932,6 +1924,7 @@ input[type=submit]:hover {
   animation: fadeInDown 0.6s ease-in-out;
 }
 
+/* -------- BROWSER -------- */
 html {
   scroll-behavior: smooth;
 }
@@ -1955,8 +1948,6 @@ html {
   background-color: var(--color-queso);
 }
 
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
 /* -------- CSS Tricks -------- */
 .wrap-animation {
   overflow: hidden;
@@ -1994,6 +1985,7 @@ html {
       overflow-x: hidden; // No lo uso, pero seria util si aplico AOS a los botones del carousel de armala.html
   } */
 }
+/* -------- DISPOSITIVO - IPAD PRO -------- */
 @media only screen and (width: 1024px) and (height: 1366px) {
   section.video-marketing {
     height: calc(var(--altura-visible-mobile) * 0.70);

@@ -1,3 +1,4 @@
+/* -------- CSS Custom properties -------- */
 :root {
   font-size: 21px;
   /* Tipografias */
@@ -117,6 +118,7 @@ section.error div.d-flex {
   row-gap: 0.5rem;
 }
 
+/* -------- BROWSER -------- */
 html {
   scroll-behavior: smooth;
 }
@@ -138,46 +140,6 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-queso);
-}
-
-/* -------- Estos mixins respestan la interfaz de mixins de bootstrap para media query  -------- */
-/* -------- Se agrega a style.scss cuando el framework es traido por CDN -------- */
-/* -------- CSS Tricks -------- */
-.wrap-animation {
-  overflow: hidden;
-}
-
-.h-visible {
-  height: var(--altura-visible);
-}
-
-.row-v-align {
-  /* Mi propio hack, para trabajar con h-visible */
-  align-items: center;
-  height: 100%;
-}
-
-:target::before {
-  /* Solucion a exceso de desplazamiento de links internos por menu fijo */
-  content: "";
-  display: block;
-  height: var(--altura-menu-fijo);
-  margin-top: calc(0px - var(--altura-menu-fijo));
-}
-
-@media only screen and (min-width: 0) and (max-width: 991.98px) {
-  .h-visible {
-    height: auto;
-  }
-
-  :target::before {
-    height: var(--altura-menu-fijo-mobile);
-    margin-top: calc(0px - var(--altura-menu-fijo-mobile));
-  }
-
-  /* html, body { // Tomado "prestado" de Ryki Jaco y Filabe
-      overflow-x: hidden; // No lo uso, pero seria util si aplico AOS a los botones del carousel de armala.html
-  } */
 }
 
 /*# sourceMappingURL=style-error.css.map */

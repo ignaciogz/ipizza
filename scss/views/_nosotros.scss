@@ -132,6 +132,11 @@ section.galeria {
     section.historia figure {
         figcaption {
             margin-top: 2rem;
+
+            p {
+                font-size: 0.9rem;
+                text-align: center;
+            }
         }
     }
 }

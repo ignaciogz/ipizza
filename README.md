@@ -20,6 +20,7 @@
 - Video in WebM format. MP4 format as an alternative.
 - Bootstrap's carousel adapted to display product cards and user reviews.
 - Custom checkbox and switch buttons.
+- When viewing the website on a desktop screen or higher, flexible units are used to determine the viewable height and assign it to certain sections. Flexible units are also used to assign the height to the fixed menu.
 - In the project, the clip-path property is used to cut product images, filter to stylize or modify backgrounds, the drop-shadow function to apply an identical shadow to a specific object with an irregular shape, such as app store images.
 - Pizza maker developed with HTML canvas element and JS.
 - Order quote web tool developed with HTML form, Bootstrap's carousel and JS.

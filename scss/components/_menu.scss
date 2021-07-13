@@ -1,5 +1,6 @@
 @import '../base/mixins';
 
+/* -------- MENU -------- */
 nav.menu {
     @include menu(inline-block) {
         margin-left: 0.5rem;
